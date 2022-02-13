@@ -8,15 +8,19 @@ function NavLeft({className=""}) {
   return (
     <DIV className={`${className}`}>
          <div className="NavLeft-wrapper">
-             <div className="row">
+             <div className="row align-items-center">
 
-                            {/* <MenuIcon></MenuIcon> */}
+                            <MenuIcon id="mobileNav-open-icon" className='mobile-nav-open-icon font-4-5  display-none text-color-white'></MenuIcon>
+                           
+                           
                             <div className="logo col-4 cursor-p">
                                 <Link to="/">
                                     <Logo></Logo>
                                 </Link>
                             </div>
-                            <div className="col-8  display-flex"> 
+
+
+                            <div className="col-8  display-flex width-800-display-none"> 
                                         <Link to="/ " className="  all-ads text-color-white ms-2 p-1 ms-5   fw-bold  font-1-6" >  All Ads</Link>
                                         <Link to="/ " className="nav-left-link  ms-3 text-color-white p-1   fw-bold  font-1-6" >  සිංහල</Link>
                                         <Link to="/ " className="nav-left-link  ms-2 text-color-white p-1   fw-bold  font-1-6" >  தமிழ் </Link>
@@ -39,6 +43,23 @@ const DIV=styled.div`
       /* width: var(--NavLeft-content-width);
         margin-left: auto;
         margin-right: auto;  */
+
+        .logo{
+            @media(max-width:800px){     
+                width: 60%;
+                }
+            @media(max-width:500px){     
+                width: 70%;
+                }
+                
+            }
+            
+            .mobile-nav-open-icon{
+                @media(max-width:800px){     
+                        display:flex !important;
+                    }
+
+        }
 
         .nav-left-link{
             border:1px solid var(--color-white);

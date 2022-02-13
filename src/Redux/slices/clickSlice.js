@@ -9,10 +9,6 @@ export const clickSlice=createSlice({
         showLocationPopUp:false, 
         showCategoryPopUp:false, 
 
-        showPostAd:false, 
-
-        classifiedPageSelectedLocation:"Location",
-        classifiedPageSelectedCategory:"Category",
 
     },
     reducers:{
@@ -20,11 +16,6 @@ export const clickSlice=createSlice({
 
             state.showOverlay=true;   
             state.showMobileNav=true;   
-        },
-        HideMobileNavFN:(state)=>{     
-
-            state.showOverlay=false;    
-            state.showMobileNav=false;   
         },
 
 

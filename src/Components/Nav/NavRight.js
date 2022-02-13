@@ -11,16 +11,16 @@ function NavRight({className=""}) {
                     <div className="display-flex align-item-center   ">
 
                                 <Button className=" ms-auto text-color-white">
-                                        <i className="fas fa-comments font-1-8" /><span className="Mobile ms-2 font-1-7">Chat</span>
+                                        <i className="fas fa-comments font-1-8" /><span className="Mobile ms-2 font-1-7  width-800-display-none">Chat</span>
                                 </Button>
 
                                 <Link to="/login " className="text-color-white ms-3">
-                                      <i className="fas fa-user font-1-8" /><span className="Mobile ms-2  font-1-7">Login</span>
+                                      <i className="fas fa-user font-1-8" /><span className="Mobile ms-2  font-1-7  width-800-display-none">Login</span>
                                 </Link>
 
                               
 
-                                <Button className=" background-secondary ms-4 p-3">
+                                <Button className=" background-secondary ms-4 p-3 width-800-display-none">
                                     <div className="fw-bold"> Post Your Add</div>
                                 </Button>
                     </div>

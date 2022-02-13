@@ -18,14 +18,16 @@ import RegisterPage from './Pages/Register/Register';
 import OverlayFull from './Components/Overlay/OverlayFull';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import { useSelector } from 'react-redux';
-import { selectClicks } from './Redux/slices/clickSlice';
+import { selectClicks, ShowMobileNavFN } from './Redux/slices/clickSlice';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 
 
 function App() {
 
   const clicks=useSelector(selectClicks);
+  const dispatch=useDispatch();
 
 
   useEffect(()=>{
@@ -40,10 +42,16 @@ function App() {
   },[clicks.showOverlay]);
 
 
-  
+  const handleClick=(e)=>{
+    // console.log(e.target.closest('#mobileNav-open-icon'));
+    const mobileNavOpenIcon=e.target.closest('#mobileNav-open-icon');
 
 
+    if(mobileNavOpenIcon){
+      dispatch(ShowMobileNavFN());
+    }
 
+  };
 
 
 
@@ -56,8 +64,7 @@ function App() {
          <div className="app-wrapper">
           <BrowserRouter>
 
-                <div className="app-content">
-                          <div className="clear"></div>
+                <div className="app-content" onClick={handleClick}>
                         <Routes>
                                     <Route path="/" element={ 
                                       <>
@@ -137,7 +144,7 @@ function App() {
 
                 </div>
 
-                       {/* { clicks.showOverlay &&  <OverlayFull></OverlayFull>} */}
+                       { clicks.showOverlay &&  <OverlayFull></OverlayFull>}
           </BrowserRouter>
 
 
