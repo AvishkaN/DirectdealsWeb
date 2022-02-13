@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import HomePage from './Pages/Home/HomePage';
+import StorePage from './Pages/StorePage/StorePage';
 import PropertPage from './Pages/ProperyPage/PropertPage';
 import ProductItem from './Pages/ProductItem/ProductItem';
 import ClassifiedPage from './Pages/Classified/ClassifiedPage';
@@ -69,13 +70,22 @@ function App() {
                                     <Route path="/" element={ 
                                       <>
                                       <NavBar className='position-fixed w-100'></NavBar>
-                                      {/* <MobielNavBar></MobielNavBar> */}
 
                                       <HomePage></HomePage>
                                       <Footer className='mt-6'></Footer>
 
                                       </>
                                     } />
+
+
+                                    <Route path="/store/:prodcuctId" element={ 
+                                       <>
+                                          <StorePage></StorePage>
+
+                                      </>
+                                    } />
+
+
 
                                     {/* <Route path="/properties" element={ 
                                       <>
