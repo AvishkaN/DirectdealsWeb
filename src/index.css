@@ -476,7 +476,7 @@ a{
 @media   (max-width: 394px) {   
        
     html {       
-        font-size: 53%;
+        /* font-size: 53%; */
     }
 }
 
