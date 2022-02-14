@@ -78,7 +78,7 @@ function App() {
                                     } />
 
 
-                                    <Route path="/store/:prodcuctId" element={ 
+                                    <Route path="/store/*" element={ 
                                        <>
                                           <StorePage></StorePage>
 
