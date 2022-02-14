@@ -11,7 +11,7 @@ function StoreNav({className=""}) {
        <div className="display-flex justify-content-center align-items-center">
            {
                links.map(linkitem=>(
-                   <Link to=""  className="ms-3  font-1-7  ps-2 pe-2 text-color-grey-ori">{linkitem}</Link>
+                   <Link  to="" key={Math.random()} className="ms-3  font-1-7  ps-2 pe-2 text-color-grey-ori">{linkitem}</Link>
 
                ))
            }

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import ShowMoreTxt from '../../../Components/UI/ShowMoreTxt/ShowMoreTxt';
+import RecentAds from './RecentAds/RecentAds';
 
 
 
@@ -6,16 +8,24 @@ function StoreHomePage({className="",store}) {
   return (
     <DIV className={`${className}`} backgroundImg={store.backgroundImage}>
          <div className="StoreHomePage-wrapper">
+           {/* Banner */}
                <div className="banner "> </div>
 
 
-               <div className="shop-description">
+                  {/* Shop Description */}
+               <div className="shop-description mt-5 pb-4">
                    <div className="row justify-content-around ">
 
-                                <div className="col-9 ">
-                                      <div className="text text-color-grey-ori  font-1-8 ">{store.shopDescription}</div>
+
+                                  {/* Description Text  */}
+                                <div className="col-9 ">  
+                                      <div className="text text-color-grey-ori  font-1-8 ">
+                                         <ShowMoreTxt className='font-1-8 text-center' showMoreTextClassName={'text-color-primary  text-color-link   '}  paragraph={store.shopDescription} words={90}/>
+
+                                        </div>
                                 </div>
 
+                                  {/* Box Img  */}
                                 <div className="col-2">
                                          <div className="box-img w-100">
                                                   <img src={store.boxImg} alt="" className='w-100' />
@@ -27,6 +37,15 @@ function StoreHomePage({className="",store}) {
                   
                    </div>
                </div>
+
+               {/* Recent Ads */}
+               <div className="mt-6 pb-4">
+                    <h2 className='fw-bold text-center'> Recent Ads  </h2>
+
+                    <RecentAds className=' mt-5 ' store={store}></RecentAds>
+               </div>
+
+               {/* Services */}
        
          </div>
     </DIV>

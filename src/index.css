@@ -51,6 +51,8 @@ html{
     --color-aqua: aqua;
     --color-grey-ori: grey;
 
+    --color-link: #2196f3;
+
 
 
     --page-content-width: 80%;   
@@ -304,6 +306,10 @@ h1{
     justify-content: space-around;
 }
 
+.justify-content-end{
+    justify-content: end;
+}
+
 
 .no-wrap{
     flex-wrap: nowrap;   
@@ -403,6 +409,10 @@ h1{
 }
 .text-color-red{  
     color: var(--color-red);
+}
+
+.text-color-link{  
+    color: var(--color-link);
 }
 
 
