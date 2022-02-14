@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import ShowMoreTxt from '../../../Components/UI/ShowMoreTxt/ShowMoreTxt';
+import ShowMoreTxt from '../../../../Components/UI/ShowMoreTxt/ShowMoreTxt';
 import RecentAds from './RecentAds/RecentAds';
-import ServicesSection from './../ServicesSection/ServicesSection';
+import ServicesSection from './../../ServicesSection/ServicesSection';
 
 
 
@@ -54,7 +54,7 @@ function StoreHomePage({className="",store}) {
                </div>
 
 
-               
+               {/* Footer */}
 
 
 

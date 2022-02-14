@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import StoreNav from './StorePageNav/StoreNav';
-import StoreHomePage from './StoreHome/StoreHomePage';
+import StoreFooter from './StoreFooter/StoreFooter';
+import StoreHomePage from './StorePages/StoreHome/StoreHomePage';
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
@@ -46,7 +47,12 @@ const store={
 
 
 
-    ]
+    ],
+
+    Adress:"Isuru Auto Land, 687,meepitiya, kegalle, Sri Lanka",
+    EMail:"spspriyantha@gmail.com",
+    Telephone:"94352221230 / ",
+    Mobile:"94722814383 /  94713773683 / ",
 
   };
 
@@ -69,6 +75,8 @@ function StoreComp({className=""}) {
                   <Routes>
                       <Route path="/home" element={<StoreHomePage store={store} />} />
                 </Routes>
+
+                <StoreFooter storeData={store}></StoreFooter>
 
               </div>
 
