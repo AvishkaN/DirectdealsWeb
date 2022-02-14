@@ -32,7 +32,7 @@ function Ad({className="",adDetails}) {
                                             {adDetails.description}
                                     </div>
 
-                                    <div className="time-and-date mt-3  display-flex align-items-center justify-content-end">
+                                    <div className="time-and-date mt-3 text-color-grey-ori display-flex align-items-center justify-content-end">
                                         <Clock/>
                                         <div className="font-1-3 ms-2">  {adDetails.timeAndDate} </div>
                                     

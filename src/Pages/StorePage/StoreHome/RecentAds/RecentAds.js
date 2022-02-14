@@ -36,7 +36,7 @@ const DIV=styled.div`
 
         .ad-col{
             box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1);
-            width: 28%;
+            width: 29%;
         }
 
     }

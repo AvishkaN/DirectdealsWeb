@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import ShowMoreTxt from '../../../Components/UI/ShowMoreTxt/ShowMoreTxt';
 import RecentAds from './RecentAds/RecentAds';
+import ServicesSection from './../ServicesSection/ServicesSection';
 
 
 
@@ -40,12 +41,24 @@ function StoreHomePage({className="",store}) {
 
                {/* Recent Ads */}
                <div className="mt-6 pb-4">
-                    <h2 className='fw-bold text-center'> Recent Ads  </h2>
+                    <h2 className='fw-bold text-center  font-2-3'> Recent Ads  </h2>
 
                     <RecentAds className=' mt-5 ' store={store}></RecentAds>
                </div>
 
                {/* Services */}
+               <div className="mt-6 pb-4  cursor-p">
+                    <h2 className='fw-bold text-center  font-2-3'> Our Services  </h2>
+                     
+                      <ServicesSection className='mt-4'></ServicesSection>
+               </div>
+
+
+               
+
+
+
+
        
          </div>
     </DIV>
