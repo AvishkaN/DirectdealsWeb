@@ -43,7 +43,7 @@ function StoreHomePage({className="",store}) {
                <div className="mt-5 pb-4">
                     <h2 className='fw-bold text-center  font-2-3'> Recent Ads  </h2>
 
-                    <RecentAds className=' mt-5 ' store={store}></RecentAds>
+                    <RecentAds className=' mt-5 ' store={store} sliceNum={-3}></RecentAds>
                </div>
 
                {/* Services */}

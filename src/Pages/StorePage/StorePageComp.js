@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import StoreNav from './StorePageNav/StoreNav';
 import StoreFooter from './StoreFooter/StoreFooter';
 import StoreHomePage from './StorePages/StoreHome/StoreHomePage';
+import StoreAllAdsPage from './StorePages/StoreAllAds/StoreAllAdsPage';
+import ServicesPage from './StorePages/ServicesPage/ServicesPage';
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
@@ -15,6 +17,30 @@ const store={
       {
           adPhot:"https://www.saleme.lk/saleme/images/uploads/86934/saleme_61f35a37c2b32.jpg",
           adName:"QMitsubishi L200 1994",
+          location:"Kegalle",
+          price:"3,450,000",
+          description:"good running...",
+          timeAndDate:"2 Feb 2022, 6:25pm ",
+      },
+      {
+          adPhot:"https://www.saleme.lk/saleme/images/uploads/86934/saleme_61f35a37c2b32.jpg",
+          adName:"Nissan tres sunny 1986",
+          location:"Kegalle",
+          price:"3,450,000",
+          description:"good running...",
+          timeAndDate:"2 Feb 2022, 6:25pm ",
+      },
+      {
+          adPhot:"https://www.saleme.lk/saleme/images/uploads/86931/saleme_61f35750ac550.jpg",
+          adName:"Mitsubishi L200 1994",
+          location:"Kegalle",
+          price:"3,450,000",
+          description:"good running...",
+          timeAndDate:"2 Feb 2022, 6:25pm ",
+      },
+      {
+          adPhot:"https://www.saleme.lk/saleme/images/uploads/86932/saleme_61f3582b2b48c.jpg",
+          adName:"KIA Spectra 2001",
           location:"Kegalle",
           price:"3,450,000",
           description:"good running...",
@@ -74,6 +100,14 @@ function StoreComp({className=""}) {
 
                   <Routes>
                       <Route path="/Home" element={<StoreHomePage store={store} />} />
+                </Routes>
+
+                  <Routes>
+                      <Route path="/AllAds" element={<StoreAllAdsPage store={store} />} />
+                </Routes>
+
+                  <Routes>
+                      <Route path="/Services" element={<ServicesPage store={store} />} />
                 </Routes>
 
                 <StoreFooter storeData={store}></StoreFooter>
