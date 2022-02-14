@@ -1,17 +1,18 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Link from '../../../Components/UI/Link/Link';
 
-const links=["Home","All Ads","Services","Contact"];
+const links=["Home","AllAds","Services","Contact","privacyPolicy","AboutUs"];
 
 
 
 function StoreNav({className=""}) {
   return (
     <DIV className={`${className}`}>
-       <div className="display-flex justify-content-center align-items-center">
+       <nav className="display-flex justify-content-center align-items-center">
            {
                links.map(linkitem=>(
-                   <Link  to="" key={Math.random()} className="ms-3  font-1-7  ps-2 pe-2 text-color-grey-ori">{linkitem}</Link>
+                   <NavLink  to={`/store/${linkitem}`} key={Math.random()}   activeClassName="active"   className="ms-3  a font-1-7  ps-2 pe-2 text-color-grey-ori">{linkitem}</NavLink>
 
                ))
            }
@@ -20,7 +21,7 @@ function StoreNav({className=""}) {
                  <img className=' ms-3 w-50  ' src={"https://www.saleme.lk/premium_assets/frontend/images/saleme-logo.png"} alt="" />
              </Link>
 
-       </div>
+       </nav>
     </DIV>
   );
 }
@@ -29,6 +30,11 @@ function StoreNav({className=""}) {
 const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only StoreNav */
+
+    .active{
+      border-bottom: 3px solid var(--color-secondary);
+      transition:all .3s; 
+    }
     
  
 `;

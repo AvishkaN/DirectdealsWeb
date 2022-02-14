@@ -44,6 +44,7 @@ html{
 
     --color-grey: #b7b8b9;   
     --color-grey-2: #eee;   
+    --color-ccc: #ccc;   
 
     --color-green: #149777;   
     
@@ -424,6 +425,9 @@ h1{
 
 .text-color-link{  
     color: var(--color-link);
+}
+.text-color-ccc{  
+    color: var(--color-ccc);
 }
 
 

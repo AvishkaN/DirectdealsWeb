@@ -14,7 +14,7 @@ function StoreHomePage({className="",store}) {
 
 
                   {/* Shop Description */}
-               <div className="shop-description mt-5 pb-4">
+               <div className="shop-description mt-6 pb-4">
                    <div className="row justify-content-around ">
 
 
@@ -40,7 +40,7 @@ function StoreHomePage({className="",store}) {
                </div>
 
                {/* Recent Ads */}
-               <div className="mt-6 pb-4">
+               <div className="mt-5 pb-4">
                     <h2 className='fw-bold text-center  font-2-3'> Recent Ads  </h2>
 
                     <RecentAds className=' mt-5 ' store={store}></RecentAds>

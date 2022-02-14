@@ -49,7 +49,7 @@ const store={
 
     ],
 
-    Adress:"Isuru Auto Land, 687,meepitiya, kegalle, Sri Lanka",
+    Adress:"687,meepitiya, kegalle, Sri Lanka",
     EMail:"spspriyantha@gmail.com",
     Telephone:"94352221230 / ",
     Mobile:"94722814383 /  94713773683 / ",
@@ -70,10 +70,10 @@ function StoreComp({className=""}) {
             <StoreNav className='background-aqu' ></StoreNav>
 
 
-              <div className="mt-4">
+              <div className="mt-5">
 
                   <Routes>
-                      <Route path="/home" element={<StoreHomePage store={store} />} />
+                      <Route path="/Home" element={<StoreHomePage store={store} />} />
                 </Routes>
 
                 <StoreFooter storeData={store}></StoreFooter>

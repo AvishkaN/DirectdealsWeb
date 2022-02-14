@@ -2,19 +2,19 @@ import styled from 'styled-components';
 
 import HomePage from './Pages/Home/HomePage';
 import StorePage from './Pages/StorePage/StorePage';
-import PropertPage from './Pages/ProperyPage/PropertPage';
-import ProductItem from './Pages/ProductItem/ProductItem';
-import ClassifiedPage from './Pages/Classified/ClassifiedPage';
-import MyAccountPage from './Pages/MyAccount/MyAccountPage';
+// import PropertPage from './Pages/ProperyPage/PropertPage';
+// import ProductItem from './Pages/ProductItem/ProductItem';
+// import ClassifiedPage from './Pages/Classified/ClassifiedPage';
+// import MyAccountPage from './Pages/MyAccount/MyAccountPage';
 
 
 import NavBar from './Components/Nav/NavBar';
-import Login from './Pages/Login/Login';
-import MobielNavBar from './Components/Nav/MobileNavBar/MobielNavBar';
+// import Login from './Pages/Login/Login';
+// import MobielNavBar from './Components/Nav/MobileNavBar/MobielNavBar';
 import Footer from './Components/Footer/Footer';
 
 
-import RegisterPage from './Pages/Register/Register';
+// import RegisterPage from './Pages/Register/Register';
 
 import OverlayFull from './Components/Overlay/OverlayFull';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
