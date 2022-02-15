@@ -2,7 +2,7 @@ import {createSlice} from '@reduxjs/toolkit';
 
 export const clickSlice=createSlice({
     name:"clicks",
-    initialState:{  
+    initialState:{   
         showOverlay:false, 
         showMobileNav:false, 
 

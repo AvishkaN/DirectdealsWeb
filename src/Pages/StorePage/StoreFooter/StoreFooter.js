@@ -12,7 +12,7 @@ function StoreFooter({className="",storeData}) {
                <div className="row h-100">
                    {/* Details */}
                    <div className="col-6">
-                            <FooterContactDetailsItem  className=''  label={'Address'}  detail={storeData.Adress} />
+                            <FooterContactDetailsItem   className='mt-4' label={'Address'} PlaceName={storeData.storeName}    detail={storeData.Adress} />
                             <FooterContactDetailsItem   className='mt-4' label={'E-mail'}  detail={storeData.EMail} />
                             <FooterContactDetailsItem   className='mt-4' label={'Telephone'}  detail={storeData.Telephone} />
                             <FooterContactDetailsItem   className='mt-4' label={'Mobile'}  detail={storeData.Mobile} />

@@ -2,11 +2,16 @@ import styled from 'styled-components';
 
 
 
-function ContactDeatilsItem({className="",label,detail}) {
+function ContactDeatilsItem({className="",label,detail,PlaceName=null}) {
   return (
     <DIV className={`${className} display-flex align-items-center`}>
           <div className="font-1-5 w-25 fw-bold">{label}</div>
-          <div className=" ms-2 w-75">{detail}</div>
+
+          <div className="ms-2 w-75 ">
+               {PlaceName && <div className="">{PlaceName}</div>}
+                <div className=" ">{detail}</div>
+
+          </div>
     </DIV>
   );
 }

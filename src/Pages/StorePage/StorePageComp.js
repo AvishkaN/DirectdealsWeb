@@ -4,6 +4,11 @@ import StoreFooter from './StoreFooter/StoreFooter';
 import StoreHomePage from './StorePages/StoreHome/StoreHomePage';
 import StoreAllAdsPage from './StorePages/StoreAllAds/StoreAllAdsPage';
 import ServicesPage from './StorePages/ServicesPage/ServicesPage';
+import ContactUsPage from './StorePages/ContactUsPage/ContactUsPage';
+
+
+import MenuIcon from '@mui/icons-material/Menu';
+
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
@@ -75,10 +80,15 @@ const store={
 
     ],
 
+    Open:"06.00 am",
+    Close:"09.00 pm",
+
+
     Adress:"687,meepitiya, kegalle, Sri Lanka",
     EMail:"spspriyantha@gmail.com",
-    Telephone:"94352221230 / ",
-    Mobile:"94722814383 /  94713773683 / ",
+    WhatsAppNumber:"94352221230  ",
+    Mobile:"94722814383 /  94713773683  ",
+    Facebook:"www.facebook.com/directgn  ",
 
   };
 
@@ -87,15 +97,19 @@ const store={
 function StoreComp({className=""}) {
   return (
     <DIV className={`${className}`}>
-         <div className="StoreComp-wrapper">
+      
 
-                <h1 className="store-name text-center background-aqu pt-3 pb-4">
-                        {store.storeName}
-                </h1>
+         <div className="StoreComp-wrapper">
+         
+
+                <div className="store-name  background-aqu display-flex align-items-center justify-content-between  pt-3 pb-4 ">
+                      <MenuIcon className='font-3-5 ms-4'></MenuIcon>
+                       <h1 className='text-center ms-auto me-auto  ' >{store.storeName}</h1> 
+                </div>
 
             <StoreNav className='background-aqu' ></StoreNav>
 
-
+                {/* Pages */}
               <div className="mt-5">
 
                   <Routes>
@@ -108,6 +122,9 @@ function StoreComp({className=""}) {
 
                   <Routes>
                       <Route path="/Services" element={<ServicesPage store={store} />} />
+                </Routes>
+                  <Routes>
+                      <Route path="/Contact" element={<ContactUsPage storeData={store} />} />
                 </Routes>
 
                 <StoreFooter storeData={store}></StoreFooter>
@@ -136,6 +153,8 @@ const DIV=styled.div`
         .store-name{
           height:11vh; 
         }
+
+
 
     }
 `;
