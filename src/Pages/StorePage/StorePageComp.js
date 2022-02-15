@@ -11,6 +11,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { ShowMobileNavFN } from '../../Redux/slices/clickSlice';
+import { useDispatch } from 'react-redux';
 
 const store={
     storeName:"Isuru Auto Land",
@@ -95,15 +97,29 @@ const store={
 
 
 function StoreComp({className=""}) {
+
+  const dispacth=useDispatch();
+
+
+  const handleClick=(e)=>{
+    console.log(e.target.closest('#store-page-menu'));
+    const menuIcon=e.target.closest('#store-page-menu');
+
+    if(menuIcon){
+        dispacth(ShowMobileNavFN());
+    }
+  };
+
+
   return (
-    <DIV className={`${className}`}>
+    <DIV className={`${className}`} onClick={handleClick}>
       
 
          <div className="StoreComp-wrapper">
          
 
                 <div className="store-name  background-aqu display-flex align-items-center justify-content-between  pt-3 pb-4 ">
-                      <MenuIcon className='font-3-5 ms-4'></MenuIcon>
+                      <MenuIcon id="store-page-menu" className='font-3-5 ms-4'></MenuIcon>
                        <h1 className='text-center ms-auto me-auto  ' >{store.storeName}</h1> 
                 </div>
 

@@ -22,6 +22,7 @@ import { useSelector } from 'react-redux';
 import { selectClicks, ShowMobileNavFN } from './Redux/slices/clickSlice';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import MobileNav from './Components/Overlay/MobileNav/MobileNav';
 
 
 
@@ -153,8 +154,9 @@ function App() {
                         </Routes>
 
                 </div>
+                <MobileNav showNav={clicks.showMobileNav} className={`w-35 mobile-navv  p-3 `}></MobileNav>
+                { clicks.showOverlay &&  <OverlayFull></OverlayFull>}
 
-                       { clicks.showOverlay &&  <OverlayFull></OverlayFull>}
           </BrowserRouter>
 
 
@@ -179,6 +181,33 @@ const DIV=styled.div`
         width: var(--nav-footer-width);
         margin: 0 auto; 
       }
+
+      .mobile-navv{
+          transition: all .2s;
+
+          position: fixed;
+          top: 0;
+          left: 0;
+
+          @media(max-width:600px){     
+                      width: 48% !important;
+          }
+          @media(max-width:437px){     
+                      width: 60% !important;
+          }
+          @media(max-width:345px){     
+                      width: 70% !important;
+          }
+
+
+        }
+
+
+
+
+
+
+
     }
 
 

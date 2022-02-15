@@ -17,12 +17,13 @@ function Overlay({className=""}) {
 
 
   const handleClick=(e)=>{
+
+    console.log(e.target);
     
-    const IsSelectOverlay=(e.target.classList[0]=='Overlay-wrapper');
+    const IsSelectOverlay=(e.target.querySelector('.Overlay-wrapper').classList[0]=='Overlay-wrapper');
 
     const closeBtn=e.target.closest('#closeIcon');
 
-    console.log(closeBtn);
     
 
     if(IsSelectOverlay){ // hide mobile nav and overlay
@@ -39,9 +40,8 @@ function Overlay({className=""}) {
   return (
     <DIV className={`${className}`} onClick={handleClick}>
          <div className="Overlay-wrapper cursor-p">
-           {console.log(clicks)}
              {/* {clicks.showMobileNav &&  <MobileNav  className=' w-35 mobile-navv p-3'></MobileNav>} */}
-             <MobileNav showNav={clicks.showMobileNav} className={`w-35 mobile-navv p-3 ${clicks.showMobileNav?'mobile-nav-transalate-normal':''}`}></MobileNav>
+             {/* <MobileNav showNav={clicks.showMobileNav} className={`w-35 mobile-navv p-3 ${clicks.showMobileNav?'mobile-nav-transalate-normal':''}`}></MobileNav> */}
 
              {/* {clicks.showLocationPopUp &&    <LocationPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></LocationPopUp>}
              {clicks.showCategoryPopUp &&    <CategoryPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></CategoryPopUp>}
@@ -67,7 +67,7 @@ const DIV=styled.div`
     position: absolute;
     top: 0;
     left: 0; 
-    z-index:1000; 
+    z-index:5; 
     /* margin-top: var(--margin-top-fix-nav);  */  /*only Overlay */
     
     .Overlay-wrapper{
@@ -76,8 +76,6 @@ const DIV=styled.div`
         margin-right: auto;  */
 
         .mobile-navv{
-          /* margin-left: auto;   */
-          /* transform: translateX(-107%); */
           transition: all .2s;
 
           @media(max-width:600px){     
