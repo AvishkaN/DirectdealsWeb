@@ -9,6 +9,7 @@ import StorePage from './Pages/StorePage/StorePage';
 
 
 import NavBar from './Components/Nav/NavBar';
+import StorePageMobileNav from './Components/Overlay/StoreMobilePageNav/StorePageMobileNav'
 // import Login from './Pages/Login/Login';
 // import MobielNavBar from './Components/Nav/MobileNavBar/MobielNavBar';
 import Footer from './Components/Footer/Footer';
@@ -82,6 +83,7 @@ function App() {
                                     <Route path="/store/*" element={ 
                                        <>
                                           <StorePage></StorePage>
+                                          <StorePageMobileNav  ShowstoreMobileNav={clicks.storeMobileNav} ></StorePageMobileNav>
 
                                       </>
                                     } />
@@ -154,7 +156,7 @@ function App() {
                         </Routes>
 
                 </div>
-                <MobileNav showNav={clicks.showMobileNav} className={`w-35 mobile-navv  p-3 `}></MobileNav>
+                <MobileNav showNav={clicks.showMobileNav} className={`w-35  p-3 `}></MobileNav>
                 { clicks.showOverlay &&  <OverlayFull></OverlayFull>}
 
           </BrowserRouter>

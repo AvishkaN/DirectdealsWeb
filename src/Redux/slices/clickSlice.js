@@ -6,6 +6,9 @@ export const clickSlice=createSlice({
         showOverlay:false, 
         showMobileNav:false, 
 
+
+        storeMobileNav:null, 
+
         showLocationPopUp:false, 
         showCategoryPopUp:false, 
 
@@ -16,6 +19,13 @@ export const clickSlice=createSlice({
 
             state.showOverlay=true;   
             state.showMobileNav=true;   
+        },
+
+        setStoreMobileNav:(state,action)=>{     
+
+            state.showOverlay=true;   
+            state.storeMobileNav=action.payload;   
+
         },
 
 
@@ -55,6 +65,8 @@ export const clickSlice=createSlice({
 
             state.showOverlay=false;  
             state.showMobileNav=false; 
+
+            state.storeMobileNav=null; 
     
             state.showLocationPopUp=false; 
             state.showCategoryPopUp=false; 
@@ -75,6 +87,8 @@ export const clickSlice=createSlice({
 export const {
                             ShowMobileNavFN,
                             HideMobileNavFN,
+
+                            setStoreMobileNav,
 
                             SetClassifedLocationFN,
                             SetClassifedCategoryFN,

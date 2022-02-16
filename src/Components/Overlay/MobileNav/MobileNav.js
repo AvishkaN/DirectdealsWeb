@@ -24,26 +24,24 @@ const DIV=styled.div`
     transform: ${props => props.showNav? 'translateX(0%)' : 'translateX(-117%)'  };
     transition: .5s  transform;
     
+    transition: all .2s;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    @media(max-width:600px){     
+                width: 48% !important;
+    }
+    @media(max-width:437px){     
+                width: 60% !important;
+    }
+    @media(max-width:345px){     
+                width: 70% !important;
+    }
     
 
-    .mobile-navv{
-          transition: all .2s;
-          position: fixed;
-          top: 0;
-          left: 0;
-
-          @media(max-width:600px){     
-                      width: 48% !important;
-          }
-          @media(max-width:437px){     
-                      width: 60% !important;
-          }
-          @media(max-width:345px){     
-                      width: 70% !important;
-          }
 
 
-        }
 
 
     

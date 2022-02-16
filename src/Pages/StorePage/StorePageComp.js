@@ -11,7 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { ShowMobileNavFN } from '../../Redux/slices/clickSlice';
+import { setStoreMobileNav, ShowMobileNavFN } from '../../Redux/slices/clickSlice';
 import { useDispatch } from 'react-redux';
 
 const store={
@@ -90,23 +90,36 @@ const store={
     EMail:"spspriyantha@gmail.com",
     WhatsAppNumber:"94352221230  ",
     Mobile:"94722814383 /  94713773683  ",
-    Facebook:"www.facebook.com/directgn  ",
+    Facebook:{
+      displayLink:"www.facebook.com/directgn",
+      href:"https://www.facebook.com/directgn "
+    },
+    YouTube:{
+      displayLink:"youtube.com/directgn",
+      href:"https://youtube.com/directgn "
+    },
+    Twitter:{
+      displayLink:"twitter.com/adaderanabizsin",
+      href:"https://twitter.com/adaderanabizsin "
+    },
 
   };
 
 
+ 
+
 
 function StoreComp({className=""}) {
 
-  const dispacth=useDispatch();
+  const dispacth=useDispatch(store.storeName);
 
 
   const handleClick=(e)=>{
-    console.log(e.target.closest('#store-page-menu'));
+    console.log(e.target);
     const menuIcon=e.target.closest('#store-page-menu');
 
     if(menuIcon){
-        dispacth(ShowMobileNavFN());
+        dispacth(setStoreMobileNav({storeName:store.storeName}));
     }
   };
 
@@ -119,11 +132,11 @@ function StoreComp({className=""}) {
          
 
                 <div className="store-name  background-aqu display-flex align-items-center justify-content-between  pt-3 pb-4 ">
-                      <MenuIcon id="store-page-menu" className='font-3-5 ms-4'></MenuIcon>
+                      <MenuIcon id="store-page-menu" className='font-3-5 ms-4 cursor-p ' ></MenuIcon>
                        <h1 className='text-center ms-auto me-auto  ' >{store.storeName}</h1> 
                 </div>
 
-            <StoreNav className='background-aqu' ></StoreNav>
+            <StoreNav className='background-aqu'  ></StoreNav>
 
                 {/* Pages */}
               <div className="mt-5">

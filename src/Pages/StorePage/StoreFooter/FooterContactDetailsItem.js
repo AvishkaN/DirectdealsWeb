@@ -2,16 +2,24 @@ import styled from 'styled-components';
 
 
 
-function ContactDeatilsItem({className="",label,detail,PlaceName=null}) {
+function ContactDeatilsItem({className="",label,detail,PlaceName=null,socialMedia=false}) {
   return (
     <DIV className={`${className} display-flex align-items-center`}>
-          <div className="font-1-5 w-25 fw-bold">{label}</div>
+          <div className="font-1-6 w-25 fw-bold">{label}</div>
 
-          <div className="ms-2 w-75 ">
-               {PlaceName && <div className="">{PlaceName}</div>}
-                <div className=" ">{detail}</div>
+         {!socialMedia &&  <div className="ms-2 w-75 ">
+               {PlaceName && <div className="font-1-6">{PlaceName}</div>}
+               <div className="font-1-6 ">{detail}</div>
 
-          </div>
+          </div>}
+
+
+         {socialMedia && <div className="ms-2 w-75 ">
+                <a className="font-1-6  cursor-p" href={detail.href}>{detail.displayLink}</a>
+
+          </div>}
+
+
     </DIV>
   );
 }

@@ -9,7 +9,7 @@ const links=["Home","AllAds","Services","Contact","privacyPolicy","AboutUs"];
 function StoreNav({className=""}) {
   return (
     <DIV className={`${className}`}>
-       <nav className="display-flex justify-content-center align-items-center">
+       <nav className="display-flex justify-content-center align-items-center    ">
            {
                links.map(linkitem=>(
                    <NavLink  to={`/store/${linkitem}`} key={Math.random()}   activeClassName="active"   className="ms-3  a font-1-7  ps-2 pe-2 text-color-grey-ori">{linkitem}</NavLink>

@@ -9,7 +9,7 @@ function ContactUsPage({className="",storeData}) {
          <div className="ContactUsPage-wrapper">
              <div className="row">
 
-                <div className="col-8 box-shadow-normal mt-2 mb-2 ms-auto me-auto  p-3">
+                <div className="col-8 box-shadow-normal mt-2 mb-4 ms-auto me-auto  p-3">
 
                     <h2 className='fw-bold mt-2'>Contact Infomation</h2>
 
@@ -19,7 +19,9 @@ function ContactUsPage({className="",storeData}) {
                     <FooterContactDetailsItem   className='mt-4' label={'WhatsApp Number'}  detail={storeData.WhatsAppNumber} />
                     <FooterContactDetailsItem   className='mt-4' label={'Open Time'}  detail={storeData.Open} />
                     <FooterContactDetailsItem   className='mt-4' label={'Close Time'}  detail={storeData.Close} />
-                    <FooterContactDetailsItem   className='mt-4' label={'Facebook'}  detail={storeData.Facebook} />
+                    <FooterContactDetailsItem   className='mt-4' label={'Facebook'}  detail={storeData.Facebook}  socialMedia={true} />
+                    <FooterContactDetailsItem   className='mt-4' label={'YouTube'}  detail={storeData.YouTube}  socialMedia={true} />
+                    <FooterContactDetailsItem   className='mt-4' label={'Twitter'}  detail={storeData.Twitter}  socialMedia={true} />
                
                
                
