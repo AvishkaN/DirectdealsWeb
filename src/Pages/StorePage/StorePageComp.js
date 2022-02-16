@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import StoreNav from './StorePageNav/StoreNav';
-import StoreFooter from './StoreFooter/StoreFooter';
 import StoreHomePage from './StorePages/StoreHome/StoreHomePage';
 import StoreAllAdsPage from './StorePages/StoreAllAds/StoreAllAdsPage';
 import ServicesPage from './StorePages/ServicesPage/ServicesPage';
 import ContactUsPage from './StorePages/ContactUsPage/ContactUsPage';
+import StoreFooter from './StoreFooter/StoreFooter2';
 
 
 import MenuIcon from '@mui/icons-material/Menu';

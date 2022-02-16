@@ -89,14 +89,14 @@ function App() {
 
                                     <Route path="/store/*" element={ 
                                        <>
-                                          <StorePage></StorePage>
-
-
                                         {/* TEMPORY  WIDTH*/}
 
                                         <div className="">
                                           window width  {document.documentElement.clientWidth}
                                         </div>
+                                          <StorePage></StorePage>
+
+
 
 
                                           <StorePageMobileNav  ShowstoreMobileNav={clicks.storeMobileNav} ></StorePageMobileNav>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FooterContactDetailsItem from './../../StoreFooter/FooterContactDetailsItem';
+import FooterContactDetailsItem from '../../StoreFooter/FooterContactDetailsItem';
 
 
 

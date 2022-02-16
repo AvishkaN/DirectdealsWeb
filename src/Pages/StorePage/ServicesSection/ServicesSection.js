@@ -10,7 +10,6 @@ const Img = 'https://www.saleme.lk/saleme/images/prime-members/8/saleme_service_
 function ServicesSection({className=""}) {
   return (
     <DIV className={`${className} `}>
-      <Link to="/store/Services">
             <div className="ServicesSection-wrapper background-aqu ">
 
               <div className="services-section-row row justify-content-center">
@@ -35,7 +34,6 @@ function ServicesSection({className=""}) {
 
 
             </div>
-      </Link>
     </DIV>
   );
 }
