@@ -9,17 +9,16 @@ function StoreFooter({className="",storeData}) {
   return (
     <DIV className={`${className}`}>
          <div className="StoreFooter-wrapper  background-aqu text-color-white pt-5 pb-2">
-               <div className="row h-100">
+               <div className="row h-100 gy-5">
                    {/* Details */}
-                   <div className="col-6">
-                            <FooterContactDetailsItem   className='mt-4' label={'Address'} PlaceName={storeData.storeName}    detail={storeData.Adress} />
-                            <FooterContactDetailsItem   className='mt-4' label={'E-mail'}  detail={storeData.EMail} />
-                            <FooterContactDetailsItem   className='mt-4' label={'Telephone'}  detail={storeData.Telephone} />
-                            <FooterContactDetailsItem   className='mt-4' label={'Mobile'}  detail={storeData.Mobile} />
+                   <div className="col-lg-6">
+                            <FooterContactDetailsItem   className='mt-4  footer-detail-item' label={'Address'} PlaceName={storeData.storeName}    detail={storeData.Adress} />
+                            <FooterContactDetailsItem   className='mt-4  footer-detail-item' label={'E-mail'}  detail={storeData.EMail} />
+                            <FooterContactDetailsItem   className='mt-4  footer-detail-item' label={'Mobile'}  detail={storeData.Mobile} />
                    </div>
 
                    {/*Map  */}
-                   <div className="col-6 overflow-hidden">
+                   <div className="col-lg-6 overflow-hidden">
                             <Map className='h-100 border-radius-5'></Map>
                    </div>
 
@@ -57,6 +56,9 @@ const DIV=styled.div`
 
 
     }
+
+
+
 `;
 
 export default StoreFooter;

@@ -13,8 +13,8 @@ function ServicesSection({className=""}) {
       <Link to="/store/Services">
             <div className="ServicesSection-wrapper background-aqu ">
 
-              <div className="row justify-content-center">
-                    <div className="col-6 text-center box-shadow-normal ms-3 me-3 mt-2 mb-3 pt-5 pb-5 ps-3 pe-3">
+              <div className="services-section-row row justify-content-center">
+                    <div className="Ad-item col-6 text-center box-shadow-normal ms-3 me-3 mt-2 mb-3 pt-5 pb-5 ps-3 pe-3">
                       
                             <img className='border-radius-circle' src={Img} alt="" />
 
@@ -49,6 +49,14 @@ const DIV=styled.div`
       width: var(--storeWidth);
         margin-left: auto;
         margin-right: auto; 
+        
+
+        .Ad-item{ 
+              @media(max-width:700px){     
+                width: 95%;
+            }
+
+        }
 
     }
 `;

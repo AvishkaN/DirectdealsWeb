@@ -15,11 +15,11 @@ function StoreHomePage({className="",store}) {
 
                   {/* Shop Description */}
                <div className="shop-description mt-6 pb-4">
-                   <div className="row justify-content-around ">
+                   <div className="shop-description-row row justify-content-around ">
 
 
                                   {/* Description Text  */}
-                                <div className="col-9 ">  
+                                <div className="col-9  description-text">  
                                       <div className="text text-color-grey-ori  font-1-8 ">
                                          <ShowMoreTxt className='font-1-8 text-center' showMoreTextClassName={'text-color-primary  text-color-link   '}  paragraph={store.shopDescription} words={90}/>
 
@@ -27,8 +27,8 @@ function StoreHomePage({className="",store}) {
                                 </div>
 
                                   {/* Box Img  */}
-                                <div className="col-2">
-                                         <div className="box-img w-100">
+                                <div className="col-2 box-img">
+                                         <div className=" w-100">
                                                   <img src={store.boxImg} alt="" className='w-100' />
                                         </div>
 
@@ -40,7 +40,7 @@ function StoreHomePage({className="",store}) {
                </div>
 
                {/* Recent Ads */}
-               <div className="mt-5 pb-4">
+               <div className="mt-5 pb-4 recent-ads ">
                     <h2 className='fw-bold text-center  font-2-3'> Recent Ads  </h2>
 
                     <RecentAds className=' mt-5 ' store={store} sliceNum={-3}></RecentAds>
@@ -87,6 +87,29 @@ const DIV=styled.div`
                 margin-left: auto;
                 margin-right: auto; 
 
+
+                .shop-description-row{
+
+                  .description-text{
+
+                    @media(max-width:1171px){     
+                       width: 99%;
+                    }
+                  }
+                  
+                  .box-img{
+                    @media(max-width:1171px){     
+                        display: none;
+                    }
+
+                  }
+                }
+
+        }
+
+
+        .recent-ads{
+          /* background:red;  */
         }
 
     }

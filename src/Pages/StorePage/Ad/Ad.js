@@ -16,14 +16,16 @@ function Ad({className="",adDetails}) {
 
                     <div className="ad-details ps-4 pe-4 pb-4">
 
-                                    <div className="font-2 mt-3">{adDetails.adName}</div>
+                                    <div className="font-2 mt-3  ad-name  ">{adDetails.adName}</div>
 
+                                            {/* Location */}
                                     <div className="text-color-grey-ori mt-2">
                                         <Location className=' font-2 '></Location>
                                         {adDetails.location+' >'}  {adDetails.location}
                                     </div>
 
-                                    <div className="font-1-7 fw-bold mt-2">
+                                            {/* Price  Section*/}
+                                    <div className="  font-1-7 fw-bold mt-2  price-section">
                                             {adDetails.price}
                                     </div>
 
@@ -54,6 +56,21 @@ const DIV=styled.div`
     /* margin-top: var(--margin-top-fix-nav);  */  /*only Ad */
     
     .Ad-wrapper{
+
+        .ad-name{
+                    @media(max-width:1000px){     
+                        font-size: 1.5rem  !important;  
+                }
+            }
+            
+            .price-section{
+
+                @media(max-width:900px){     
+                    font-size: 1.4rem  !important;  
+            
+                }
+                
+        }
      
 
     }

@@ -33,7 +33,7 @@ const DIV=styled.div`
     z-index: 15;
     
     transform: ${props => props.ShowstoreMobileNav? 'translateX(0%)' : 'translateX(-117%)'  };
-    transition: .3s  transform;
+    transition: .2s  transform;
     
     
 

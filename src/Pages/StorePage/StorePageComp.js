@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { setStoreMobileNav, ShowMobileNavFN } from '../../Redux/slices/clickSlice';
 import { useDispatch } from 'react-redux';
+import DummyTxtPage from '../../Components/Dummy/DummyTxtPage';
 
 const store={
     storeName:"Isuru Auto Land",
@@ -136,7 +137,7 @@ function StoreComp({className=""}) {
                        <h1 className='text-center ms-auto me-auto  ' >{store.storeName}</h1> 
                 </div>
 
-            <StoreNav className='background-aqu'  ></StoreNav>
+            <StoreNav className='background-aqu ' id="store-nav-deskstop"></StoreNav>
 
                 {/* Pages */}
               <div className="mt-5">
@@ -152,8 +153,15 @@ function StoreComp({className=""}) {
                   <Routes>
                       <Route path="/Services" element={<ServicesPage store={store} />} />
                 </Routes>
+
                   <Routes>
                       <Route path="/Contact" element={<ContactUsPage storeData={store} />} />
+                </Routes>
+                  <Routes>
+                      <Route path="/AboutUs" element={<DummyTxtPage  title="About Us"  className='w-85 ms-auto me-auto' />} />
+                </Routes>
+                  <Routes>
+                      <Route path="/privacyPolicy" element={<DummyTxtPage title="Privacy Policy"  className='w-85 ms-auto me-auto' />} />
                 </Routes>
 
                 <StoreFooter storeData={store}></StoreFooter>
@@ -172,6 +180,11 @@ const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only StoreComp */
     --storeWidth:80%;
+    
+    
+    @media(max-width:1273px){     
+      --storeWidth:91%;
+        }
 
     
     .StoreComp-wrapper{
@@ -181,10 +194,33 @@ const DIV=styled.div`
 
         .store-name{
           height:11vh; 
+
+          h1{
+            
+            @media(max-width:600px){     
+                  font-size: 2.3rem !important;
+              }
+          }
+
+
+          @media(max-width:600px){     
+                box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1);
+            }
+
+
+
+
         }
 
 
 
+    }
+
+
+    #store-nav-deskstop{
+      @media(max-width:800px){     
+                      display: none;
+        }
     }
 `;
 

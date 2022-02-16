@@ -9,7 +9,7 @@ function RecentAds({className="",store,sliceNum=-1}) {
          <div className="RecentAds-wrapper">
 
 
-             <div className="row justify-content-between gy-5">
+             <div className="row justify-content-between gy-5"  id="all-ads-container">
                 {
                     [...store.allAds.slice(sliceNum)].map(ad=>(
                         <div key={Math.random()} className="ad-col col-3 p-0 ms-3 me-3 mt-4 mb-3">
@@ -34,9 +34,30 @@ const DIV=styled.div`
         margin-left: auto;
         margin-right: auto; 
 
-        .ad-col{
-            box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1);
-            width: 29%;
+        
+        #all-ads-container{
+
+          @media(max-width:448px){     
+            flex-direction: column;
+            align-items: center;
+            }
+
+          .ad-col{
+              box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1);
+              width: 29%;
+
+              @media(max-width:657px){     
+                 width: 45%;
+            }
+              @media(max-width:448px){     
+                width: 71%;
+            }
+              @media(max-width:326px){     
+                width: 84%;
+            }
+
+          }
+
         }
 
     }

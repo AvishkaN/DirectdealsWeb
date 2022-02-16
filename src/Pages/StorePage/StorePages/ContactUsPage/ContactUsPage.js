@@ -9,7 +9,7 @@ function ContactUsPage({className="",storeData}) {
          <div className="ContactUsPage-wrapper">
              <div className="row">
 
-                <div className="col-8 box-shadow-normal mt-2 mb-4 ms-auto me-auto  p-3">
+                <div className="col-8 ContactUsPage-section  box-shadow-normal mt-2 mb-4 ms-auto me-auto  p-3">
 
                     <h2 className='fw-bold mt-2'>Contact Infomation</h2>
 
@@ -47,6 +47,14 @@ const DIV=styled.div`
       width: var(--storeWidth);
         margin-left: auto;
         margin-right: auto; 
+
+    }
+
+    .ContactUsPage-section{
+
+      @media(max-width:756px){     
+        width: 95%;
+        }
 
     }
 `;

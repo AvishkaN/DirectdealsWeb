@@ -6,9 +6,9 @@ const links=["Home","AllAds","Services","Contact","privacyPolicy","AboutUs"];
 
 
 
-function StoreNav({className=""}) {
+function StoreNav({className="",id=""}) {
   return (
-    <DIV className={`${className}`}>
+    <DIV className={`${className}`}  id={id}>
        <nav className="display-flex justify-content-center align-items-center    ">
            {
                links.map(linkitem=>(
@@ -30,6 +30,7 @@ function StoreNav({className=""}) {
 const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only StoreNav */
+ 
 
     .active{
       border-bottom: 3px solid var(--color-secondary);
