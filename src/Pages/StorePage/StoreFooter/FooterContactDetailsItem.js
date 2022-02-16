@@ -30,7 +30,7 @@ const DIV=styled.div`
     /* margin-top: var(--margin-top-fix-nav);  */  /*only ContactDeatilsItem */
     color:#ccc;
 
-      @media(max-width:400px){     
+      @media(max-width:472px){     
              flex-direction:column;
 
              .w-25{

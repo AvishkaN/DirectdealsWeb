@@ -13,15 +13,15 @@ function ContactUsPage({className="",storeData}) {
 
                     <h2 className='fw-bold mt-2'>Contact Infomation</h2>
 
-                    <FooterContactDetailsItem   className='mt-4' label={'Address'} PlaceName={storeData.storeName}    detail={storeData.Adress} />
-                    <FooterContactDetailsItem   className='mt-4' label={'E-mail'}  detail={storeData.EMail} />
-                    <FooterContactDetailsItem   className='mt-4' label={'Mobile'}  detail={storeData.Mobile} />
-                    <FooterContactDetailsItem   className='mt-4' label={'WhatsApp Number'}  detail={storeData.WhatsAppNumber} />
-                    <FooterContactDetailsItem   className='mt-4' label={'Open Time'}  detail={storeData.Open} />
-                    <FooterContactDetailsItem   className='mt-4' label={'Close Time'}  detail={storeData.Close} />
-                    <FooterContactDetailsItem   className='mt-4' label={'Facebook'}  detail={storeData.Facebook}  socialMedia={true} />
-                    <FooterContactDetailsItem   className='mt-4' label={'YouTube'}  detail={storeData.YouTube}  socialMedia={true} />
-                    <FooterContactDetailsItem   className='mt-4' label={'Twitter'}  detail={storeData.Twitter}  socialMedia={true} />
+                    <FooterContactDetailsItem   className='mt-4  footer-contact-detail-item  ' label={'Address'} PlaceName={storeData.storeName}    detail={storeData.Adress} />
+                    <FooterContactDetailsItem   className='mt-4  footer-contact-detail-item  ' label={'E-mail'}  detail={storeData.EMail} />
+                    <FooterContactDetailsItem   className='mt-4  footer-contact-detail-item  ' label={'Mobile'}  detail={storeData.Mobile} />
+                    <FooterContactDetailsItem   className='mt-4  footer-contact-detail-item  ' label={'WhatsApp Number'}  detail={storeData.WhatsAppNumber} />
+                    <FooterContactDetailsItem   className='mt-4  footer-contact-detail-item  ' label={'Open Time'}  detail={storeData.Open} />
+                    <FooterContactDetailsItem   className='mt-4  footer-contact-detail-item  ' label={'Close Time'}  detail={storeData.Close} />
+                    <FooterContactDetailsItem   className='mt-4  footer-contact-detail-item  ' label={'Facebook'}  detail={storeData.Facebook}  socialMedia={true} />
+                    <FooterContactDetailsItem   className='mt-4  footer-contact-detail-item  ' label={'YouTube'}  detail={storeData.YouTube}  socialMedia={true} />
+                    <FooterContactDetailsItem   className='mt-4  footer-contact-detail-item  ' label={'Twitter'}  detail={storeData.Twitter}  socialMedia={true} />
                
                
                
@@ -56,6 +56,11 @@ const DIV=styled.div`
         width: 95%;
         }
 
+    }
+
+
+    .footer-contact-detail-item{
+          color: var(--color-light-grey);
     }
 `;
 
