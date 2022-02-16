@@ -68,12 +68,19 @@ function App() {
           <BrowserRouter>
 
                 <div className="app-content" onClick={handleClick}>
+
                         <Routes>
                                     <Route path="/" element={ 
                                       <>
                                       <NavBar className='position-fixed w-100'></NavBar>
 
                                       <HomePage></HomePage>
+                                      
+                                        {/* TEMPORY  WIDTH*/}
+
+                                        <div className="">
+                                          window width  {document.documentElement.clientWidth}
+                                        </div>
                                       <Footer className='mt-6'></Footer>
 
                                       </>
@@ -83,6 +90,15 @@ function App() {
                                     <Route path="/store/*" element={ 
                                        <>
                                           <StorePage></StorePage>
+
+
+                                        {/* TEMPORY  WIDTH*/}
+
+                                        <div className="">
+                                          window width  {document.documentElement.clientWidth}
+                                        </div>
+
+
                                           <StorePageMobileNav  ShowstoreMobileNav={clicks.storeMobileNav} ></StorePageMobileNav>
 
                                       </>

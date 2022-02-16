@@ -137,11 +137,6 @@ function StoreComp({className=""}) {
                        <h1 className='text-center ms-auto me-auto  ' >{store.storeName}</h1> 
                 </div>
 
-                {/* TEMPORY */}
-
-                <div className="">
-                  window width  {document.documentElement.clientWidth}
-                </div>
 
             <StoreNav className='background-aqu ' id="store-nav-deskstop"></StoreNav>
 

@@ -61,6 +61,8 @@ const DIV=styled.div`
                 &>*{
                     /* background: red;  */
                     margin-top: 1.5rem!important;
+                     font-size: 2rem;
+
                 }
 
                 img{
