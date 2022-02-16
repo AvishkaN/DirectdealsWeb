@@ -194,6 +194,15 @@ const DIV=styled.div`
 
         .store-name{
           height:11vh; 
+          overflow-y: hidden;
+
+          #store-page-menu{
+            display: none;
+                @media(max-width:800px){     
+                  display:flex;
+                }
+
+          }
 
           h1{
             
