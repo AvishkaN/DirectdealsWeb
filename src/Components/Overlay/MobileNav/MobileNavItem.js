@@ -7,7 +7,7 @@ function MobileNavItem({className="",svgIcon,ItemName}) {
     <DIV className={`${className} display-flex align-items-center `}>
 
              {svgIcon}
-             <div className="font-1-3  ms-3">{ItemName}</div>
+             <div className="font-2 ms-3">{ItemName}</div>
                 
     </DIV>
   );

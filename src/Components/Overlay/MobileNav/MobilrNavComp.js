@@ -51,7 +51,7 @@ function MobileNavComp({className=""}) {
     <DIV className={`${className}`}>
          <div className="MobileNavComp-wrapper">
 
-                <div className="logo w-60">
+                <div className="logo w-95">
                             <Logo></Logo>
                 </div>
 
@@ -67,8 +67,8 @@ function MobileNavComp({className=""}) {
 
                 <div className="borttom  pt-5">
                         <div className="language-list display-flex justify-content-space-between">
-                            <Button className="text-color-grey w-50 first-lang">සිංහල</Button>
-                            <Button className="text-color-grey w-50">தமிழ்</Button>
+                            <Button className="text-color-grey w-50 first-lang font-2">සිංහල</Button>
+                            <Button className="text-color-grey w-50 font-2">தமிழ்</Button>
                         </div>
                 </div>
 
