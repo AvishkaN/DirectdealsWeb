@@ -91,15 +91,15 @@ function BrowseAll({className=""}) {
                 
                   <h3 className='fw-bold'>Browse items by category</h3>
 
-                  <div className="row gy-6 mt-4 justify-content-between ">
+                  <div className="browse-item-collection row gy-6 mt-4      ">
                     {
                       browseAllCollectionData.map(collectionData=>(
-                        <div className="col-3 cursor-p browse-item">
+                        <div className="col-3 cursor-p browse-item pb-5">
                                 <div className="row ">
-                                  <div className="col-3">
+                                  <div className="browse-item-col  col-4 col-md-3 ms-auto me-auto">
                                         <img src={collectionData.Img} className="w-100" alt="" />
                                   </div>
-                                  <div className="col-9">
+                                  <div className="col-12 col-md-9 text-center">
                                         <div className="name fw-bold  font-1-5">{collectionData.collectionName} </div>
                                         <div className="amount font-1-3">{collectionData.AdsAmount} </div>
                                   </div>
@@ -125,8 +125,42 @@ const DIV=styled.div`
         margin-left: auto;
         margin-right: auto; 
 
+
+        .browse-item-collection{
+
+          @media(max-width:958px){     
+            justify-content: space-between;
+         }
+
+          @media(max-width:768px){       
+            flex-wrap: nowrap; 
+            overflow: auto;
+         }
+
+        }
+
+
+
+
         .browse-item{
-           width: 23%;  
+           width:  24%;  
+           
+           @media(max-width:958px){     
+             width:  27%;  
+          }
+           @media(max-width:464px){     
+             width:  29%;  
+          }
+           @media(max-width:400px){     
+             width:  31%;  
+          }
+          
+          .browse-item-col{
+                @media(max-width:471px){     
+                  width:  50%;  
+              }
+
+          }
         }
 
     }
