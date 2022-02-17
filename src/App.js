@@ -13,6 +13,7 @@ import StorePageMobileNav from './Components/Overlay/StoreMobilePageNav/StorePag
 // import Login from './Pages/Login/Login';
 // import MobielNavBar from './Components/Nav/MobileNavBar/MobielNavBar';
 import Footer from './Components/Footer/Footer';
+import Test from './Components/Test/Test';
 
 
 // import RegisterPage from './Pages/Register/Register';
@@ -24,6 +25,7 @@ import { selectClicks, ShowMobileNavFN } from './Redux/slices/clickSlice';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import MobileNav from './Components/Overlay/MobileNav/MobileNav';
+import BottomMobile from './Components/BottomMobile/BottomMobile';
 
 
 
@@ -81,6 +83,9 @@ function App() {
                                         <div className="">
                                           window width  {document.documentElement.clientWidth}
                                         </div>
+                                        <BottomMobile></BottomMobile>
+
+                                      {/* <Test></Test> */}
                                       <Footer className='mt-6'></Footer>
 
                                       </>
@@ -100,6 +105,7 @@ function App() {
 
 
                                           <StorePageMobileNav  ShowstoreMobileNav={clicks.storeMobileNav} ></StorePageMobileNav>
+                                          <BottomMobile></BottomMobile>
 
                                       </>
                                     } />
@@ -196,30 +202,11 @@ const DIV=styled.div`
       position: relative; 
       
       .app-content{
+
         width: var(--nav-footer-width);
+        
         margin: 0 auto; 
       }
-
-      .mobile-navv{
-          transition: all .2s;
-
-          position: fixed;
-          top: 0;
-          left: 0;
-
-          @media(max-width:600px){     
-                      width: 48% !important;
-          }
-          @media(max-width:437px){     
-                      width: 60% !important;
-          }
-          @media(max-width:345px){     
-                      width: 70% !important;
-          }
-
-
-        }
-
 
 
 

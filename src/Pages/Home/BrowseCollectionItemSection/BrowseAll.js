@@ -91,7 +91,7 @@ function BrowseAll({className=""}) {
                 
                   <h3 className='fw-bold'>Browse items by category</h3>
 
-                  <div className="row gy-6 mt-4 ">
+                  <div className="row gy-6 mt-4 justify-content-between ">
                     {
                       browseAllCollectionData.map(collectionData=>(
                         <div className="col-3 cursor-p browse-item">
