@@ -18,9 +18,15 @@ function Overlay({className=""}) {
 
   const handleClick=(e)=>{
 
-    console.log(e.target);
+    console.log((e.target.classList[0]=='Overlay-wrapper'));
+
     
-    const IsSelectOverlay=(e.target.querySelector('.Overlay-wrapper').classList[0]=='Overlay-wrapper');
+    let IsSelectOverlay=(e.target.querySelector('.Overlay-wrapper')?.classList[0]=='Overlay-wrapper');
+
+    if(!IsSelectOverlay){
+      IsSelectOverlay=(e.target.classList[0]=='Overlay-wrapper');
+    }
+
 
     const closeBtn=e.target.closest('#closeIcon');
 
@@ -43,9 +49,9 @@ function Overlay({className=""}) {
              {/* {clicks.showMobileNav &&  <MobileNav  className=' w-35 mobile-navv p-3'></MobileNav>} */}
              {/* <MobileNav showNav={clicks.showMobileNav} className={`w-35 mobile-navv p-3 ${clicks.showMobileNav?'mobile-nav-transalate-normal':''}`}></MobileNav> */}
 
-             {/* {clicks.showLocationPopUp &&    <LocationPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></LocationPopUp>}
+             {clicks.showLocationPopUp &&    <LocationPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></LocationPopUp>}
              {clicks.showCategoryPopUp &&    <CategoryPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></CategoryPopUp>}
-             {clicks.showPostAd &&    <PostAdPopUp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></PostAdPopUp>} */}
+             {clicks.showPostAd &&    <PostAdPopUp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></PostAdPopUp>}
      
      
      
@@ -74,6 +80,7 @@ const DIV=styled.div`
       /* width: var(--Overlay-content-width);
         margin-left: auto;
         margin-right: auto;  */
+        /* margin-top: 5rem; */
 
         .mobile-navv{
           transition: all .2s;

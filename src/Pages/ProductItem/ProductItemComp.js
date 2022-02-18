@@ -221,7 +221,7 @@ function ProductItemComp({className=""}) {
             <div className="product-item-details">
 
                     {/* Warning Text */}
-                    <WarningText className=' m-2 mt-5'></WarningText>  
+                    <WarningText className='  mt-5'></WarningText>  
 
                     {/* Summary Icons Section */}
 

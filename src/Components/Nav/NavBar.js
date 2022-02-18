@@ -34,7 +34,7 @@ function NavBar({className=""}) {
 
 const NAV=styled.nav`
 
-    z-index:10000;
+    /* z-index:10000; */
 
 .Nav-wrapper{
       width: var(--page-content-width);

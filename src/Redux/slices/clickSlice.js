@@ -12,6 +12,9 @@ export const clickSlice=createSlice({
         showLocationPopUp:false, 
         showCategoryPopUp:false, 
 
+        classifiedPageSelectedLocation:"Location",
+        classifiedPageSelectedCategory:"Category",
+
 
     },
     reducers:{

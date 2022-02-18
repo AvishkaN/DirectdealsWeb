@@ -11,7 +11,7 @@ function LinkComp(props) {
     <div className="PopUp-wrapper ">
 
                 <div className="close-btn text-right">
-                        <CloseIcon className='font-2-6 me-5 mt-4 '  id="closeIcon"></CloseIcon>
+                        <CloseIcon className='font-3-1 me-5 mt-4 '  id="closeIcon"></CloseIcon>
                 </div>
 
                 <div className="pop-up-content p-4 pt-0">

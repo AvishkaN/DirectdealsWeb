@@ -4,6 +4,7 @@ import HomePage from './Pages/Home/HomePage';
 import StorePage from './Pages/StorePage/StorePage';
 // import PropertPage from './Pages/ProperyPage/PropertPage';
 import ProductItem from './Pages/ProductItem/ProductItem';
+import ClassifiedPage from './Pages/Classified/ClassifiedPage';
 // import ClassifiedPage from './Pages/Classified/ClassifiedPage';
 // import MyAccountPage from './Pages/MyAccount/MyAccountPage';
 
@@ -127,6 +128,29 @@ function App() {
                                           <StorePage></StorePage>
                                           <StorePageMobileNav  ShowstoreMobileNav={clicks.storeMobileNav} ></StorePageMobileNav>
                                           <BottomMobile></BottomMobile>
+
+                                      </>
+                                    } />
+
+
+                                    <Route path="/allAds" element={ 
+                                       <>
+                                            <NavBar className='position-fixed w-100'></NavBar>
+
+                                            <ClassifiedPage></ClassifiedPage>
+                                            {/* <Test></Test> */}
+
+                                              {/* TEMPORY  WIDTH*/}
+
+                                              <div className="">
+                                                window width  {document.documentElement.clientWidth}
+                                              </div>
+                                              {/* <BottomMobile></BottomMobile> */}
+
+
+                                            <BottomMobile></BottomMobile>
+                                            <Footer className='mt-6'></Footer>
+
 
                                       </>
                                     } />

@@ -17,17 +17,11 @@ function PopUpShowList({className="",locationList,secondList=['Maharagama','Pili
                                  locationList.map(categorieItem=>(
                                     <div className='categorie-item display-flex border-b align-item-center first-list-item'>
                                     
-                                        <div className=' w-95 font-1-4  pb-3 pt-3 first-list-item-text '>{categorieItem.categoryName}</div>
+                                        <div className=' w-95 font-1-6  pb-3 pt-3 first-list-item-text '>{categorieItem.categoryName}</div>
                                         <div className="arrow-icon   w-5  ">
                                               <ArrowForwardIosIcon className='font-2 text-color-grey'></ArrowForwardIosIcon>
                                         </div>
 
-                                        {/* .mobile-second-list
-
-
-                                        <div className="">cat rygwer</div>
-                                        <div className="">cat rygwer</div>
-                                        <div className="">cat rygwer</div> */}
 
                                     </div>
                                  ))
@@ -42,7 +36,7 @@ function PopUpShowList({className="",locationList,secondList=['Maharagama','Pili
                             { 
                                  secondList.map(categorieItem=>(
                                     <div className='categorie-item display-flex border-b '>
-                                        <div className=' w-95 font-1-3  pb-2 pt-3 second-list-item'>{categorieItem}</div>
+                                        <div className=' w-95 font-1-5  pb-2 pt-3 second-list-item'>{categorieItem}</div>
                                     </div>
                                  ))
                                  }
