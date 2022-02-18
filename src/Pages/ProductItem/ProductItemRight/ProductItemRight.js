@@ -74,7 +74,7 @@ function ProductItemRight({className="",product}) {
                 </div>
 
                 {/* Price */}
-                <div className="cursor-p mt-5 font-2-3 fw-bold background-black text-color-grey-2 w-70 border-radius-5 display-flex justify-content-center">
+                <div className="cursor-p mt-5 font-2-3 fw-bold background-black text-color-grey-2  border-radius-5 display-flex justify-content-center">
                     <span className="font-inherit text-color-secondary">Rs:</span>
                       <span className="font-inherit "> &nbsp; {product.Price}</span> 
                       

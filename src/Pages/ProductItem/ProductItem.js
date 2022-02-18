@@ -31,7 +31,14 @@ const DIV=styled.div`
   
     
     .ProductItem-wrapper{
-        width: var(--page-content-width);
+      --product-itmem-page-width:80%;
+      
+      
+      @media(max-width:1134px){     
+        --product-itmem-page-width:97%;
+        }
+
+        width: var(--product-itmem-page-width);
         margin-left: auto;
         margin-right: auto; 
 

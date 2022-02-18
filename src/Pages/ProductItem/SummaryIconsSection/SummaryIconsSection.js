@@ -11,13 +11,16 @@ import MeterIcon from '@mui/icons-material/SpeedOutlined';
 function SummaryIconSection({className="",product}) {
   return (
     <DIV className={`${className} `}>
-         <div className="SummaryIconSection-wrapper background-aqu display-flex">
+         <div className="SummaryIconSection-wrapper row  gy-5 background-aqu display-flex">
 
 
                     {
                         product.summery.map((summeryItem)=>(
+                          <div className="col-sm-3 col-6">
 
                             <SummaryIcon key={Math.random()}   svgIcon={summeryItem.svgIcon} label={summeryItem.label}  txt={summeryItem.txt} ></SummaryIcon>
+                          </div>
+
                         ))
                     }
 

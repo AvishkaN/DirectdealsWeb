@@ -101,12 +101,13 @@ function App() {
                                       
                                         {/* TEMPORY  WIDTH*/}
 
-                                        {/* <div className="">
+                                        <div className="">
                                           window width  {document.documentElement.clientWidth}
                                         </div>
-                                        <BottomMobile></BottomMobile> */}
+                                        <BottomMobile></BottomMobile>
+                                        
 
-                                      {/* <Test></Test> */}
+                                        <BottomMobile></BottomMobile>
                                       <Footer className='mt-6'></Footer>
 
                                       </>

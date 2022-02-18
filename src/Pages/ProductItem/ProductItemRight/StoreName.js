@@ -8,7 +8,7 @@ function StoreName({className="",product}) {
     <DIV className={`${className}  `}>
          <div className="StoreName-wrapper row justify-content-between">
                 {/* Store Name */}
-                <div className="col-8  ">
+                <div className="col-lg-8  col-10  ">
                       <div className="font-2 fw-bold text-center">
                              {product.storeName}
                       </div>
@@ -17,7 +17,7 @@ function StoreName({className="",product}) {
                 </div>
 
                 {/* Img */}
-                <div className="col-4 display-flex">
+                <div className="col-lg-4  col-2 display-flex">
                     <img className='w-85 ms-auto' src={product.storeLogoPng} alt="" />
                 </div>
 

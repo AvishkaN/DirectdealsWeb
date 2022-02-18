@@ -20,6 +20,7 @@ import CalenderIcon from '@mui/icons-material/DateRangeOutlined';
 
 // Right Icon
 import CorrectIcon from '@mui/icons-material/Check';
+import RecentAds from '../StorePage/StorePages/StoreHome/RecentAds/RecentAds';
 
 
 
@@ -121,6 +122,72 @@ const product={
   
 };
 
+const store={
+  allAds:[
+
+    {
+        adPhot:"https://www.saleme.lk/saleme/images/uploads/86934/saleme_61f35a37c2b32.jpg",
+        adName:"QMitsubishi L200 1994",
+        location:"Kegalle",
+        price:"3,450,000",
+        description:"good running...",
+        timeAndDate:"2 Feb 2022, 6:25pm ",
+    },
+    {
+        adPhot:"https://www.saleme.lk/saleme/images/uploads/86934/saleme_61f35a37c2b32.jpg",
+        adName:"Nissan tres sunny 1986",
+        location:"Kegalle",
+        price:"3,450,000",
+        description:"good running...",
+        timeAndDate:"2 Feb 2022, 6:25pm ",
+    },
+    {
+        adPhot:"https://www.saleme.lk/saleme/images/uploads/86931/saleme_61f35750ac550.jpg",
+        adName:"Mitsubishi L200 1994",
+        location:"Kegalle",
+        price:"3,450,000",
+        description:"good running...",
+        timeAndDate:"2 Feb 2022, 6:25pm ",
+    },
+    {
+        adPhot:"https://www.saleme.lk/saleme/images/uploads/86932/saleme_61f3582b2b48c.jpg",
+        adName:"KIA Spectra 2001",
+        location:"Kegalle",
+        price:"3,450,000",
+        description:"good running...",
+        timeAndDate:"2 Feb 2022, 6:25pm ",
+    },
+    {
+        adPhot:"https://www.saleme.lk/saleme/images/uploads/86934/saleme_61f35a37c2b32.jpg",
+        adName:"Nissan tres sunny 1986",
+        location:"Kegalle",
+        price:"3,450,000",
+        description:"good running...",
+        timeAndDate:"2 Feb 2022, 6:25pm ",
+    },
+    {
+        adPhot:"https://www.saleme.lk/saleme/images/uploads/86931/saleme_61f35750ac550.jpg",
+        adName:"Mitsubishi L200 1994",
+        location:"Kegalle",
+        price:"3,450,000",
+        description:"good running...",
+        timeAndDate:"2 Feb 2022, 6:25pm ",
+    },
+    {
+        adPhot:"https://www.saleme.lk/saleme/images/uploads/86932/saleme_61f3582b2b48c.jpg",
+        adName:"KIA Spectra 2001",
+        location:"Kegalle",
+        price:"3,450,000",
+        description:"good running...",
+        timeAndDate:"2 Feb 2022, 6:25pm ",
+    },
+
+
+
+  ],
+
+
+};
 
 
 
@@ -134,13 +201,13 @@ function ProductItemComp({className=""}) {
          <div className="ProductItemComp-wrapper row">
 
               {/* Slider */}
-            <div className="col-7   product-item-left ">
+            <div className="col-lg-7   product-item-left ">
                      <Slider className='' images={product.images}></Slider>
 
             </div>
 
               {/* Right Details */}
-            <div className="col-4  product-item-right  mt-5">
+            <div className="col-lg-4  product-item-right  mt-5">
                     <ProductItemRight product={product}></ProductItemRight>
 
             </div>
@@ -149,11 +216,11 @@ function ProductItemComp({className=""}) {
             <div className="product-item-details">
 
                     {/* Warning Text */}
-                    <WarningText className=' m-2'></WarningText>  
+                    <WarningText className=' m-2 mt-5'></WarningText>  
 
                     {/* Summary Icons Section */}
 
-                    <SummaryIconsSection className='mt-4'   product={product} ></SummaryIconsSection>
+                    <SummaryIconsSection className='mt-5'   product={product} ></SummaryIconsSection>
 
                       {/* Specification Section */}
                       <div className="mt-4">
@@ -179,15 +246,20 @@ function ProductItemComp({className=""}) {
                       </div>
 
 
-                      {/* Similar Products */}
-                      <div className="mt-4">
-                                {/*title   */}
-                              <div className=" mt-4 background-secondary  border-radius-5 p-2 display-inline-block">
-                                    <span className="font-1-7  "> Similars Ads by </span>
-                                    <span className="font-1-7 fw-bold text-color-primary">{product.storeName}</span>
-                            </div>
 
-                      </div>
+            </div>
+
+            {/* Similar Products */}
+            <div className="mt-4">
+                      {/*title   */}
+                    <div className=" mt-4 background-secondary  border-radius-5 p-2 display-inline-block">
+                          <span className="font-1-7  "> Similars Ads by </span>
+                          <span className="font-1-7 fw-bold text-color-primary">{product.storeName}</span>
+                  </div>
+
+
+                  <RecentAds className=' mt-4  '    columnSizeClassName={" ad-col-3"}  store={store} sliceNum={-4}></RecentAds>
+
 
             </div>
 
@@ -203,6 +275,11 @@ const DIV=styled.div`
     width: 100%;
 
     --this-page-size:60%;
+    
+    
+    @media(max-width:992px){     
+          --this-page-size:98%;
+        }
     
     .ProductItemComp-wrapper{
     

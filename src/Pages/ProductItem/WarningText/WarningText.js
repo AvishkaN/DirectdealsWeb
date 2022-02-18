@@ -5,7 +5,7 @@ import styled from 'styled-components';
 function WarText({className=""}) {
   return (
     <DIV className={`${className} border-radius-5 `}>
-         <div className="WarText-wrapper text-center ">
+         <div className="WarText-wrapper text-center   p-2">
 
                 <p className='font-1-5'>
                      Do not pay for the item on the internet, telephone networks or bank networks before checking out or checking the seller. 
