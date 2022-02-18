@@ -7,9 +7,18 @@ function SpeficationIcon({className="",svgIcon,label,txt}) {
     <DIV className={`${className} display-flex pb-1`}>
 
                {svgIcon}
-               <div className="w-30 background-aqu  font-1-6 text-color-grey-light ms-4">{label}</div>
 
-               <div className="w-30 background-yello font-1-6 fw-bold">{txt}</div>
+               <div className="col-sm-4 col-5"> 
+
+                        <div className=" background-aqu  font-1-6 text-color-grey-light ms-4">{label}</div>
+               </div>
+
+
+                  <div className="col-sm-3  col-4  ">
+
+                          <div className=" background-yello font-1-6 fw-bold">{txt}</div>
+                  </div>
+
             
 
     </DIV>

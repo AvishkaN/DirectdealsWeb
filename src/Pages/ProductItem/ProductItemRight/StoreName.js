@@ -8,16 +8,16 @@ function StoreName({className="",product}) {
     <DIV className={`${className}  `}>
          <div className="StoreName-wrapper row justify-content-between">
                 {/* Store Name */}
-                <div className="col-lg-8  col-10  ">
+                <div className="col-lg-8  col-md-10  col-9  ">
                       <div className="font-2 fw-bold text-center">
                              {product.storeName}
                       </div>
 
-                      <Button  className="background-primary mt-4 w-90 text-color-white font-1-6">View Store</Button>
+                      <Button  className="background-primary mt-4 w-100 text-color-white font-1-6">View Store</Button>
                 </div>
 
                 {/* Img */}
-                <div className="col-lg-4  col-2 display-flex">
+                <div className="col-lg-4  col-md-2   col-3  display-flex">
                     <img className='w-85 ms-auto' src={product.storeLogoPng} alt="" />
                 </div>
 

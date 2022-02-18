@@ -200,19 +200,24 @@ function ProductItemComp({className=""}) {
     <DIV className={`${className}`}>
          <div className="ProductItemComp-wrapper row">
 
-              {/* Slider */}
-            <div className="col-lg-7   product-item-left ">
-                     <Slider className='' images={product.images}></Slider>
+           <div className="slider-section row  ">
 
-            </div>
+                  {/* Slider */}
+                <div className="col-lg-7   product-item-left ">
+                        <Slider className='' images={product.images}></Slider>
 
-              {/* Right Details */}
-            <div className="col-lg-4  product-item-right  mt-5">
-                    <ProductItemRight product={product}></ProductItemRight>
+                </div>
 
-            </div>
+                  {/* Right Details */}
+                <div className="col-lg-5  product-item-right  mt-5 p-lg-1 p-0">
+                        <ProductItemRight product={product}></ProductItemRight>
+
+                </div>
+
+           </div>
 
 
+                  {/* Other  Product Details */}
             <div className="product-item-details">
 
                     {/* Warning Text */}
@@ -241,7 +246,7 @@ function ProductItemComp({className=""}) {
                       {/* Description */}
                       <div className="mt-4">
                               <div className="font-2 mt-4">Description</div>
-                              <div className="">{product.description}</div>
+                              <div className="mt-3">{product.description}</div>
 
                       </div>
 
@@ -282,15 +287,29 @@ const DIV=styled.div`
         }
     
     .ProductItemComp-wrapper{
+
+
+      .slider-section{ 
+
+        width: 98.5%;
+        margin-left: auto;
+        margin-right: auto;
+      }
     
 
         .product-item-details{ 
           /* background:yellow; */
           width: var(--this-page-size);
           margin-right: auto;
-        }
 
-    }
+
+              @media(max-width:992px){     
+                margin-left: auto;
+            }
+
+        }
+        
+      }
 `;
 
 export default ProductItemComp;

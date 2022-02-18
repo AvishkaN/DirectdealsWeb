@@ -21,21 +21,21 @@ function ProductItemRight({className="",product}) {
                 {/* TWO details --> location , time */}
 
                 <div className="two-details row mt-4">
-                        <div className="col-5 display-flex align-items-center">
+                        <div className="col-6 display-flex align-items-center">
                                     <LocationIcon className='font-3 text-color-primary  '></LocationIcon>
 
                                     <div className="ms-2">
                                         <div className="">Location</div>
-                                        <div className="fw-bold mt-0-5-">{product.Location}</div>
+                                        <div className="fw-bold mt-0-5- font-1-3">{product.Location}</div>
                                     </div>
                         </div>
 
-                        <div className="col-7 display-flex align-items-center">
+                        <div className="col-6 display-flex align-items-center">
                                     <Clock className='  font-2-8 text-color-primary  '></Clock>
 
                                     <div className="ms-2">
                                         <div className="">Ad Updated</div>
-                                        <div className="fw-bold mt-0-5-">{product.UpdateTime}</div>
+                                        <div className="fw-bold mt-0-5- font-1-3">{product.UpdateTime}</div>
                                     </div>
                         </div>
                 </div>

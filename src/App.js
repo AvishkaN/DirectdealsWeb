@@ -104,8 +104,8 @@ function App() {
                                         <div className="">
                                           window width  {document.documentElement.clientWidth}
                                         </div>
-                                        <BottomMobile></BottomMobile>
-                                        
+                                        {/* <BottomMobile></BottomMobile> */}
+
 
                                         <BottomMobile></BottomMobile>
                                       <Footer className='mt-6'></Footer>

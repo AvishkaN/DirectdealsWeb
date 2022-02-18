@@ -19,7 +19,7 @@ const DIV=styled.div`
     border-radius: 0% 8% 8% 0%;
     background: #424e4e; 
     height: 100vh; 
-    z-index: 15;
+    z-index: 8952136515;
     
     transform: ${props => props.showNav? 'translateX(0%)' : 'translateX(-117%)'  };
     transition: .5s  transform;

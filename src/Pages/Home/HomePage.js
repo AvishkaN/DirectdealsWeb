@@ -6,6 +6,7 @@ import DeleverySection from './DeleverySecion/DeleverySection';
 
 import { useEffect } from 'react';
 import Link from '../../Components/UI/Link/Link';
+import LinkComp from '../../Components/UI/Link/Link';
 
 
 const data=[
@@ -162,10 +163,18 @@ function HomePage({className=""}) {
     <DIV className={`${className}`}>
          <div className="HomePage-wrapper">
 
+         
+
             <SearchSection className='background-primary'></SearchSection>
             <BrowseAll className='mt-5'></BrowseAll>
             <StartMakingMoney className='mt-5 pt-4'></StartMakingMoney>
             <DeleverySection className=''></DeleverySection>
+
+
+                <LinkComp to="/single-product">
+                    <h1>Product item</h1>
+              </LinkComp>
+
 
          </div>
     </DIV>

@@ -50,12 +50,24 @@ const DIV=styled.div`
             @media(max-width:326px){     
               width: 84%;
           }
-    
+          
         }
-
+        
         .ad-col-3{
           width: 23%;
-           flex: 0 0 auto;
+          flex: 0 0 auto;
+
+
+          
+                @media(max-width:657px){     
+                  width: 45%;
+              }
+                @media(max-width:448px){     
+                  width: 71%;
+              }
+                @media(max-width:326px){     
+                  width: 84%;
+              }
         }
 
 
