@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import HomePage from './Pages/Home/HomePage';
 import StorePage from './Pages/StorePage/StorePage';
 // import PropertPage from './Pages/ProperyPage/PropertPage';
-// import ProductItem from './Pages/ProductItem/ProductItem';
+import ProductItem from './Pages/ProductItem/ProductItem';
 // import ClassifiedPage from './Pages/Classified/ClassifiedPage';
 // import MyAccountPage from './Pages/MyAccount/MyAccountPage';
 
@@ -13,7 +13,7 @@ import StorePageMobileNav from './Components/Overlay/StoreMobilePageNav/StorePag
 // import Login from './Pages/Login/Login';
 // import MobielNavBar from './Components/Nav/MobileNavBar/MobielNavBar';
 import Footer from './Components/Footer/Footer';
-import Test from './Components/Test/Test';
+// import Test from './Components/Test/Test';
 
 
 // import RegisterPage from './Pages/Register/Register';
@@ -92,6 +92,30 @@ function App() {
                                     } />
 
 
+                                    <Route path="/single-product" element={ 
+                                      <>
+                                      <NavBar className='position-fixed w-100'></NavBar>
+
+                                      <ProductItem></ProductItem>
+                                      {/* <Test></Test> */}
+                                      
+                                        {/* TEMPORY  WIDTH*/}
+
+                                        {/* <div className="">
+                                          window width  {document.documentElement.clientWidth}
+                                        </div>
+                                        <BottomMobile></BottomMobile> */}
+
+                                      {/* <Test></Test> */}
+                                      <Footer className='mt-6'></Footer>
+
+                                      </>
+                                    } />
+
+
+                           
+
+
                                     <Route path="/store/*" element={ 
                                        <>
                                         {/* TEMPORY  WIDTH*/}
@@ -100,10 +124,6 @@ function App() {
                                           window width  {document.documentElement.clientWidth}
                                         </div>
                                           <StorePage></StorePage>
-
-
-
-
                                           <StorePageMobileNav  ShowstoreMobileNav={clicks.storeMobileNav} ></StorePageMobileNav>
                                           <BottomMobile></BottomMobile>
 

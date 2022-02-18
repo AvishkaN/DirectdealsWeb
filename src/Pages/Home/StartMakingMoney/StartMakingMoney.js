@@ -9,9 +9,9 @@ function StartMakingMoney({className=""}) {
          <div className="StartMakingMoney-wrapper mb-4">
                <div className="row justify-content-between">
 
-                   <div className="col-6">
-                       <div className="row justify-content-between">
-                           <div className="col-4 ps-4 pt-3">
+                   <div className="first col-xl-6 col-11  box-shadow-normal   m-4  m-xl-0 ">
+                       <div className="row justify-content-between  pb-5  pb-xl-0">
+                           <div className="col-xl-4   col-4 ps-4 pt-3">
                                
 
                                             <svg viewBox="0 0 119 126" className="svgIcon  svg-wrapper--8ky9e"><g fill="none" fillRule="evenodd"><ellipse fill="#F3F6F5" cx="58.904" cy="66.658" rx="58.904" ry="59.342" /><g fillRule="nonzero"><path d="M88.078 46.845c-.928-5.296-3.62-10.302-8-14.022-4.384-3.723-9.715-5.54-15.017-5.54H40.648c-5.3 0-10.632 1.817-15.019 5.54-4.382 3.72-7.074 8.727-8 14.022L9.505 93.16a23.789 23.789 0 0 1-3.966 9.589l-3.776 5.386a2.885 2.885 0 0 0-.21 2.957 2.802 2.802 0 0 0 2.492 1.538h97.616a2.8 2.8 0 0 0 2.49-1.538 2.89 2.89 0 0 0-.206-2.957l-3.782-5.386a23.911 23.911 0 0 1-3.963-9.59l-8.122-46.315zM72.351 5.367c0 .77-.175 1.508-.482 2.155 0 .008-.582.925-.582.925a.2.2 0 0 1-.05.069l-3.947 6.413a9.332 9.332 0 0 1-3.4 3.274 9.233 9.233 0 0 1-4.537 1.188H46.349c-1.54 0-3.099-.38-4.535-1.188a9.415 9.415 0 0 1-3.402-3.271L34.42 8.446l-.579-.925a4.973 4.973 0 0 1-.488-2.154c0-2.733 2.181-4.941 4.873-4.941 2.693 0 4.872 2.208 4.872 4.94 0-2.732 2.187-4.94 4.88-4.94 2.697 0 4.872 2.208 4.872 4.94 0-2.732 2.18-4.94 4.873-4.94 2.695 0 4.882 2.208 4.882 4.94 0-2.732 2.178-4.94 4.872-4.94 2.698 0 4.875 2.209 4.875 4.941z" fill="#D95E46" />
@@ -23,13 +23,15 @@ function StartMakingMoney({className=""}) {
 
 
                            </div>
-                           <div className="col-8">
+                           <div className="col-xl-8   col-12  text-xl-start text-center">
                                <div className=" fw-bold font-1-8 mt-5 ">Start Making Money!</div>
                                <div className="mt-3 font-1-3 text-color-grey-light">
                                       Do you have something to sell? Post your first ad and start making money!
                                </div>
 
-                               <Button className="background-secondary display-flex align-items-center mt-4 border-radius-20 ps-4 pe-4 pt-2 pb-2">
+                               <div className="">
+
+                               <Button className="background-secondary display-flex align-items-center mt-4 border-radius-20 ps-4 pe-4 pt-2 pb-2  me-xl-0 ms-xl-0 me-auto ms-auto">
                                     <i className="fas fa-plus-circle font-1-8" aria-hidden="true" />
 
                                     <div className=" ms-2">
@@ -37,11 +39,18 @@ function StartMakingMoney({className=""}) {
                                     </div>
 
                                </Button>
+                               </div>
+
+
+
+
                            </div>
                        </div>
                    </div>
 
-                   <div className="col-6 sec ps-3 ">
+
+
+                   <div className="col-xl-6  col-11   sec ps-3  box-shadow-normal   m-4  m-xl-0 ">
                        <div className="row justify-content-between">
                            
 
@@ -62,6 +71,8 @@ function StartMakingMoney({className=""}) {
 
                                </Button>
                            </div>
+
+
                        </div>
                    </div>
 
@@ -83,7 +94,31 @@ const DIV=styled.div`
         margin-left: auto;
         margin-right: auto; 
 
-        box-shadow: 0 2px 16px 0 rgba(0, 0, 0,0.10);
+        @media(min-width:1200px){     
+                      box-shadow: 0 2px 16px 0 rgba(0, 0, 0,0.10);
+        }
+
+
+        .box-shadow-normal { 
+            box-shadow:none !important;
+
+
+            @media(max-width:1200px){     
+                      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.1) !important;
+            }
+
+        }
+
+        .first{
+                            
+                .row{ 
+                    @media(max-width:1200px){     
+                              justify-content: center !important;
+                    }
+                }
+
+        }
+
 
 
         .sec{
@@ -91,7 +126,7 @@ const DIV=styled.div`
 
             @media(max-width:1346px){     
                 padding-bottom: 3rem!important;
-                 }
+            }
 
         }
 

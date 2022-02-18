@@ -17,7 +17,7 @@ const DIV=styled.div`
     height: auto;   
     /* height: 50px;   */
     /* margin-top: var(--margin-top-fix-nav);  */  /*only page */
-    background: var(--color-white);  
+    background:#ffffffa3;  
     
 
         display: flex;  
