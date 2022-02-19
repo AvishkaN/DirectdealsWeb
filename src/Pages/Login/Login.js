@@ -1,20 +1,33 @@
 import styled from 'styled-components';
 import Password from './../Register/Password';
 import Input from './../Register/Input'; 
-import Bottom from './../Register/Bottom';
+import BottomComp from './../Register/Bottom';
+import Button from '../../Components/UI/Button/Button';
+import LinkComp from '../../Components/UI/Link/Link';
 
 
 
-function RegistarPage({className=""}) {
+function RegistarPage({className="",btnText="LOGIN",secondText="Sign Up",to="/register"}) {
   return (
     <DIV className={`${className} display-flex align-items-center`}>
          <div className="RegistarPage-wrapper p-5 border-radius-10  ">
                  <h2 className='text-center fw-bold text-color-primary'>Login</h2>    
+                 <BottomComp btnText="LOGIN" secondText="Sign Up" to="/register" ></BottomComp>
 
-                 <Input className="input w-100 p-2  ps-3 mt-4" placeholder='email'></Input>  
-                 <Password className="input w-100 p-2  ps-3 mt-4"   placeholder='password'></Password>
+                 <Input className="input w-100 p-2  ps-3 mt-4  font-1-5" placeholder='email'></Input>  
+                 <Password className="input w-100 p-2  ps-3 mt-4  font-1-5"   placeholder='password'></Password>
 
-                 <Bottom btnText="LOGIN" secondText="Sign Up" to="/register" ></Bottom>
+
+                    
+                {/* Button */}
+                <Button className='background-primary border-radius-20  text-color-white mt-4 w-100 font-1-4'  >{btnText}</Button>
+
+
+                    {/* Txt */}
+                    <div className="sign-in text-center mt-5">
+                        <span className='  text-color-grey'> Don't have an account ? </span>
+                        <LinkComp to={to} className='  cursor-p text-color-primary fw-bold '>{secondText}</LinkComp>
+                    </div> 
          
          </div>
     </DIV>

@@ -5,6 +5,7 @@ import StorePage from './Pages/StorePage/StorePage';
 // import PropertPage from './Pages/ProperyPage/PropertPage';
 import ProductItem from './Pages/ProductItem/ProductItem';
 import ClassifiedPage from './Pages/Classified/ClassifiedPage';
+import Login from './Pages/Login/Login';
 // import ClassifiedPage from './Pages/Classified/ClassifiedPage';
 // import MyAccountPage from './Pages/MyAccount/MyAccountPage';
 
@@ -152,6 +153,15 @@ function App() {
                                             <Footer className='mt-6'></Footer>
 
 
+                                      </>
+                                    } />
+
+
+
+                                    <Route path="/login" element={ 
+                                       <>
+
+                                            <Login></Login>
                                       </>
                                     } />
 
