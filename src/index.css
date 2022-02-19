@@ -415,6 +415,9 @@ h1{
 .background-white{
     background-color: var(--color-white);
 }
+.background-transparent{
+    background-color: transparent;
+}
 .background-black{
     background-color: var(--color-black);
 }

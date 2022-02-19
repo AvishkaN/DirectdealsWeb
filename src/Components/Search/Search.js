@@ -37,15 +37,52 @@ import Autocomplete from '@mui/material/Autocomplete';
 import parse from 'autosuggest-highlight/parse';
 import match from 'autosuggest-highlight/match';
 
+
+import Input from '@mui/material/Input';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormControl from '@mui/material/FormControl';
+// import TextField from '@mui/material/TextField';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+
+
+{/* <TextField id="standard-basic" label="Standard" variant="standard" /> */}
+
 export default function Highlights() {
   return (
     <Autocomplete
       id="highlights-demo"
-      sx={{ width: 300 }}
+      // sx={{ width: 300 }}
+      // className="background-transparent"
       options={top100Films}
       getOptionLabel={(option) => option.title}
       renderInput={(params) => (
-        <TextField {...params} label="Highlights" margin="normal" />
+        // <TextField {...params}  margin="normal" id="standard-basic" label="Standard" variant="standard"
+        // <TextField {...params} label="Highlights" margin="normal" />
+
+        
+        
+        
+        
+        // <FormControl variant="standard">
+
+
+        //     </FormControl>
+          <TextField {...params}   id="standard-basic"  label="Search" variant="filled"
+          sx={{
+            '& > :not(style)': { fontSize:'1.5rem', backgroundColor:"transparent"  },
+          }} 
+          className=""
+
+          startAdornment={
+            <InputAdornment position="end">
+              <AccountCircle />
+            </InputAdornment>
+          }
+          
+          />
+
+
       )}
       renderOption={(props, option, { inputValue }) => {
         const matches = match(option.title, inputValue);
@@ -199,4 +236,3 @@ const top100Films = [
   { title: '3 Idiots', year: 2009 },
   { title: 'Monty Python and the Holy Grail', year: 1975 },
 ];
-
