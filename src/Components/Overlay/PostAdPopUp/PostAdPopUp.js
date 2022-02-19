@@ -6,7 +6,7 @@ import TextArea from './../../UI/TextArea/TextArea';
 import FIleUpload from './../../UI/FileUpload/FIleUpload';
 import Button from '../../UI/Button/Button';
 
-import CheckBoxSection from './CheckboxSection/CheckBoxSection';
+import CheckBoxSection from '../../CheckboxSection/CheckBoxSection';
 
 const data=[
     "Air Conditioning",

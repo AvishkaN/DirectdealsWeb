@@ -4,30 +4,38 @@ import Input from './../Register/Input';
 import BottomComp from './../Register/Bottom';
 import Button from '../../Components/UI/Button/Button';
 import LinkComp from '../../Components/UI/Link/Link';
+import CheckBoxColumn from '../../Components/CheckboxSection/CheckBoxColumn';
 
 
 
 function RegistarPage({className="",btnText="LOGIN",secondText="Sign Up",to="/register"}) {
   return (
-    <DIV className={`${className} display-flex align-items-center`}>
-         <div className="RegistarPage-wrapper p-5 border-radius-10  ">
-                 <h2 className='text-center fw-bold text-color-primary'>Login</h2>    
-                 <BottomComp btnText="LOGIN" secondText="Sign Up" to="/register" ></BottomComp>
+    <DIV className={`${className} display-flex align-items-center `}>
+        
 
-                 <Input className="input w-100 p-2  ps-3 mt-4  font-1-5" placeholder='email'></Input>  
-                 <Password className="input w-100 p-2  ps-3 mt-4  font-1-5"   placeholder='password'></Password>
+                 <h2 className='text-center fw-bold text-color-primary background-aqua'>Login</h2>    
+       
+       
+                  <div className="LoginPage-wrapper p-5 border-radius-10  ">
+
+                                <BottomComp btnText="LOGIN" secondText="Sign Up" to="/register" ></BottomComp>
+
+                                <Input className="input w-100 p-2  ps-3 mt-4  font-1-5  border-radius-5" placeholder='email'></Input>  
+                                <Password className="input w-100 p-2  ps-3 mt-4  font-1-5  border-radius-5"   placeholder='password'></Password>
 
 
-                    
-                {/* Button */}
-                <Button className='background-primary border-radius-20  text-color-white mt-4 w-100 font-1-4'  >{btnText}</Button>
+                                    {/* Remember me check box */}
+                                <CheckBoxColumn  className='mt-4  font-1-3'  text={"Remember Me"}></CheckBoxColumn>
+                                    
+                                {/* Button */}
+                                <Button className='background-primary border-radius-5  text-color-white mt-4 w-100 font-1-4'  >{btnText}</Button>
 
 
-                    {/* Txt */}
-                    <div className="sign-in text-center mt-5">
-                        <span className='  text-color-grey'> Don't have an account ? </span>
-                        <LinkComp to={to} className='  cursor-p text-color-primary fw-bold '>{secondText}</LinkComp>
-                    </div> 
+                                    {/* Txt */}
+                                    <div className="sign-in text-center mt-4">
+                                        <span className='  text-color-grey'> Don't have an account ? </span>
+                                        <LinkComp to={to} className='  cursor-p text-color-primary fw-bold '>{secondText}</LinkComp>
+                                    </div> 
          
          </div>
     </DIV>
@@ -40,8 +48,8 @@ const DIV=styled.div`
     /* margin-top: var(--margin-top-fix-nav);  */  /*only RegistarPage */
     min-height: 100vh; 
     
-    .RegistarPage-wrapper{
-        width: 30%;
+    .LoginPage-wrapper{
+        width: 35%;
         box-shadow: -2px 5px 11px 0px #b6a2a2;
         margin-left: auto;
         margin-right: auto; 
@@ -58,7 +66,7 @@ const DIV=styled.div`
 
         input{
             border:1px solid gray;
-            border-radius: 20px;  
+            /* border-radius: 20px;   */
         }
 
         .social-media-container{

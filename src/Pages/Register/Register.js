@@ -31,7 +31,7 @@ const DIV=styled.div`
     min-height: 100vh; 
     
     .RegistarPage-wrapper{
-        width: 30%;
+        width: 40%;
         margin-left: auto;
         margin-right: auto; 
         /* border:2px solid black; */

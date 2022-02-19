@@ -7,7 +7,7 @@ function CheckBoxColumn({className="",text="txt"}) {
     <DIV className={`${className} display-flex align-items-center`}>
 
         <input type="checkbox" className='cursor-p'  id={text}   />
-        <label htmlFor={text}  className='cursor-p ms-2'> {text} </label>
+        <label htmlFor={text}  className='cursor-p ms-2  font-inherit'> {text} </label>
 
     </DIV>
   );
