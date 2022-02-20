@@ -163,9 +163,20 @@ function HomePage({className=""}) {
     <DIV className={`${className}`}>
          <div className="HomePage-wrapper">
 
+
          
 
             <SearchSection className='background-primary'></SearchSection>
+           <Link to="/allAds">
+             <h1>
+
+                  All ads
+             </h1>
+             
+             </Link>
+
+
+
             <BrowseAll className='mt-5'></BrowseAll>
             <StartMakingMoney className='mt-5 pt-4'></StartMakingMoney>
             <DeleverySection className=''></DeleverySection>

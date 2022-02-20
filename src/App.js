@@ -7,6 +7,7 @@ import ProductItem from './Pages/ProductItem/ProductItem';
 import ClassifiedPage from './Pages/Classified/ClassifiedPage';
 import Login from './Pages/LoginAndRegister/Login/Login';
 import Register from './Pages/LoginAndRegister/Register/Register';
+import MyAccountPage from './Pages/UserDashBorad/MyAccountPage';
 // import ClassifiedPage from './Pages/Classified/ClassifiedPage';
 // import MyAccountPage from './Pages/MyAccount/MyAccountPage';
 
@@ -140,6 +141,30 @@ function App() {
                                             <NavBar className='position-fixed w-100'></NavBar>
 
                                             <ClassifiedPage></ClassifiedPage>
+                                            {/* <Test></Test> */}
+
+                                              {/* TEMPORY  WIDTH*/}
+
+                                              <div className="">
+                                                window width  {document.documentElement.clientWidth}
+                                              </div>
+                                              {/* <BottomMobile></BottomMobile> */}
+
+
+                                            <BottomMobile></BottomMobile>
+                                            <Footer className='mt-6'></Footer>
+
+
+                                      </>
+                                    } />
+
+
+
+                                    <Route path="/dashBoard" element={ 
+                                       <>
+                                            <NavBar className='position-fixed w-100'></NavBar>
+
+                                            <MyAccountPage></MyAccountPage>
                                             {/* <Test></Test> */}
 
                                               {/* TEMPORY  WIDTH*/}
