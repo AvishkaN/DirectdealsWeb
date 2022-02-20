@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Button from '../../Components/UI/Button/Button';
-import Link from '../../Components/UI/Link/Link';
+import Button from '../../../Components/UI/Button/Button';
+import Link from '../../../Components/UI/Link/Link';
 
 
 
@@ -34,16 +34,6 @@ function Bottom({className="",btnText,secondText,to}) {
                Or
           </div>
       
-
-      {/* Button */}
-      {/* <Button className='background-primary border-radius-20 font-1-2 text-color-white mt-4 w-100'  >{btnText}</Button> */}
-
-
-      {/* Txt */}
-      {/* <div className="sign-in text-center mt-2">
-          <span className=' font-1-1 text-color-grey'> Don't have an account ? </span>
-          <Link to={to} className=' font-1-1 cursor-p text-color-primary fw-bold '>{secondText}</Link>
-      </div>  */}
 
 
 

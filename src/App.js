@@ -5,7 +5,8 @@ import StorePage from './Pages/StorePage/StorePage';
 // import PropertPage from './Pages/ProperyPage/PropertPage';
 import ProductItem from './Pages/ProductItem/ProductItem';
 import ClassifiedPage from './Pages/Classified/ClassifiedPage';
-import Login from './Pages/Login/Login';
+import Login from './Pages/LoginAndRegister/Login/Login';
+import Register from './Pages/LoginAndRegister/Register/Register';
 // import ClassifiedPage from './Pages/Classified/ClassifiedPage';
 // import MyAccountPage from './Pages/MyAccount/MyAccountPage';
 
@@ -162,6 +163,13 @@ function App() {
                                        <>
 
                                             <Login></Login>
+                                      </>
+                                    } />
+
+                                    <Route path="/register" element={ 
+                                       <>
+
+                                            <Register></Register>
                                       </>
                                     } />
 
