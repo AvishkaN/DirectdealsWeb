@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import RightArrow from './../../../Components/UI/Arrow/NormalArrows/RightArrow';
+
 
 
 
@@ -6,9 +8,11 @@ function NavItemRow({className="",svgIcon,text,id}) {
   return (
     <DIV id={id} className={`${className} display-flex align-items-center`}>
             {svgIcon}
-            <div className="text font-1-4 ms-3 text-color-grey-ori">
+            <div className="text font-1-4 ms-3 text-color-grey-ori w-82">
                 {text}
             </div>
+
+            <RightArrow className=''></RightArrow>
     </DIV>
   );
 }

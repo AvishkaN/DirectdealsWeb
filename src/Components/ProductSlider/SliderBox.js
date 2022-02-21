@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import ArowLeft from '../UI/Arrow/ArowLeft';
-import ArrowRight from '../UI/Arrow/ArrowrRight';
+import ArowLeft from '../UI/Arrow/ArrowWithCircle/ArowLeft';
+import ArrowRight from '../UI/Arrow/ArrowWithCircle/ArrowrRight';
 
 
 

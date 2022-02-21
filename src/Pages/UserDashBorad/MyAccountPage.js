@@ -5,9 +5,9 @@ import MyAccountComp from './MyAccountComp';
 
 function MyAccoutPage({className=""}) {
   return (
-    <DIV className={`${className}`}>
-         <div className="MyAccoutPage-wrapper mt-5">
-                <MyAccountComp className='pb-5'></MyAccountComp>
+    <DIV className={`${className} `}>
+         <div className="MyAccoutPage-wrapper       mt-5">
+                <MyAccountComp className='pb-5     '></MyAccountComp>
          </div>
     </DIV>
   );
@@ -23,17 +23,19 @@ function MyAccoutPage({className=""}) {
 
 
 const DIV=styled.div`
-    width: 100%;
-    margin-top:10rem;
+    width: 100%;    
+    margin-top:7rem;
     /* background: green;  */
     /* margin-top: var(--margin-top-fix-nav);  */  /*only MyAccoutPage */
     background: #D5DAE6;
     min-height:87vh;  
+    display:flex;
     
     .MyAccoutPage-wrapper{
+      display:flex;
         /* background: yellow;  */
         /* width: var(--page-content-width); */
-        width: 70%;
+        width: 94%;     
 
         @media(max-width:1064px){     
                 width: 94% !important;  

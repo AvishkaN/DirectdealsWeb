@@ -96,8 +96,26 @@ h1{
 .w-90{   
     width: 90% !important; 
 }
+.w-86{   
+    width: 86% !important; 
+}
 .w-85{   
     width: 85% !important; 
+}
+.w-85{   
+    width: 85% !important; 
+}
+.w-84{   
+    width: 84% !important; 
+}
+.w-83{   
+    width: 83% !important; 
+}
+.w-82{   
+    width: 82% !important; 
+}
+.w-81{   
+    width: 81% !important; 
 }
 .w-80{   
     width: 80% !important; 
@@ -429,6 +447,9 @@ h1{
 }
 .background-green{
     background-color: var(--color-green);
+}
+.background-red{
+    background-color: var(--color-red);
 }
 
 

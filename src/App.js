@@ -160,7 +160,7 @@ function App() {
 
 
 
-                                    <Route path="/dashBoard" element={ 
+                                    <Route path="/dashBoard/*" element={ 
                                        <>
                                             <NavBar className='position-fixed w-100'></NavBar>
 
