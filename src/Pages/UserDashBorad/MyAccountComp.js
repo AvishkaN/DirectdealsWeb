@@ -7,19 +7,25 @@ import { useDispatch } from 'react-redux';
 import { SetShowPostAdFN } from '../../Redux/slices/clickSlice';
 import { Route, Routes } from 'react-router-dom';
 
+import { useLocation } from "react-router-dom"
+
 
 
 
 function MyAccountComp({className=""}) {
 
     const dispatch=useDispatch();
+    const location = useLocation();
 
 
     const handleClick=(e)=>{
         // console.log(e.target.closest('#post-ad-ad'));
         // console.log(e.target.closest('#1'));
         // console.log(e.target.closest('.1'));
-        // console.log(e.target);
+        console.log(e.target);
+        console.log(location.pathname);
+
+
         // console.log(e.target.closest('.1'));
 
         const PostAdButton=e.target.closest('#post-ad-ad');
@@ -50,7 +56,7 @@ function MyAccountComp({className=""}) {
                                 <div className=" h-100 ">
 
                                     {/*Conetnt Header  */}
-                                        <Header></Header>
+                                    <Header></Header>
 
 
                                     {/* Post  Ad  Form */}
@@ -59,7 +65,12 @@ function MyAccountComp({className=""}) {
                                     </Routes>
 
                                     <Routes>
-                                        <Route path="/PostAd" element={<PostAd  id="post-ad" className='h-100 '></PostAd>} />
+                                        <Route path="PostAd" element={<PostAd  id="post-ad" className='h-100 '></PostAd>} />
+                                    </Routes>
+
+
+                                    <Routes>
+                                        <Route path="MyAds" element={<h1   className='h-100 '>MyAds</h1>} />
                                     </Routes>
 
                                     <Routes>
@@ -111,7 +122,7 @@ const DIV=styled.div`
         margin-right: auto;  */
         /* min-height: 72vh; */
         background: #F9FBFC;
-        border-radius: 2% 2% 2% 0%;
+        border-radius: 1% 1% 1% 1%;
 
         .nv{
 
@@ -129,6 +140,7 @@ const DIV=styled.div`
                         /* background: red;  */
                         display:flex; 
                         flex-wrap: wrap;  
+                        flex-direction: column;
                         justify-content:space-between;
 
                         .-nav-item-row{      

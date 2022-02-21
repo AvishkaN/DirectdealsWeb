@@ -15,6 +15,10 @@ export const clickSlice=createSlice({
         classifiedPageSelectedLocation:"Location",
         classifiedPageSelectedCategory:"Category",
 
+        
+
+        classifiedPageSelectedCategory:"Category",
+
 
     },
     reducers:{
