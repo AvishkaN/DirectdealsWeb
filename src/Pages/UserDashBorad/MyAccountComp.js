@@ -1,13 +1,22 @@
 import styled from 'styled-components';
 import MyAccountNav from './MyAccountNav/MyAccountNav';
-import PostAd from './Content/PostAd/PostAd';
 import Header from './Content/Header/Header';
 
+import MyAccount from './Content/1MyAccount/MyAccount';
+import PostAd from './Content/2PostAd/PostAd';
+import MyAds from './Content/3MyAds/3MyAds';
+import MyMemberShip from './Content/4MyMembership/MyMemberShip';
+import PendingAds from './Content/5PendingAds/5PendingAds';
+import PublishedAds from './Content/6PublishedAds/PublishedAds';
+import LogOut from './Content/7LogOut/LogOut';
+
 import { useDispatch } from 'react-redux';
-import { SetShowPostAdFN } from '../../Redux/slices/clickSlice';
-import { Route, Routes } from 'react-router-dom';
+import { selectClicks, SetShowPostAdFN, SetUserDashBoardSelectedCompFN } from '../../Redux/slices/clickSlice';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import { useLocation } from "react-router-dom"
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 
 
@@ -16,18 +25,19 @@ function MyAccountComp({className=""}) {
 
     const dispatch=useDispatch();
     const location = useLocation();
+    const navigate = useNavigate();
+    const clicks = useSelector(selectClicks);
 
 
     const handleClick=(e)=>{
-        // console.log(e.target.closest('#post-ad-ad'));
-        // console.log(e.target.closest('#1'));
-        // console.log(e.target.closest('.1'));
-        console.log(e.target);
-        console.log(location.pathname);
+
+        const selectedLink=e.target.closest('.nav-item-row-item');
+
+     
 
 
-        // console.log(e.target.closest('.1'));
 
+        // Post Ad 
         const PostAdButton=e.target.closest('#post-ad-ad');
 
         if(PostAdButton){
@@ -36,6 +46,90 @@ function MyAccountComp({className=""}) {
 
         }
     }
+
+
+
+    useEffect(()=>{
+        const pathName=location.pathname;
+        let comp;
+        
+        
+        if(pathName==="/dashBoard/MyAccount"){
+            console.log(`!!!`);
+            comp={compName:"My Account",comp:<MyAccount></MyAccount>};
+            // dispatch(SetUserDashBoardSelectedCompFN(<MyAccount></MyAccount>));
+            
+        }
+        
+        if(pathName==="/dashBoard/PostAd"){
+            comp={compName:"Post Ad",comp:<PostAd></PostAd>};
+            // comp=<PostAd></PostAd>;
+            // dispatch(SetUserDashBoardSelectedCompFN(<PostAd></PostAd>));
+            
+        }
+        if(pathName==="/dashBoard/MyAds"){
+            comp={compName:"My Ads",comp:<MyAds></MyAds>};
+            // comp=<MyAds></MyAds>;
+            // dispatch(SetUserDashBoardSelectedCompFN(<MyAds></MyAds>));
+            
+        }
+        if(pathName==="/dashBoard/MyMembership"){
+            comp={compName:"My Membership",comp:<MyMemberShip></MyMemberShip>};
+            // comp=<MyMemberShip></MyMemberShip>;
+            // dispatch(SetUserDashBoardSelectedCompFN( <MyMemberShip></MyMemberShip>));
+            
+        }
+
+        if(pathName==="/dashBoard/PendingAds"){
+            comp={compName:"Pending Ads",comp:<PendingAds></PendingAds>};
+            // comp=<PendingAds></PendingAds>;
+            // dispatch(SetUserDashBoardSelectedCompFN(<PendingAds></PendingAds>));
+            
+        }
+        if(pathName==="/dashBoard/PublishedAds"){
+            comp={compName:"Pending Ads",comp:<PublishedAds></PublishedAds>};
+            // comp=<PendingAds></PendingAds>;
+            // dispatch(SetUserDashBoardSelectedCompFN(<PendingAds></PendingAds>));
+            
+        }
+        
+        if(pathName==="/dashBoard/LogOut"){
+            // comp=<LogOut></LogOut>;
+            comp={compName:"Log Out",comp:<LogOut></LogOut>};
+                // dispatch(SetUserDashBoardSelectedCompFN(<LogOut></LogOut>));
+                
+            }
+
+            
+        if(comp){  // update state 
+            
+            dispatch(SetUserDashBoardSelectedCompFN(comp));
+        }
+        
+        
+        console.log(comp);
+
+
+    },[location.pathname]);
+
+
+    useEffect(()=>{
+
+        console.log(clicks.UserDashBoardSelectedComp);
+        if(clicks.UserDashBoardSelectedComp){
+            console.log(`🤜🤜`);
+
+            if(document.documentElement.clientWidth<600){
+                navigate("/dashboard-mobile");
+            }
+            
+        }else{
+            navigate("/dashBoard");
+            
+        }
+
+
+    },[clicks.UserDashBoardSelectedComp]);
 
   return (
     <DIV className={`${className}`} onClick={handleClick}>
@@ -59,34 +153,40 @@ function MyAccountComp({className=""}) {
                                     <Header></Header>
 
 
-                                    {/* Post  Ad  Form */}
+                                    {/* MY Account */}
                                     <Routes>
-                                        <Route path="MyAccount" element={<h1  className='h-100 '>Header</h1>} />
+                                        <Route path="MyAccount" element={<MyAccount></MyAccount>} />
                                     </Routes>
 
+                                    {/* Post  Ad  Form */}
                                     <Routes>
                                         <Route path="PostAd" element={<PostAd  id="post-ad" className='h-100 '></PostAd>} />
                                     </Routes>
 
-
+                                    {/* My Ads */}
                                     <Routes>
-                                        <Route path="MyAds" element={<h1   className='h-100 '>MyAds</h1>} />
+                                        <Route path="MyAds" element={<MyAds></MyAds>} ></Route>
                                     </Routes>
 
+                                    {/* MyMemberShip */}
                                     <Routes>
-                                        <Route path="MyMembership" element={<h1   className='h-100 '>membership</h1>} />
+                                        <Route path="MyMembership" element={<MyMemberShip></MyMemberShip>} />
                                     </Routes>
 
+                                        {/* PendingAds */}
                                     <Routes>
-                                        <Route path="PendingAds" element={<h1  className='h-100 '>Pending Ads</h1>} />
+                                        <Route path="PendingAds" element={<PendingAds></PendingAds>} />
                                     </Routes>
 
+
+                                      {/* PublishedAds */}
                                     <Routes>
-                                        <Route path="PublishedAds" element={<h1  className='h-100 '>PublishedAds</h1>} />
+                                        <Route path="PublishedAds" element={<PublishedAds></PublishedAds>} />
                                     </Routes>
 
+                                        {/* LogOut */}
                                     <Routes>
-                                        <Route path="LogOut" element={<h1  className='h-100 '>LogOut</h1>} />
+                                        <Route path="LogOut" element={<LogOut></LogOut>} />
                                     </Routes>
 
 

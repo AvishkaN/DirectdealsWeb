@@ -35,32 +35,32 @@ function MyAccountNav({className=""}) {
 
                 <div className="nav-itesm-row  p-4 ">
 
-                    <NavLink activeClassName="active" to="MyAccount" className="a  x">
+                    <NavLink activeClassName="active" to="MyAccount" className="a  nav-item-row-item    x">
                              <NavItemRow id={"1" }  className={`    -nav-item-row   cursor-p mt-3     border-radius-20         ${className}`}  svgIcon={<AccountCircleOutlinedIcon className='font-2-3   text-color-grey-ori    '></AccountCircleOutlinedIcon>} text={"My account"}></NavItemRow>
                     </NavLink>
 
 
-                    <NavLink   to="PostAd" className="a  x">
+                    <NavLink   to="PostAd" className="a  nav-item-row-item    x">
                              <NavItemRow id={"1" }  className={`    -nav-item-row   cursor-p mt-3     border-radius-20         ${className}`}  svgIcon={<AddCircleOutlineOutlinedIcon className='font-2-3   text-color-grey-ori    '></AddCircleOutlineOutlinedIcon>} text={"Post an Ad"}></NavItemRow>
                     </NavLink>
 
-                    <NavLink to="MyAds" className="a  x">
+                    <NavLink to="MyAds" className="a  nav-item-row-item    x">
                                  <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3    border-radius-20border-radius-20 '  svgIcon={<StorefrontOutlinedIcon   className='font-2-3   text-color-grey-ori         '   ></StorefrontOutlinedIcon>} text={"My Ads"}></NavItemRow>
                     </NavLink>
 
-                    <NavLink to="MyMembership" className="a  x">
+                    <NavLink to="MyMembership" className="a  nav-item-row-item    x">
                               <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3   border-radius-20border-radius-20  '  svgIcon={<StorefrontOutlinedIcon   className='font-2-3   text-color-grey-ori         '   ></StorefrontOutlinedIcon>} text={"My Membership"}></NavItemRow>
                     </NavLink>
 
-                    <NavLink to="PendingAds" className="a  x">
+                    <NavLink to="PendingAds" className="a  nav-item-row-item    x">
                            <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3    border-radius-20border-radius-20 '  svgIcon={<WorkOutlineOutlinedIcon   className='font-2-3   text-color-grey-ori         '   ></WorkOutlineOutlinedIcon>} text={"Pending ads"}></NavItemRow>
                     </NavLink>
 
-                    <NavLink to="PublishedAds" className="a  x">
+                    <NavLink to="PublishedAds" className="a  nav-item-row-item    x">
                            <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3   border-radius-20border-radius-20  '  svgIcon={<BusinessIcon   className='font-2-3   text-color-grey-ori         '   ></BusinessIcon>} text={"published ads"}></NavItemRow>
                     </NavLink>
 
-                    <NavLink to="LogOut" className="a  x">
+                    <NavLink to="LogOut" className="a  nav-item-row-item    x">
                             <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3   border-radius-20border-radius-20  '  svgIcon={<PowerSettingsNewIcon   className='font-2-3   text-color-grey-ori         '   ></PowerSettingsNewIcon>} text={"Log Out"}></NavItemRow>
                     </NavLink>
 

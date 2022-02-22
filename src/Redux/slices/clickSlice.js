@@ -17,7 +17,7 @@ export const clickSlice=createSlice({
 
         
 
-        classifiedPageSelectedCategory:"Category",
+        UserDashBoardSelectedComp:null,
 
 
     },
@@ -67,6 +67,16 @@ export const clickSlice=createSlice({
             state.classifiedPageSelectedCategory=action.payload;    
         },
 
+
+        SetUserDashBoardSelectedCompFN:(state,action)=>{     
+
+            state.UserDashBoardSelectedComp=action.payload;    
+
+            if(document.documentElement.clientWidth<600)  return; //guard class
+
+            state.showOverlay=true;   
+        },
+
         
         ShowHideAllFN:(state)=>{     
 
@@ -79,6 +89,7 @@ export const clickSlice=createSlice({
             state.showCategoryPopUp=false; 
 
             state.showPostAd=false; 
+            state.UserDashBoardSelectedComp=null; 
 
         },
 
@@ -104,6 +115,8 @@ export const {
                             ShowLocationPopupFN,
 
                             SetShowPostAdFN,
+
+                            SetUserDashBoardSelectedCompFN,
 
 
                             ShowHideAllFN,

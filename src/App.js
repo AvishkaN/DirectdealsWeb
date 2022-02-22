@@ -8,6 +8,7 @@ import ClassifiedPage from './Pages/Classified/ClassifiedPage';
 import Login from './Pages/LoginAndRegister/Login/Login';
 import Register from './Pages/LoginAndRegister/Register/Register';
 import MyAccountPage from './Pages/UserDashBorad/MyAccountPage';
+import UserDashBoardMobile from './Pages/UserDashBorad/UserDashBoardMobile/UserDashBoardMobile';
 // import ClassifiedPage from './Pages/Classified/ClassifiedPage';
 // import MyAccountPage from './Pages/MyAccount/MyAccountPage';
 
@@ -30,6 +31,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import MobileNav from './Components/Overlay/MobileNav/MobileNav';
 import BottomMobile from './Components/BottomMobile/BottomMobile';
+import LinkComp from './Components/UI/Link/Link';
 
 
 
@@ -164,7 +166,36 @@ function App() {
                                        <>
                                             <NavBar className='position-fixed w-100'></NavBar>
 
+
+
+
                                             <MyAccountPage></MyAccountPage>
+                                            {/* <Test></Test> */}
+
+                                              {/* TEMPORY  WIDTH*/}
+
+                                              <div className="">
+                                                window width  {document.documentElement.clientWidth}
+                                              </div>
+                                              {/* <BottomMobile></BottomMobile> */}
+
+
+                                            <BottomMobile></BottomMobile>
+                                            <LinkComp to="/dashboard-mobile">mobile dashboard</LinkComp>
+                                            <Footer className='mt-6'></Footer>
+
+
+                                      </>
+                                    } />
+
+
+
+                                    <Route path="/dashboard-mobile" element={ 
+                                       <>
+                                            <NavBar className='position-fixed w-100'></NavBar>
+
+
+                                            <UserDashBoardMobile></UserDashBoardMobile>
                                             {/* <Test></Test> */}
 
                                               {/* TEMPORY  WIDTH*/}
