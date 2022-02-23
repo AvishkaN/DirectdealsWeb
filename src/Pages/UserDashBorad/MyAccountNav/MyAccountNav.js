@@ -49,15 +49,15 @@ function MyAccountNav({className=""}) {
                     </NavLink>
 
                     <NavLink to="MyMembership" className="a  nav-item-row-item    x">
-                              <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3   border-radius-20border-radius-20  '  svgIcon={<StorefrontOutlinedIcon   className='font-2-3   text-color-grey-ori         '   ></StorefrontOutlinedIcon>} text={"My Membership"}></NavItemRow>
+                              <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3    border-radius-20  '  svgIcon={<StorefrontOutlinedIcon   className='font-2-3   text-color-grey-ori         '   ></StorefrontOutlinedIcon>} text={"My Membership"}></NavItemRow>
                     </NavLink>
 
                     <NavLink to="PendingAds" className="a  nav-item-row-item    x">
-                           <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3    border-radius-20border-radius-20 '  svgIcon={<WorkOutlineOutlinedIcon   className='font-2-3   text-color-grey-ori         '   ></WorkOutlineOutlinedIcon>} text={"Pending ads"}></NavItemRow>
+                           <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3     border-radius-20 '  svgIcon={<WorkOutlineOutlinedIcon   className='font-2-3   text-color-grey-ori         '   ></WorkOutlineOutlinedIcon>} text={"Pending ads"}></NavItemRow>
                     </NavLink>
 
                     <NavLink to="PublishedAds" className="a  nav-item-row-item    x">
-                           <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3   border-radius-20border-radius-20  '  svgIcon={<BusinessIcon   className='font-2-3   text-color-grey-ori         '   ></BusinessIcon>} text={"published ads"}></NavItemRow>
+                           <NavItemRow id="00" className='   -nav-item-row   cursor-p mt-3    border-radius-20  '  svgIcon={<BusinessIcon   className='font-2-3   text-color-grey-ori         '   ></BusinessIcon>} text={"published ads"}></NavItemRow>
                     </NavLink>
 
                     <NavLink to="LogOut" className="a  nav-item-row-item    x">

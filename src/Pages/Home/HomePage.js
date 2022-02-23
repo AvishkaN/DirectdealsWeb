@@ -175,15 +175,25 @@ function HomePage({className=""}) {
                 </h1>
              
              </Link>
-             
 
-           <Link to="/dashBoard/MyAccount">
-                <h1>
 
-                      My Account
-                </h1>
-             
-             </Link>
+          {document.documentElement.clientWidth >600 && (
+              <Link to="/dashBoard/MyAccount">
+                    <h1>
+
+                          My Account
+                    </h1>
+                
+                </Link>)}
+
+          {document.documentElement.clientWidth < 600 && (
+              <Link to="/dashBoard">
+                    <h1>
+
+                          My Account
+                    </h1>
+                
+                </Link>)}
 
 
 
