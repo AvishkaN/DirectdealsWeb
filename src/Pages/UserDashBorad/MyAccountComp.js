@@ -29,23 +29,24 @@ function MyAccountComp({className=""}) {
     const clicks = useSelector(selectClicks);
 
 
-    const handleClick=(e)=>{
+    // const handleClick=(e)=>{
+    //     console.log(e.target.closest('#post-ad-ad'));
 
-        const selectedLink=e.target.closest('.nav-item-row-item');
+    //     const selectedLink=e.target.closest('.nav-item-row-item');
 
      
 
 
 
-        // Post Ad 
-        const PostAdButton=e.target.closest('#post-ad-ad');
+    //     // Post Ad 
+    //     const PostAdButton=e.target.closest('#post-ad-ad');
 
-        if(PostAdButton){
+    //     if(PostAdButton){
 
-            dispatch(SetShowPostAdFN());
+    //         dispatch(SetShowPostAdFN());
 
-        }
-    }
+    //     }
+    // }
 
 
 
@@ -123,19 +124,15 @@ function MyAccountComp({className=""}) {
                 navigate("/dashboard-mobile");
             }
             
-        }else{
-            navigate("/dashBoard");
-            
         }
 
 
     },[clicks.UserDashBoardSelectedComp]);
 
   return (
-    <DIV className={`${className}`} onClick={handleClick}>
-         <div className="MyAccountComp-wrapper w-100   ">
+    <DIV className={`${className}`} >
+         <div className="MyAccountComp-wrapper w-100 row   ">
 
-             <div className="row w-100">
 
                 {/* Nav */}
                  <div className="col-3 nv">
@@ -147,50 +144,51 @@ function MyAccountComp({className=""}) {
                 {/* My account Content */}
                  <div className="col-9  background-aqu  content">
                      <div className="my-account-content h-100"> 
-                                <div className=" h-100 ">
 
                                     {/*Conetnt Header  */}
                                     <Header></Header>
 
 
-                                    {/* MY Account */}
-                                    <Routes>
-                                        <Route path="MyAccount" element={<MyAccount></MyAccount>} />
-                                    </Routes>
+                                    <div className="content-bottom">
+                                                        {/* MY Account */}
+                                                        <Routes>
+                                                            <Route path="MyAccount" element={<MyAccount></MyAccount>} />
+                                                        </Routes>
 
-                                    {/* Post  Ad  Form */}
-                                    <Routes>
-                                        <Route path="PostAd" element={<PostAd  id="post-ad" className='h-100 '></PostAd>} />
-                                    </Routes>
+                                                        {/* Post  Ad  Form */}
+                                                        <Routes>
+                                                            <Route path="PostAd" element={<PostAd  id="post-ad" className='h-100 '></PostAd>} />
+                                                        </Routes>
 
-                                    {/* My Ads */}
-                                    <Routes>
-                                        <Route path="MyAds" element={<MyAds></MyAds>} ></Route>
-                                    </Routes>
+                                                        {/* My Ads */}
+                                                        <Routes>
+                                                            <Route path="MyAds" element={<MyAds></MyAds>} ></Route>
+                                                        </Routes>
 
-                                    {/* MyMemberShip */}
-                                    <Routes>
-                                        <Route path="MyMembership" element={<MyMemberShip></MyMemberShip>} />
-                                    </Routes>
+                                                        {/* MyMemberShip */}
+                                                        <Routes>
+                                                            <Route path="MyMembership" element={<MyMemberShip></MyMemberShip>} />
+                                                        </Routes>
 
-                                        {/* PendingAds */}
-                                    <Routes>
-                                        <Route path="PendingAds" element={<PendingAds></PendingAds>} />
-                                    </Routes>
-
-
-                                      {/* PublishedAds */}
-                                    <Routes>
-                                        <Route path="PublishedAds" element={<PublishedAds></PublishedAds>} />
-                                    </Routes>
-
-                                        {/* LogOut */}
-                                    <Routes>
-                                        <Route path="LogOut" element={<LogOut></LogOut>} />
-                                    </Routes>
+                                                            {/* PendingAds */}
+                                                        <Routes>
+                                                            <Route path="PendingAds" element={<PendingAds></PendingAds>} />
+                                                        </Routes>
 
 
-                                </div> 
+                                                        {/* PublishedAds */}
+                                                        <Routes>
+                                                            <Route path="PublishedAds" element={<PublishedAds></PublishedAds>} />
+                                                        </Routes>
+
+                                                            {/* LogOut */}
+                                                        <Routes>
+                                                            <Route path="LogOut" element={<LogOut></LogOut>} />
+                                                        </Routes>
+                                    </div>
+
+
+
                      </div>
                  </div>
 
@@ -200,7 +198,8 @@ function MyAccountComp({className=""}) {
 
 
 
-             </div>
+
+
          </div>
     </DIV>
   );
@@ -217,12 +216,13 @@ const DIV=styled.div`
     .MyAccountComp-wrapper{
         display: flex;
         height:100%;
-      /* width: var(--MyAccountComp-content-width);
-        margin-left: auto;
-        margin-right: auto;  */
-        /* min-height: 72vh; */
         background: #F9FBFC;
         border-radius: 1% 1% 1% 1%;
+
+        @media(max-width:600px){    
+                flex-direction: column-reverse;
+                justify-content: flex-end
+        }
 
         .nv{
 
@@ -232,6 +232,7 @@ const DIV=styled.div`
             }
             @media(max-width:600px){     
                 flex: 0 0 auto;
+                    height: 100%; 
                 width:100%;
             }
             
@@ -272,7 +273,7 @@ const DIV=styled.div`
         .my-account-nav{  
             border-radius: 2%;
             background: #FFF;
-            box-shadow: 0px 8px 3px 3px rgba(0 ,0 ,0,0.12);
+            box-shadow: 0px 8px 3px 3px var(--color-primary);
             /* min-height:70vh;   */
 
             @media(max-width:600px){      
@@ -283,9 +284,18 @@ const DIV=styled.div`
           
         }
 
-        .my-account-content{
+        
+    }
+    .my-account-content{ 
+        /* background-color: red;    */
+
+        .content-bottom{
+            @media(max-width:600px){    
+                display: none; 
+            }
         }
 
+       
     }
 `;
 

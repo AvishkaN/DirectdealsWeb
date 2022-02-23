@@ -159,6 +159,7 @@ function HomePage({className=""}) {
     window.scroll(0, 0);
 
   },[]);
+
   return (
     <DIV className={`${className}`}>
          <div className="HomePage-wrapper">
@@ -168,10 +169,19 @@ function HomePage({className=""}) {
 
             <SearchSection className='background-primary'></SearchSection>
            <Link to="/allAds">
-             <h1>
+                <h1>
 
-                  All ads
-             </h1>
+                      All ads
+                </h1>
+             
+             </Link>
+             
+
+           <Link to="/dashBoard/MyAccount">
+                <h1>
+
+                      My Account
+                </h1>
              
              </Link>
 

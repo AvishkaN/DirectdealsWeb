@@ -53,7 +53,7 @@ function Overlay({className=""}) {
              {clicks.showLocationPopUp &&    <LocationPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></LocationPopUp>}
              {clicks.showCategoryPopUp &&    <CategoryPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></CategoryPopUp>}
              {clicks.showPostAd &&    <PostAdPopUp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></PostAdPopUp>}
-             {clicks.UserDashBoardSelectedComp && document.documentElement.clientWidth>600 &&    <UserDashBoardSelectComp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></UserDashBoardSelectComp>}
+             {/* {clicks.UserDashBoardSelectedComp && document.documentElement.clientWidth>600 &&    <UserDashBoardSelectComp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></UserDashBoardSelectComp>} */}
      
      
      

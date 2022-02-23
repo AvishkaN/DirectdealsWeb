@@ -74,7 +74,7 @@ export const clickSlice=createSlice({
 
             if(document.documentElement.clientWidth<600)  return; //guard class
 
-            state.showOverlay=true;   
+            // state.showOverlay=true;   
         },
 
         

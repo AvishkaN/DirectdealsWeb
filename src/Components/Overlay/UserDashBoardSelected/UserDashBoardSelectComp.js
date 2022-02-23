@@ -175,7 +175,7 @@ function CategoryPopUp({className=""}) {
 
            <PopUp to="/">
                     
-                    <div className="title fw-bold font-1-8 text-color-primary">Select Categorie</div>
+                    <div className="title fw-bold font-1-8 text-color-primary">{clicks.UserDashBoardSelectedComp.compName}</div>
 
 
 

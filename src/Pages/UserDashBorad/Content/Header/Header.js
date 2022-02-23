@@ -13,11 +13,11 @@ function ConatentHeader({className=""}) {
          <div className="ConatentHeader-wrapper row">
                 {/* <h1>Header</h1> */}
 
-                <div className="content-left col-3">
+                {/* <div className="content-left col-3">
                     search
-                </div>
+                </div> */}
 
-                <div className="content-right  ms-auto col-3 display-flex  align-items-center background-aqu  ">
+                <div className="content-right  ms-auto col-3 display-flex  align-items-center text-color-primary  ">
                         <NotificationIconCount  className=' cursor-p ms-auto'  svgIcon={<NotificationIcon className="font-2-4 "></NotificationIcon>}  count={2} ></NotificationIconCount>
                         <NotificationIconCount  className=' cursor-p ms-2'  svgIcon={ <ChatIcon className="font-2-4 "></ChatIcon>}  count={2} ></NotificationIconCount>
                         <NotificationIconCount  className=' cursor-p ms-2'  svgIcon={ <SettingsOutlinedIcon className="font-2-4 "></SettingsOutlinedIcon>}  count={2} ></NotificationIconCount>
@@ -35,6 +35,7 @@ function ConatentHeader({className=""}) {
 const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only ConatentHeader */
+    /* background:green;    */
     
     .ConatentHeader-wrapper{
       /* width: var(--ConatentHeader-content-width);

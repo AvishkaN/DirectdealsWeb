@@ -113,7 +113,7 @@ const DIV=styled.div`
             /* padding-left: 0.8rem  !important; */
             
             div,svg{
-                color:black;
+                color:var(--color-primary);
             }
             transition:all .2s;
         }
