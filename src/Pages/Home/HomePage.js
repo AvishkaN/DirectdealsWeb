@@ -181,7 +181,7 @@ function HomePage({className=""}) {
               <Link to="/dashBoard/MyAccount">
                     <h1>
 
-                          My Account
+                          User DashBoard
                     </h1>
                 
                 </Link>)}
@@ -190,10 +190,51 @@ function HomePage({className=""}) {
               <Link to="/dashBoard">
                     <h1>
 
-                          My Account
+                          User DashBoard
                     </h1>
                 
                 </Link>)}
+
+                {
+
+                <Link to="/single-product">
+                    <h1>
+                          Single Product
+                    </h1>
+                </Link>
+
+                }
+
+                {
+
+                <Link to="/login">
+                    <h1>
+                          Login
+                    </h1>
+                </Link>
+
+                }
+
+                {
+
+                <Link to="/register">
+                    <h1>
+                          Register
+                    </h1>
+                </Link>
+
+                }
+
+
+                {
+
+                <Link to="/store/Home">
+                    <h1>
+                         Store
+                    </h1>
+                </Link>
+
+                }
 
 
 

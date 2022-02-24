@@ -1,15 +1,18 @@
 import styled from 'styled-components';
+import Link from './../../../Components/UI/Link/Link';
 
 
 
-function MobileNavItem({className="",svgIcon,ItemName}) {
+function MobileNavItem({className="",svgIcon,ItemName,link}) {
   return (
-    <DIV className={`${className} display-flex align-items-center `}>
-
+    
+    <Link to={link}>
+          <DIV className={`${className} display-flex align-items-center `}>
              {svgIcon}
              <div className="font-2 ms-3">{ItemName}</div>
+          </DIV>
+      </Link>
                 
-    </DIV>
   );
 }
 

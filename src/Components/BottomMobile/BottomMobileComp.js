@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from '../../Components/UI/Link/Link';
 
 
 
@@ -6,15 +7,36 @@ function BottomMobileComp({className=""}) {
   return (
     <DIV className={`${className}`}>
          <div className="BottomMobileComp-wrapper display-flex  justify-content-between align-item-center   pb-1 pt-1 ">
-                    <i className="fas fa-home  font-2" aria-hidden="true" />
-                    <i className="fas fa-search  font-2" aria-hidden="true" />
+                  
+                    <Link to="/">
 
-                     <div className="plus-button-background   ">
-                            <i className="fas fa-plus  font-2 plus-button" aria-hidden="true" />
-                    </div>   
+                          <i className="fas fa-home  font-2" aria-hidden="true" />
+                    </Link>
 
-                    <i className="fas fa-comments  font-2" aria-hidden="true" />
-                    <i className="fas fa-user  font-2" aria-hidden="true" />
+                    <Link to="/">
+                        <i className="fas fa-search  font-2" aria-hidden="true" />
+                    </Link>
+
+                    <Link to="/">
+                        <div className="plus-button-background   ">
+                                <i className="fas fa-plus  font-2 plus-button" aria-hidden="true" />
+                        </div>   
+                    </Link>
+
+
+                    <Link to="/">
+
+                          <i className="fas fa-comments  font-2" aria-hidden="true" />
+                    </Link>
+
+                    <Link to="/dashBoard">
+                           <i className="fas fa-user  font-2" aria-hidden="true" />
+
+                    </Link>
+                  
+                  
+
+
          </div>
 
     </DIV>

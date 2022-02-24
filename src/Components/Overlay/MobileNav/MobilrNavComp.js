@@ -8,37 +8,37 @@ const navList=[
     {
         itemName:"All ads in Sri Lanka",
         Icon:<i className="fas fa-tags  font-1-8    " aria-hidden="true"></i>,
-
+        link:"/allAds",
     },
     {
         itemName:"Login",
         Icon:<i className="fas fa-user  font-1-8    " aria-hidden="true"></i>,
-
+        link:"/",
     },
     {
         itemName:"Stay Safe",
         Icon:<i className="fas fa-shield-alt  font-1-8    " aria-hidden="true"></i>,
-
+        link:"/",
     },
     {
         itemName:"FAQ",
         Icon:<i className="fas fa-question-circle  font-1-8    " aria-hidden="true"></i>,
-
+        link:"/",
     },
     {
         itemName:"How to Sell fast",
         Icon:<i className="fas fa-money-bill  font-1-8    " aria-hidden="true"></i>,
-
+        link:"/",
     },
     {
         itemName:"Download to sell fast",
         Icon:<i className="fas fa-play  font-1-8    " aria-hidden="true"></i>,
-
+        link:"/",
     },
     {
         itemName:"More",
         Icon:<i className="fas fa-ellipsis-h  font-1-8    " aria-hidden="true"></i>,
-
+        link:"/",
     },
 
 
@@ -59,7 +59,7 @@ function MobileNavComp({className=""}) {
 
                     {
                         navList.map(navitem=>(
-                            <MobileNavItem  className='mt-3' svgIcon={navitem.Icon} ItemName={navitem.itemName}></MobileNavItem>
+                            <MobileNavItem  className='mt-3' svgIcon={navitem.Icon} ItemName={navitem.itemName}  link={navitem.link}  ></MobileNavItem>
                         ))
                     }
 
