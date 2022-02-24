@@ -53,7 +53,7 @@ function ClassifiedHeader({className=""}) {
                  </div> */}
 
 
-                 <div className="col-4   classified-header-input cursor-p  location">
+                 <div className="col-4   classified-header-input cursor-p  location background-red">
                     
                             <Search></Search>
 

@@ -22,18 +22,15 @@ function UndoPage(props) {
   <DIV className={`${props.className}  border-radius-5  `}>
     <div className="undoPage-wrapper ">
 
-        <div className="display-flex align-item-center  ">
+        <div className="display-flex align-item-center mb-4 ">
 
-
-                {/* <LinkComp to={props.to}>
-                </LinkComp> */}
                         <div className="left-btn text-left cursor-p" onClick={handleClick}>
                                 <NormalArrowLeft className='font-3-2 ' ></NormalArrowLeft>
                         </div>
 
 
-                <div className="">
-                        <h2 className="">{props.title}</h2>
+                <div className="   mt-2 ms-2">
+                        <h2 className="fw-bold ">{props.title}</h2>
                 </div>
 
         </div>

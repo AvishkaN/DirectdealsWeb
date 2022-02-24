@@ -24,11 +24,11 @@ function MyAccoutPage({className=""}) {
 
 const DIV=styled.div`
     width: 100%;    
-    margin-top:7rem;
+    /* margin-top:7rem; */
     /* background: green;  */
     /* margin-top: var(--margin-top-fix-nav);  */  /*only MyAccoutPage */
     background: #D5DAE6;
-    min-height:87vh;  
+    min-height:100vh;  
     display:flex;
     
     .MyAccoutPage-wrapper{

@@ -164,7 +164,7 @@ function App() {
 
                                     <Route path="/dashBoard/*" element={ 
                                        <>
-                                            <NavBar className='position-fixed w-100'></NavBar>
+                                            {/* <NavBar className='position-fixed w-100'></NavBar> */}
 
 
 
@@ -174,15 +174,15 @@ function App() {
 
                                               {/* TEMPORY  WIDTH*/}
 
-                                              <div className="">
+                                              {/* <div className="">
                                                 window width  {document.documentElement.clientWidth}
-                                              </div>
+                                              </div> */}
                                               {/* <BottomMobile></BottomMobile> */}
 
 
                                             <BottomMobile></BottomMobile>
-                                            <LinkComp to="/dashboard-mobile">mobile dashboard</LinkComp>
-                                            <Footer className='mt-6'></Footer>
+                                            {/* <LinkComp to="/dashboard-mobile">mobile dashboard</LinkComp> */}
+                                            {/* <Footer className='mt-6'></Footer> */}
 
 
                                       </>
@@ -200,14 +200,14 @@ function App() {
 
                                               {/* TEMPORY  WIDTH*/}
 
-                                              <div className="">
+                                              {/* <div className="">
                                                 window width  {document.documentElement.clientWidth}
-                                              </div>
+                                              </div> */}
                                               {/* <BottomMobile></BottomMobile> */}
 
 
                                             <BottomMobile></BottomMobile>
-                                            <Footer className='mt-6'></Footer>
+                                            {/* <Footer className='mt-6'></Footer> */}
 
 
                                       </>
