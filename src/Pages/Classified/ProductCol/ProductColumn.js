@@ -1,18 +1,12 @@
 import styled from 'styled-components';
+import MobilePhoto1 from './../../../assets/img/productImages/fitted (1).jpg';
+import MobilePhoto2 from './../../../assets/img/productImages/fitted.jpg';
 import Link from '../../../Components/UI/Link/Link';
 import Product from './Product';
 
 const classifiedProducts=[
     {
-        image:"https://i.ikman-st.com/i3-3-rd-gen-gaming-pc-for-sale-kandy/4d218f00-f5d7-4b10-944e-3815fb1f4387/620/466/fitted.jpg",
-        productName:"Calculator CT-8866V Solar led display",
-        AdType:"Classified",
-        location:"malabe",
-        Price:"Rs 15, 000",
-        nearBy:"nearby 1 Km",
-    },
-    {
-        image:"https://i.ikman-st.com/borgwad-bx5-2019-for-sale-colombo/97c03d4c-b32c-434c-a470-3541caec731a/620/466/fitted.jpg",
+        image:MobilePhoto1,
         productName:"Calculator CT-8866V Solar led display",
         AdType:"Classified",
         location:"malabe",
@@ -21,6 +15,14 @@ const classifiedProducts=[
     },
     {
         image:"https://i.ikman-st.com/calculator-ct-8866v-solar-led-display-desktop-for-sale-colombo/6f610c99-c7ca-40b5-8c01-348bbdb38b8c/160/120/cropped.webp",
+        productName:"Calculator CT-8866V Solar led display",
+        AdType:"Classified",
+        location:"malabe",
+        Price:"Rs 15, 000",
+        nearBy:"nearby 1 Km",
+    },
+    {
+        image:MobilePhoto2,
         productName:"Calculator CT-8866V Solar led display",
         AdType:"Classified",
         location:"malabe",

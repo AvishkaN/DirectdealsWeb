@@ -8,17 +8,17 @@ function Product({className="",product}) {
     <DIV className={`${className}`}>
          <div className="Product-wrapper">
                 <div className="row">
-                    <div className="col-md-3 col-12">
+                    <div className="col-md-3 col-12 product-image">
                         <img className='w-100' src={product.image} alt="" />
                     </div>
-                    <div className="col-md-9 col-12">
+                    <div className="col-md-9 col-12 mt-sm-0 mt-2  ">
                         <div className="title font-1-6 fw-bold">{product.productName}</div>
  
 
                         <div className="font-1-4 product-list-mt text-color-grey-ori ">{product.AdType}</div>
                         <div className="font-1-4  product-list-mt text-color-grey-ori ">{product.location}</div>
                         <div className="font-1-6  product-list-mt  text-color-primary fw-bold ">{product.Price}</div>
-                        <div className="  product-list-mt font-1-6 fw-bold  text-color-grey-ori  text-right me-4 nearby-text">{ product.nearBy}</div>
+                        <div className="mt-1  font-1-6 fw-bold  text-color-grey-ori  text-right me-4 nearby-text">{ product.nearBy}</div>
 
 
 
@@ -34,6 +34,27 @@ function Product({className="",product}) {
 const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only Product */
+
+    .product-image{
+
+        @media(max-width:767px){     
+            margin-bottom: 1rem;
+
+        }
+
+        @media(max-width:800px){     
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        img{
+            height: 14rem !important;
+            width: 20rem !important;
+            /* width: 85% !important;   */
+
+    
+        }
+    }
     
     .Product-wrapper{
       /* width: var(--Product-content-width);
@@ -54,6 +75,9 @@ const DIV=styled.div`
         }
 
         .title{
+            @media (max-width: 767px){
+                    font-size:1.4rem;
+            }
             @media (max-width: 396px){
                     font-size:1.3rem;
             }

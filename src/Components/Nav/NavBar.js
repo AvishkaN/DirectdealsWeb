@@ -8,10 +8,10 @@ function NavBar({className=""}) {
   return (
     <NAV className={`${className} background-primary`}>
         <div className="Nav-wrapper">
-            <div className="row p-4 align-items-center">
-                    <NavLeft className=' col-6  '></NavLeft>
+            <div className="row  p-sm-4 align-items-center">
+                    <NavLeft className=' col-6  nav-left '></NavLeft>
 
-                    <NavRight className='   col-6 '></NavRight>
+                    <NavRight className='   col-6  width-800-display-none '></NavRight>
            
             </div>
 
@@ -41,9 +41,16 @@ const NAV=styled.nav`
         margin-left: auto;
         margin-right: auto; 
 
+        .nav-left{
+              
+                @media(max-width:900px){     
+                    width: 100%;
+                }
+        }
+
 
         .width-800-display-none{
-              @media(max-width:800px){     
+              @media(max-width:900px){     
                           display: none !important;
             }
 

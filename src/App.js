@@ -231,67 +231,6 @@ function App() {
 
 
 
-                                    {/* <Route path="/properties" element={ 
-                                      <>
-                                       <NavBar></NavBar>
-                                      <MobielNavBar></MobielNavBar>
-
-                                      <PropertPage></PropertPage>
-                                      <Footer className='mt-6'></Footer>
-
-                                      </>
-                                    } />
-
-                                    <Route path="/product-item/:prodcuctId" element={ 
-                                      <>
-                                      <NavBar></NavBar>
-                                      <MobielNavBar></MobielNavBar>
-
-                                      <ProductItem></ProductItem>
-                                      <Footer className='mt-6'></Footer>
-
-                                      </>
-                                    } />
-
-
-                                    <Route path="/classified" element={ 
-                                      <>
-                                            <NavBar></NavBar>
-                                          <MobielNavBar></MobielNavBar>
-
-                                        <ClassifiedPage></ClassifiedPage>
-                                        <Footer className='mt-6'></Footer>
-
-                                      </>
-                                    } />
-
-                                    <Route path="/myaccount" element={ 
-                                      <>
-                                            <NavBar></NavBar>
-                                          <MobielNavBar></MobielNavBar>
-
-                                        <MyAccountPage></MyAccountPage>
-                                        <Footer className='mt-6'></Footer>
-
-                                      </>
-                                    } />
-
-
-                                    <Route path="/register" element={ 
-                                      <> 
-
-                                            <RegisterPage></RegisterPage>
-
-                                      </>
-                                    } />
-                                    <Route path="/login" element={ 
-                                      <> 
-
-                                            <Login></Login>
-
-                                      </>
-                                    } /> */}
-
 
 
                         </Routes>

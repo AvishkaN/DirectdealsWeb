@@ -6,7 +6,7 @@ import Link from '../UI/Link/Link';
 
 function NavRight({className=""}) {
   return (
-    <DIV className={`${className}`}>
+    <DIV className={`${className} `}>
          <div className="NavRight-wrapper">
                     <div className="display-flex align-item-center   ">
 

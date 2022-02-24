@@ -45,17 +45,24 @@ const DIV=styled.div`
         margin-right: auto;  */
 
         .logo{
-            @media(max-width:800px){     
-                width: 60%;
+            @media(max-width:900px){   
+                margin-right: auto!important;
+                margin-left: auto!important;  
+                width: 29%;
                 }
+
+            @media(max-width:667px){     
+                width: 35%;
+                }
+
             @media(max-width:500px){     
-                width: 70%;
+                width: 42%;
                 }
                 
             }
             
             .mobile-nav-open-icon{
-                @media(max-width:800px){     
+                @media(max-width:900px){     
                         display:flex !important;
                     }
 
