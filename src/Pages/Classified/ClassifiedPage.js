@@ -33,12 +33,19 @@ const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only ClassfiedPage */
     margin-top: 10rem;   
+    --classified-page-width:85%;
+    
+    @media(max-width:1000px){     
+      --classified-page-width:93%;
+    }
+
+
     
     .ClassfiedPage-wrapper{   
         /* width: var(--page-content-width); */
         
         /* width: 94%; */
-        width: var(--page-content-width);
+        width: var(--classified-page-width);
         margin-left: auto;
         margin-right: auto; 
         /* background: yellow;  */

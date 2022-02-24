@@ -25,7 +25,7 @@ function ClassifiedHeader({className=""}) {
                      <div className="display-flex  ps-3">
 
                         <input type="text" className='input  search-input w-80 ' placeholder='What are you Looking For' />
-                        <Button text="Search " className='w-20 search--btn  text-color-white font-1-3'></Button>
+                        <Button  className='w-20 search--btn  text-color-white font-1-5 '>Search</Button>
                      </div>
 
 

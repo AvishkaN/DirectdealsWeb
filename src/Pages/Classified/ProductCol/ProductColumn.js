@@ -4,87 +4,44 @@ import Product from './Product';
 
 const classifiedProducts=[
     {
-        image:"https://i.ikman-st.com/calculator-ct-8866v-solar-led-display-desktop-for-sale-colombo/6f610c99-c7ca-40b5-8c01-348bbdb38b8c/160/120/cropped.webp",
+        image:"https://i.ikman-st.com/i3-3-rd-gen-gaming-pc-for-sale-kandy/4d218f00-f5d7-4b10-944e-3815fb1f4387/620/466/fitted.jpg",
         productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
+        AdType:"Classified",
+        location:"malabe",
+        Price:"Rs 15, 000",
+        nearBy:"nearby 1 Km",
     },
     {
-        image:"https://i.ikman-st.com/apple-iphone-7-128gb-used-for-sale-colombo-6708/37a40b7e-9072-4505-abc0-7e3f3eccae73/142/107/cropped.webp",   
+        image:"https://i.ikman-st.com/borgwad-bx5-2019-for-sale-colombo/97c03d4c-b32c-434c-a470-3541caec731a/620/466/fitted.jpg",
         productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
+        AdType:"Classified",
+        location:"malabe",
+        Price:"Rs 15, 000",
+        nearBy:"nearby 1 Km",
     },
-    {
-        image:"https://i.ikman-st.com/calculator-ct-8866v-solar-led-display-desktop-for-sale-colombo/6f610c99-c7ca-40b5-8c01-348bbdb38b8c/160/120/cropped.webp",  
-        productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
-    },
-    {
-        image:"https://i.ikman-st.com/apple-iphone-x-256gb-usa-used-for-sale-colombo-87/751ebad1-ec13-4ee4-af08-e287071c869d/142/107/cropped.webp",     
-        productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
-    },
-    {
-        image:"https://i.ikman-st.com/apple-iphone-x-256gb-usa-used-for-sale-colombo-87/751ebad1-ec13-4ee4-af08-e287071c869d/142/107/cropped.webp",       
-         productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
-    },
-
-
-    
     {
         image:"https://i.ikman-st.com/calculator-ct-8866v-solar-led-display-desktop-for-sale-colombo/6f610c99-c7ca-40b5-8c01-348bbdb38b8c/160/120/cropped.webp",
         productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
+        AdType:"Classified",
+        location:"malabe",
+        Price:"Rs 15, 000",
+        nearBy:"nearby 1 Km",
     },
     {
-        image:"https://i.ikman-st.com/apple-iphone-7-128gb-used-for-sale-colombo-6708/37a40b7e-9072-4505-abc0-7e3f3eccae73/142/107/cropped.webp",   
+        image:"https://i.ikman-st.com/calculator-ct-8866v-solar-led-display-desktop-for-sale-colombo/6f610c99-c7ca-40b5-8c01-348bbdb38b8c/160/120/cropped.webp",
         productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
+        AdType:"Classified",
+        location:"malabe",
+        Price:"Rs 15, 000",
+        nearBy:"nearby 1 Km",
     },
     {
-        image:"https://i.ikman-st.com/calculator-ct-8866v-solar-led-display-desktop-for-sale-colombo/6f610c99-c7ca-40b5-8c01-348bbdb38b8c/160/120/cropped.webp",  
+        image:"https://i.ikman-st.com/calculator-ct-8866v-solar-led-display-desktop-for-sale-colombo/6f610c99-c7ca-40b5-8c01-348bbdb38b8c/160/120/cropped.webp",
         productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
-    },
-    {
-        image:"https://i.ikman-st.com/apple-iphone-x-256gb-usa-used-for-sale-colombo-87/751ebad1-ec13-4ee4-af08-e287071c869d/142/107/cropped.webp",     
-        productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
-    },
-    {
-        image:"https://i.ikman-st.com/apple-iphone-x-256gb-usa-used-for-sale-colombo-87/751ebad1-ec13-4ee4-af08-e287071c869d/142/107/cropped.webp",       
-         productName:"Calculator CT-8866V Solar led display",
-        Address:"253A Galle Road, 04",
-        telNo:"071 127 8952",
-        Web:"www.retret.com",
-        CategoryAndType:"Electronics & Others",
+        AdType:"Classified",
+        location:"malabe",
+        Price:"Rs 15, 000",
+        nearBy:"nearby 1 Km",
     },
 
 ];
@@ -94,13 +51,16 @@ const classifiedProducts=[
 function ProductColumn({className="",}) {
   return (
     <DIV className={`${className}`}>
-         <div className="ProductColumn-wrapper">
+         <div className="ProductColumn-wrapper row">
 
         {
         classifiedProducts.map(product=>(
-            <Link to="/product-item/:7884546546324165">
-                    <Product className='product-item  ms-3 me-3 cursor-p mt-5 w-70' price={product.price} Address={product.Address}  image={product.image} name={product.productName} telNo={product.telNo} Web={product.Web}  CategoryAndType={product.CategoryAndType}></Product>
-            </Link>
+            <div className=" col-6  col-md-12 ">
+
+                        <Link to="/single-product">
+                                <Product className='product-item  ms-3 me-3 cursor-p mt-5 w-70' product={product}></Product>
+                        </Link>
+            </div>
             ))
         }
          </div>

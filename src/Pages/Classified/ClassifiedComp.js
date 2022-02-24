@@ -80,6 +80,8 @@ function ClassfiedPageComp({className=""}) {
                      <ClassifiedHeader></ClassifiedHeader>
              </div>
 
+
+                    {/* filter  */}
              <div className="filter-icon ps-5 cursor-p">
                  <div className="row">
                         <div className="col p-3">
@@ -98,6 +100,7 @@ function ClassfiedPageComp({className=""}) {
                     )}
 
 
+                        {/* Product Column */}
                    <div className="col-lg-8 product-col">
                           <ProductColumn></ProductColumn>
                    </div>
