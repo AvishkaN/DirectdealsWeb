@@ -14,7 +14,7 @@ const classifiedProducts=[
         nearBy:"nearby 1 Km",
     },
     {
-        image:"https://i.ikman-st.com/calculator-ct-8866v-solar-led-display-desktop-for-sale-colombo/6f610c99-c7ca-40b5-8c01-348bbdb38b8c/160/120/cropped.webp",
+        image:MobilePhoto2,
         productName:"Calculator CT-8866V Solar led display",
         AdType:"Classified",
         location:"malabe",
@@ -60,7 +60,7 @@ function ProductColumn({className="",}) {
             <div className=" col-6  col-md-12 ">
 
                         <Link to="/single-product">
-                                <Product className='product-item  ms-3 me-3 cursor-p mt-5 w-70' product={product}></Product>
+                                <Product className='product-item  ms-3 me-3 cursor-p mt-5 w-90' product={product}></Product>
                         </Link>
             </div>
             ))
