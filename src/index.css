@@ -544,6 +544,11 @@ a{
     color: inherit;
 }
 
+
+.li{
+    list-style: none;
+}
+
 .cursor-p{
     cursor: pointer;
 }

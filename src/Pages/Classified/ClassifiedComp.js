@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { ShowCategoryPopupFN, ShowLocationPopupFN } from '../../Redux/slices/clickSlice';
+import Search from '../../Components/Search/Search';
 
 
 
@@ -70,6 +71,9 @@ function ClassfiedPageComp({className=""}) {
              <div className="first-banner dispaly-none-992">
                  <img src={FirstBanner} alt="" className='w-100' />
              </div>
+
+
+
 
 
              <div className="Classified-header">

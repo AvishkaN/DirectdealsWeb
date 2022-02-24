@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Search from '../../../Components/Search/Search';
 import DropDownList from '../../../Components/UI/DropDownList/DropDownList';
 import FilterSelect from '../../../Components/UI/SelectJs/FilterSelect';
 import AllCategories from './AllCategories/AllCategories';
@@ -15,8 +16,20 @@ function FilterColumn({className=""}) {
                     <FilterSelect selectedColor="#80808021" className='filter-select'  filterSectionTitle={"Price Range"} filterList={["Date: Newest on top","Date: Oldest on top","Price: High to low","Price: Low to high"]} filterDefaultSelectedText={"Date:Newest on top"}></FilterSelect>
              </div>
 
+             <div className="mt-4">
+                    <div className="font-1-4">Nearby Location</div>
+                    <Search  
+                            className='search border-radius-5   mt-2 '
+                            searchFiledClassName='  search-field-className p-2   border-radius-5'
+                            SearchIconClassName=' search-icon-className  font-2-3 text-color-primary  '
+                            ListItemClassName='  list-item-className  p-2 '
 
-            <div className="filter-ads-by mt-5">
+                    />
+
+             </div>
+
+
+            <div className="filter-ads-by mt-3">
                   <div className="font-1-4">Filter ads by</div>
 
 
@@ -80,6 +93,25 @@ const DIV=styled.div`
                 background: #673500;     
             }
         }
+
+    }
+
+
+    .search{
+        border:1px solid var(--color-grey) ;
+        
+        .search-field-className{
+
+        }
+        .search-icon-className{
+
+        }
+        .list-item-className{
+
+        }
+
+        
+
 
     }
 `;

@@ -41,7 +41,7 @@ function ClassifiedHeader({className=""}) {
                      </div>
                  </div>
 
-                 {/* <div className="col-4   classified-header-input cursor-p  location">
+                 <div className="col-4   classified-header-input cursor-p  location">
                      <div className=" filter-title filter-title-location  display-flex  align-items-center  p-1">
 
 
@@ -50,14 +50,14 @@ function ClassifiedHeader({className=""}) {
                          <div className="fw-bold"> {clicks.classifiedPageSelectedLocation}</div>
                         
                      </div>
-                 </div> */}
+                 </div>
 
 
-                 <div className="col-4   classified-header-input cursor-p  location background-red">
+                 {/* <div className="col-4   classified-header-input cursor-p  location background-red">
                     
                             <Search></Search>
 
-                 </div>
+                 </div> */}
 
 
 
