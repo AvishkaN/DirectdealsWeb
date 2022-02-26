@@ -5,6 +5,77 @@ import FilterSelect from '../../../Components/UI/SelectJs/FilterSelect';
 import AllCategories from './AllCategories/AllCategories';
 
 
+const AllCategoriesList=[
+
+    {
+      listTxt:"Cars & Vehicles",
+      SvgIcon:<i className="ion-model-s cat-ico   text-color-primary   font-1-9  " />,
+      count:"(6690)"
+    },
+    
+    {
+      listTxt:"Electronics",
+      SvgIcon:<i className="lnr lnr-laptop-phone cat-ico   text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Property",
+      SvgIcon:<i className="ion-ios-home-outline cat-ico   text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Fashion, Health & Beauty ",
+      SvgIcon:<i className="lnr lnr-shirt linier-icon cat-ico   text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Home & Garden",
+      SvgIcon:<i className="lnr lnr-sun cat-ico  text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Animals",
+      SvgIcon:<i className="ion-ios-paw-outline cat-ico  text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Education",
+      SvgIcon:<i className="lnr lnr-graduation-hat cat-ico  text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Food & Agriculture",
+      SvgIcon:<i className="lnr lnr-leaf linier-icon cat-ico  text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Services",
+      SvgIcon:<i className="ion-wrench cat-ico  text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Others",
+      SvgIcon:<i className="ion-ios-albums-outline cat-ico text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Hotel, Travels & Tours",
+      SvgIcon:<i className="ion-beer cat-ico  text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+    {
+      listTxt:"Jobs",
+      SvgIcon:<i className="ion-briefcase cat-ico  text-color-primary font-1-9    " />,
+      count:"(8185)"
+    },
+  
+   
+  
+  
+  
+  ];
+
+
 
 function FilterColumn({className=""}) {
   return (
@@ -53,8 +124,23 @@ function FilterColumn({className=""}) {
              </div>
 
 
+
+ 
+
+
+            
             <div className="all-categories">
-                      <AllCategories></AllCategories>
+
+
+                    {/* Category Section */}
+                    <div className="font-1-4 mt-4">Category</div>
+                      <AllCategories  AllCategoriesList={AllCategoriesList}></AllCategories>
+                        
+
+                    {/* Category Section */}
+                    <div className="font-1-4 mt-4"> Location </div>
+                      <AllCategories  AllCategoriesList={AllCategoriesList}></AllCategories>
+
             </div>
 
 

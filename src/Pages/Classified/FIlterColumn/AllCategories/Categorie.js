@@ -7,11 +7,11 @@ function Categorie({className="",text,svgIcon,number}) {
   return (
     <DIV className={`${className} display-flex align-item-center`}>
              {svgIcon}
-             <Link to={text} className="ms-2">
+             <Link to={text} className="ms-3  category-text">
                 {text}
             </Link>
             
-            <div className="ms-2">{number}</div>
+            <div className="ms-2 text-color-grey-ori">{number}</div>
 
     </DIV>
   );
@@ -21,6 +21,10 @@ function Categorie({className="",text,svgIcon,number}) {
 const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only Categorie */
+
+    .category-text{
+      color: #757575;
+    }
     
     .Categorie-wrapper{
       /* width: var(--Categorie-content-width);

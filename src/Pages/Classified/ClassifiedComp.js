@@ -81,7 +81,7 @@ function ClassfiedPageComp({className=""}) {
              </div>
 
 
-                    {/* filter  */}
+                    {/* filter  icon */}
              <div className="filter-icon ps-5 cursor-p">
                  <div className="row">
                         <div className="col p-3">
@@ -93,6 +93,9 @@ function ClassfiedPageComp({className=""}) {
              </div>
 
                <div className="row pe-4 ps-4  mt-3 ">
+
+
+                    {/* Filter  */}
                   {showFilter &&(
                        <div className="filtercol col-lg-3 p-3">
                             <FilterColumn></FilterColumn>
@@ -100,14 +103,17 @@ function ClassfiedPageComp({className=""}) {
                     )}
 
 
-                        {/* Product Column */}
+                    {/* Product Column */}
                    <div className="col-lg-8 product-col">
                           <ProductColumn></ProductColumn>
                    </div>
 
+
+                {/* Google Ad */}
                    <div className="col-lg-1  gogole-ad p-0 dispaly-none-992">
                        <img src={googleAdBanner} className="w-100" alt="" />
                    </div>
+                   
                </div>
          </div>
     </DIV>
