@@ -1,31 +1,55 @@
 import styled from 'styled-components';
+import ProductDetailItem from './ProductDetailItem';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import LocationIcon from '@mui/icons-material/FmdGoodOutlined';
 
 
 
 function Product({className="",product}) {
   return (
     <DIV className={`${className}`}>
-         <div className="Product-wrapper">
-                <div className="row">
-                    <div className="col-md-3 col-12 product-image">
-                        <img className='w-100' src={product.image} alt="" />
+                <div className="Product-wrapper display-flex pt-4 pb-4">
+                    <div className="   product-image">
+                        <img className=' ' src={product.image} alt="" />
                     </div>
-                    <div className="col-md-9 col-12 mt-sm-0 mt-2  ">
+                    <div className="   mt-sm-0 mt-2   flex-1 ms-3 ">
+
+                        {/* Product  Name */}
                         <div className="title font-1-6 fw-bold">{product.productName}</div>
  
+                        {/* Small details */}
+                        <div className="display-flex Small-details-section">
+                            <div className="">
+                                    <ProductDetailItem  svgIcon={product.list.date.icon} text={product.list.date.text}  ></ProductDetailItem>
 
-                        <div className="font-1-4 product-list-mt text-color-grey-ori ">{product.AdType}</div>
-                        <div className="font-1-4  product-list-mt text-color-grey-ori ">{product.location}</div>
-                        <div className="font-1-6  product-list-mt  text-color-primary fw-bold ">{product.Price}</div>
-                        <div className="mt-1  font-1-6 fw-bold  text-color-grey-ori  text-right me-4 nearby-text">{ product.nearBy}</div>
+                            </div>
+                            <div className="ms-sm-3">
 
+                                    <ProductDetailItem  svgIcon={product.list.location.icon} text={product.list.location.text}  ></ProductDetailItem>
+                            </div>
+                            <div className="ms-sm-3">
+
+                                    <ProductDetailItem  svgIcon={product.list.category.icon} text={product.list.category.text}  ></ProductDetailItem>
+                            </div>
+                        </div>
+
+
+                        {/* Near by location */}
+                        <div className="   fw-bold    text-color-grey-ori  font-1-3  me-4 nearby-text">
+                            <LocationIcon></LocationIcon>
+                            {product.nearBy}
+                        </div>
+
+
+                        {/* Price */}
+                        <div className=" font-1-6   mt-2  text-color-primary fw-bold ">
+                            {product.Price}
+                        </div>
 
 
                         {/* <div className="price text-color-primary fw-bold font-1-5">{price}</div> */}
                     </div>
                 </div>
-         </div>
     </DIV>
   );
 }
@@ -34,6 +58,8 @@ function Product({className="",product}) {
 const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only Product */
+
+
 
     .product-image{
 
@@ -48,18 +74,33 @@ const DIV=styled.div`
 
         }
         img{
-            height: 14rem !important;
-            width: 20rem !important;
-            /* width: 85% !important;   */
+            /* height: 13rem !important;
+            width: 14rem !important; */
+
+            /* height: 102px;
+            width: 136px; */
+
+            height: 12rem;
+            width: 14rem;
 
     
         }
     }
     
+    .Small-details-section{  
+        @media(max-width:576px){     
+            flex-direction: column;  
+        }
+    }
+
+
     .Product-wrapper{
       /* width: var(--Product-content-width);
         margin-left: auto;
         margin-right: auto;  */
+        @media(max-width:576px){     
+            flex-direction: column;  
+        }
 
         .product-list-mt{  
             margin-top: -0.27rem; 
@@ -68,11 +109,6 @@ const DIV=styled.div`
         }
 
 
-        .row{
-            /* @media (min-width: 992px){
-                flex-direction: column;  
-            } */
-        }
 
         .title{
             @media (max-width: 767px){

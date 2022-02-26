@@ -343,6 +343,9 @@ h1{
 .display-flex{   
     display: flex !important;
 }
+.flex-1{   
+    flex: 1;
+}
 .display-flex-direction-column{   
     flex-direction: column;
 }

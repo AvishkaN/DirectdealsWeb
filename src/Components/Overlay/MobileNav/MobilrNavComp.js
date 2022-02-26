@@ -51,7 +51,7 @@ function MobileNavComp({className=""}) {
     <DIV className={`${className}`}>
          <div className="MobileNavComp-wrapper">
 
-                <div className="logo w-95">
+                <div className="logo w-75">
                             <Logo></Logo>
                 </div>
 
