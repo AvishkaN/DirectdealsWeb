@@ -5,6 +5,7 @@ import WarningText from './WarningText/WarningText';
 import SummaryIconsSection from './SummaryIconsSection/SummaryIconsSection';
 import Specification from './Specification/Specification';
 import FeatureSection from './FeatureSection/FeatureSection';
+import RecentAds from '../StorePage/StorePages/StoreHome/RecentAds/RecentAds';
 
 
 import HistoryIcon from '@mui/icons-material/HistoryOutlined';
@@ -20,7 +21,6 @@ import CalenderIcon from '@mui/icons-material/DateRangeOutlined';
 
 // Right Icon
 import CorrectIcon from '@mui/icons-material/Check';
-import RecentAds from '../StorePage/StorePages/StoreHome/RecentAds/RecentAds';
 
 
 
@@ -122,7 +122,7 @@ const product={
   
 };
 
-const store={
+const AllAds={
   allAds:[
 
     {
@@ -263,7 +263,7 @@ function ProductItemComp({className=""}) {
                   </div>
 
 
-                  <RecentAds className=' mt-4  '    columnSizeClassName={" ad-col-3"}  store={store} sliceNum={-4}></RecentAds>
+                  <RecentAds className=' mt-4  '    columnSizeClassName={" ad-col-3"}  AllAds={AllAds} sliceNum={-4}></RecentAds>
 
 
             </div>

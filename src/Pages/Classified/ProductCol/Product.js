@@ -1,35 +1,38 @@
 import styled from 'styled-components';
+
+import StarIcon from '@mui/icons-material/StarOutlined';
+
 import ProductDetailItem from './ProductDetailItem';
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import TopSellerIcon from './../../../assets/icons/topSeller/topSeller.png';
 import LocationIcon from '@mui/icons-material/FmdGoodOutlined';
 
 
 
-function Product({className="",product}) {
+function Product({className="",Ad}) {
   return (
-    <DIV className={`${className}`}>
-                <div className="Product-wrapper display-flex pt-4 pb-4">
+    <DIV className={`${className}`} featureAd={Ad.featureAd}>
+                <div className="Product-wrapper display-flex pt-sm-4 pb-sm-4">
                     <div className="   product-image">
-                        <img className=' ' src={product.image} alt="" />
+                        <img className=' ' src={Ad.image} alt="" />
                     </div>
                     <div className="   mt-sm-0 mt-2   flex-1 ms-3 ">
 
                         {/* Product  Name */}
-                        <div className="title font-1-6 fw-bold">{product.productName}</div>
+                        <div className="title font-1-6 fw-bold">{Ad.productName}</div>
  
                         {/* Small details */}
                         <div className="display-flex Small-details-section">
                             <div className="">
-                                    <ProductDetailItem  svgIcon={product.list.date.icon} text={product.list.date.text}  ></ProductDetailItem>
+                                    <ProductDetailItem  svgIcon={Ad.list.date.icon} text={Ad.list.date.text}  ></ProductDetailItem>
 
                             </div>
                             <div className="ms-sm-3">
 
-                                    <ProductDetailItem  svgIcon={product.list.location.icon} text={product.list.location.text}  ></ProductDetailItem>
+                                    <ProductDetailItem  svgIcon={Ad.list.location.icon} text={Ad.list.location.text}  ></ProductDetailItem>
                             </div>
                             <div className="ms-sm-3">
 
-                                    <ProductDetailItem  svgIcon={product.list.category.icon} text={product.list.category.text}  ></ProductDetailItem>
+                                    <ProductDetailItem  svgIcon={Ad.list.category.icon} text={Ad.list.category.text}  ></ProductDetailItem>
                             </div>
                         </div>
 
@@ -37,17 +40,94 @@ function Product({className="",product}) {
                         {/* Near by location */}
                         <div className="   fw-bold    text-color-grey-ori  font-1-3  me-4 nearby-text">
                             <LocationIcon></LocationIcon>
-                            {product.nearBy}
+                            {Ad.nearBy}
                         </div>
 
+
+                        
+
+                    {/* Feature ad */}
+                     { Ad.featureAd&& (
+                         
+                    <div className="feature-ad-section">
 
                         {/* Price */}
-                        <div className=" font-1-6   mt-2  text-color-primary fw-bold ">
-                            {product.Price}
+                        <div className="font-1-6    text-color-primary fw-bold ">
+                            {Ad.Price}
+                        </div>
+
+                        {/* Other Images */}
+
+                        <div className="other-images-section">
+
+                                {
+                                    Ad.otherImages.map(image=>(
+                                        <img src={image} alt=""  className='other-images  ms-2' />
+                                    ))
+                                }
                         </div>
 
 
-                        {/* <div className="price text-color-primary fw-bold font-1-5">{price}</div> */}
+                        <div className="FetureAdText  text-color-white fw-bold ps-2 pe-5  ">
+                                Feature Ad
+                        </div>
+
+
+
+                    </div>
+                    )}
+
+                   
+                 
+
+                    {
+                        Ad.topSeller && (
+
+                        <div className='top-ad-section'>
+                                {/* Price */}
+                                <div className="font-1-6    text-color-primary fw-bold ">
+                                    {Ad.Price}
+                                </div>
+
+                                        
+
+                                <div className="top-seller-section ">
+                                    <img src={TopSellerIcon} alt="" className='w-75 ' />
+                                </div>
+
+                                <div className="top-ad-text   display-inline-block border-radius-5 pe-1 ">
+                                      <div className="pe-2 ps-2 border-radius-5  text-color-white display-flex align-items-center">
+
+                                                <StarIcon className='font-2'></StarIcon>
+                                                <div className="">
+                                                        Top Ad
+                                                </div>
+
+                                      </div>
+                                      
+                                </div>
+
+                        </div>
+
+                        )
+                    }
+
+
+
+                    {/* Price  normal Ad*/}
+                    {
+                      (  !Ad.topSeller   ||  !Ad.topSeller) && (
+
+
+                                <div className="font-1-6    text-color-primary fw-bold ">
+                                    {Ad.Price}
+                                </div>
+
+
+                        )
+                    }
+
+
                     </div>
                 </div>
     </DIV>
@@ -58,6 +138,7 @@ function Product({className="",product}) {
 const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only Product */
+    background:${props => props.featureAd? '#fffbc1':''};
 
 
 
@@ -74,14 +155,12 @@ const DIV=styled.div`
 
         }
         img{
-            /* height: 13rem !important;
-            width: 14rem !important; */
-
-            /* height: 102px;
-            width: 136px; */
-
             height: 12rem;
             width: 14rem;
+
+            @media(max-width:576px){        
+                     width:100%;
+            }
 
     
         }
@@ -94,10 +173,37 @@ const DIV=styled.div`
     }
 
 
+    .feature-ad-section{
+        
+        .other-images-section{
+            
+            /* background-color: red;  */
+
+            @media(max-width:576px){     
+                            display: none;
+                }
+
+
+            .other-images{
+                width: 55px;
+                 height: 50px;
+            }
+        }
+
+    }
+
+
+    .top-seller-section{
+
+    }
+
+
+
     .Product-wrapper{
       /* width: var(--Product-content-width);
         margin-left: auto;
         margin-right: auto;  */
+        position: relative;
         @media(max-width:576px){     
             flex-direction: column;  
         }
@@ -153,6 +259,37 @@ const DIV=styled.div`
                 }
         }
 
+    }
+
+    .FetureAdText{
+        /* background-color: var(--color-primary); */
+        background-color: #fea502;
+        clip-path: polygon(18% 0px, 21% 0px, 81.42% 0px, 100% 100%, 70% 100%, 0px 98%, 0px 0px, 7% 0px);
+        position: absolute;
+        top: 0;
+        left:0; 
+    }
+
+    .top-seller-section{
+        position: absolute;
+        top: 0;
+        left: 0; 
+        transform:translateX(-4%) rotate(0deg) translateY(-1%);
+
+        img{
+            margin-top: -0.3rem;
+
+        }
+
+        /* background: red; */
+    }
+
+    .top-ad-section{
+        /* background-color: red;  */
+        .top-ad-text{
+            /* display: inline; */
+            background-color: #fea502;
+        }
     }
 `;
 

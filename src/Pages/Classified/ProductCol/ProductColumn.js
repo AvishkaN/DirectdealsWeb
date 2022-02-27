@@ -4,114 +4,26 @@ import MobilePhoto2 from './../../../assets/img/productImages/fitted.jpg';
 import Link from '../../../Components/UI/Link/Link';
 import Product from './Product';
 
-import TimeIconSvg from '@mui/icons-material/AccessTimeOutlined';
-import TagIconSvg from '@mui/icons-material/LocalOfferOutlined';
-import LocationIconSvg from '@mui/icons-material/FmdGoodOutlined';
-
-const classifiedProducts=[
-    // {
-    //     image:"https://i.ikman-st.com/laptop-for-sale-colombo-4435/a9a2f172-2212-4df8-bc94-7679f07f2157/620/466/fitted.jpg",
-    //     productName:" Solar led display",
-    //     AdType:"Classified",
-    //     location:"malabe",
-    //     Price:"Rs 15, 000",
-    //     nearBy:"nearby 1 Km",
-    // },
-    {
-        image:"https://i.ikman-st.com/laptop-for-sale-colombo-4435/a9a2f172-2212-4df8-bc94-7679f07f2157/620/466/fitted.jpg",
-        productName:" Solar led display",
-        
-        list:{
-            date:{
-                text:"17 Mar 2021, 3:49pm",
-                icon:<TimeIconSvg className=""></TimeIconSvg>
-            },
-            location:{
-                text:"malabe",
-                icon:<LocationIconSvg className="" ></LocationIconSvg>
-            },
-            category:{
-                text:"land",
-                icon:<TagIconSvg></TagIconSvg>
-            },
+import { AllAds } from '../../../Data/Data';
 
 
-            
-        },
-        Price:"Rs 15, 000",
-        nearBy:"nearby 1 Km",
-
-        premiumMember:true,
-    },
-    {
-        image:"https://i.ikman-st.com/laptop-for-sale-colombo-4435/a9a2f172-2212-4df8-bc94-7679f07f2157/620/466/fitted.jpg",
-        productName:" Solar led display",
-        
-        list:{
-            date:{
-                text:"17 Mar 2021, 3:49pm",
-                icon:<TimeIconSvg className=""></TimeIconSvg>
-            },
-            location:{
-                text:"malabe",
-                icon:<LocationIconSvg className="" ></LocationIconSvg>
-            },
-            category:{
-                text:"land",
-                icon:<TagIconSvg></TagIconSvg>
-            },
 
 
-            
-        },
-        Price:"Rs 15, 000",
-        nearBy:"nearby 1 Km",
 
-        premiumMember:true,
-    },
-    {
-        image:"https://i.ikman-st.com/laptop-for-sale-colombo-4435/a9a2f172-2212-4df8-bc94-7679f07f2157/620/466/fitted.jpg",
-        productName:" Solar led display",
-        
-        list:{
-            date:{
-                text:"17 Mar 2021, 3:49pm",
-                icon:<TimeIconSvg className=""></TimeIconSvg>
-            },
-            location:{
-                text:"malabe",
-                icon:<LocationIconSvg className="" ></LocationIconSvg>
-            },
-            category:{
-                text:"land",
-                icon:<TagIconSvg></TagIconSvg>
-            },
-
-
-            
-        },
-        Price:"Rs 15, 000",
-        nearBy:"nearby 1 Km",
-
-        premiumMember:true,
-    },
-
-
-];
 
 
 
 function ProductColumn({className="",}) {
   return (
     <DIV className={`${className}`}>
-         <div className="ProductColumn-wrapper row">
+         <div className="ProductColumn-wrapper row gx-5 gx-sm-0">
 
         {
-        classifiedProducts.map(product=>(
-            <div className=" col-sm-12 col-6    ">
+        AllAds.map(Ad=>(
+            <div className=" col-sm-11 col-6 mb-4   overfloy-y-hidden">
 
                         <Link to="/single-product">
-                                <Product className='product-item  me-2 ms-2  mb-3 cursor-p  w-90' product={product}></Product>
+                                <Product className='product-item   cursor-p  h-100    me-sm-2 ms-sm-2  mb-sm-3   ' Ad={Ad}></Product>
                         </Link>
             </div>
             ))
@@ -127,9 +39,13 @@ const DIV=styled.div`
     /* margin-top: var(--margin-top-fix-nav);  */  /*only ProductColumn */
     
     .ProductColumn-wrapper{
-      /* width: var(--ProductColumn-content-width);
-        margin-left: auto;
-        margin-right: auto;  */
+        /* background-color: red; */
+
+        @media(max-width:576px){     
+            /* justify-content: center; */
+        }
+
+
 
         .product-item{
             border-top: 0.5px solid #d4ded9;

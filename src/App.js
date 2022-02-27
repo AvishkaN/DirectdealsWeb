@@ -78,6 +78,7 @@ function App() {
                 <div className="app-content" onClick={handleClick}>
 
                         <Routes>
+                                    {/* Home Page */}
                                     <Route path="/" element={ 
                                       <>
                                       <NavBar className='position-fixed w-100'></NavBar>
@@ -98,6 +99,7 @@ function App() {
                                     } />
 
 
+                                    {/* Single Product */}
                                     <Route path="/single-product" element={ 
                                       <>
                                       <NavBar className='position-fixed w-100'></NavBar>
