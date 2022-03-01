@@ -168,6 +168,11 @@ function HomePage({className=""}) {
          
 
             <SearchSection className='background-primary'></SearchSection>
+          
+          
+          
+          
+          
            <Link to="/allAds">
                 <h1>
 
@@ -260,6 +265,10 @@ const DIV=styled.div`
     margin-top: 5.88rem; 
     /* background:yellow;  */
     /* min-height:100vh;  */
+
+    @media(max-width:768px){     
+      margin-top: 4rem;
+    }
     
     
     .HomePage-wrapper{

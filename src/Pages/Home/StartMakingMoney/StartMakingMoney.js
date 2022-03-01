@@ -50,26 +50,32 @@ function StartMakingMoney({className=""}) {
 
 
 
+
+                    {/* Direct deals job */}
                    <div className="col-xl-6  col-11   sec ps-3  box-shadow-normal   m-4  m-xl-0 ">
                        <div className="row justify-content-between">
                            
 
 
-                           <div className="col-8">
-                               <div className=" fw-bold font-1-8 mt-5 ">DirectDealJobs</div>
+                           <div className="col-xl-8  text-center   text-xl-start">
+                               <div className=" fw-bold font-1-8 mt-5 ">DirectDeal Jobs</div>
 
                                <div className="mt-3 text-color-grey-light font-1-3">
                                          Looking to hire or get hired in Sri Lanka ? Get access to 400k+ CVs or browse through 4.5k+ job vacancies!
                                </div>
 
-                               <Button className="background-green display-flex align-items-center mt-4 border-radius-20 ps-4 pe-4 pt-2 pb-2 ">
-                                    <div className=" me-2  text-color-white">
-                                        Explore More
-                                    </div>
-                                     <i className="fas fa-chevron-circle-right  font-1-8 text-color-white" aria-hidden="true" />
+                               <div className="button-container  display-flex">
+
+                                    <Button className="background-green display-flex align-items-center mt-4 border-radius-20 ps-4 pe-4 pt-2 pb-2 ">
+                                            <div className=" me-2  text-color-white">
+                                                Explore More
+                                            </div>
+                                            <i className="fas fa-chevron-circle-right  font-1-8 text-color-white" aria-hidden="true" />
 
 
-                               </Button>
+                                    </Button>
+                               </div>
+
                            </div>
 
 
@@ -135,6 +141,14 @@ const DIV=styled.div`
         }
 
 
+    }
+
+    .button-container{
+        justify-content: center;
+        @media(min-width:1200px){   
+
+                      justify-content: left; 
+        }
     }
 `;
 

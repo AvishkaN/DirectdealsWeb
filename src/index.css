@@ -367,6 +367,9 @@ h1{
 .display-flex-direction-column{   
     flex-direction: column;
 }
+.flex-direction-column{   
+    flex-direction: column;
+}
 .display-flex-j-c{
     display: flex;
     justify-content: center;
@@ -384,6 +387,42 @@ h1{
 .justify-content-center{
     justify-content: center;
 }
+
+/* text-sm-end */
+
+@media (min-width: 576px){
+    .justify-content-sm-center{
+        justify-content: center;
+    
+    }
+}
+@media (min-width:768px){
+    .justify-content-md-center{
+        justify-content: center;
+    
+    }
+}
+@media (min-width: 992px){
+    .justify-content-lg-center{
+        justify-content: center;
+    
+    }
+}
+@media (min-width: 1200px){
+    .justify-content-lg-center{
+        justify-content: center;
+    
+    }
+}
+@media (min-width: 1400px){
+    .justify-content-lg-center{
+        justify-content: center;
+    
+    }
+}
+
+
+
 .justify-content-space-between{
     justify-content: space-between;
 }
