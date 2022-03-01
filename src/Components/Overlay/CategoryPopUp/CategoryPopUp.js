@@ -26,136 +26,283 @@ import Vegitables from './../../../assets/img/vegitables.png';
 
 import PopUp from '../PopUp/PopUp';
 
+// const CategoryList=[
+//     {
+//         categoryName:"Hotel",
+//         categoryIconSvg:<Hotel></Hotel>,
+//         subCategories:[
+//             "Resturant",
+//             "Hotel",
+//         ]
+//     },
+//     {
+//         categoryName:"Resturant",
+//         categoryIconSvg:<Resturant></Resturant>,
+//         subCategories:[
+//             "Maharagama",
+//             "Kottawa",
+//             "Piliyandala",
+//             "Homagama",
+//             "Dehiwala",
+//             "EEEE",
+//         ]
+//     },
+//     {
+//         categoryName:"Book Shop",
+//         categoryIconSvg:<BookShop></BookShop>,
+//         subCategories:[
+//             "Book",
+//             "Pencil",
+//             "Piliyandala",
+//             "Homagama",
+//             "Dehiwala",
+//             "EEEE",
+//         ]
+//     },
+//     {
+//         categoryName:"Staionary Shop",
+//         categoryIconSvg:<StainoryIcon></StainoryIcon>,
+//         subCategories:[
+//             "Staionary",
+//             "Kottawa",
+//             "Piliyandala",
+//             "Homagama",
+//             "Dehiwala",
+//             "EEEE",
+//         ]
+//     },
+//     {
+//         categoryName:"Jewelry",
+//         categoryIconSvg:<JewelleryIcon></JewelleryIcon>,
+//         subCategories:[
+//             "Gold",
+//             "Kottawa",
+//             "Piliyandala",
+//             "Homagama",
+//             "Dehiwala",
+//             "EEEE",
+//         ]
+//     },
+//     {
+//         categoryName:"Saloon",
+//         categoryIconSvg:<Parlor></Parlor>,
+//         subCategories:[
+//             "Hair Cut",
+//             "Kottawa",
+//             "Piliyandala",
+//             "Homagama",
+//             "Dehiwala",
+//             "EEEE",
+//         ]
+//     },
+//     {
+//         categoryName:"Food City",
+//         categoryIconSvg:<FoodCity></FoodCity>,
+//         subCategories:[
+//             "Maharagama",
+//             "Kottawa",
+//             "Piliyandala",
+//             "Homagama",
+//             "Dehiwala",
+//             "EEEE",
+//         ]
+//     },
+//     {
+//         categoryName:"Bakery",
+//         categoryIconSvg:<Bakery></Bakery>,
+//         subCategories:[
+//             "Bread",
+//             "Kottawa",
+//             "Piliyandala",
+//             "Homagama",
+//             "Dehiwala",
+//             "EEEE",
+//         ]
+//     },
+//     {
+//         categoryName:"Fruite Shop",
+//         categoryIconSvg:<FruiteShop></FruiteShop>,
+//         subCategories:[
+//             "Appple",
+//             "Orange",
+//             "Piliyandala",
+//         ]
+//     },
+//     {
+//         categoryName:"Vegetable Shop",
+//         categoryIconSvg:<Vegitables></Vegitables>,
+//         subCategories:[
+//             "potato",
+//             "Kottawa",
+//             "Piliyandala",
+//         ]
+//     },
+//     {
+//         categoryName:"Vegetable Shop",
+//         categoryIconSvg:<Vegitables></Vegitables>,
+//         subCategories:[
+//             "potato",
+//             "Kottawa",
+//             "Piliyandala",
+//         ]
+//     },
+//     {
+//         categoryName:"Vegetable Shop",
+//         categoryIconSvg:<Vegitables></Vegitables>,
+//         subCategories:[
+//             "potato",
+//             "Kottawa",
+//             "Piliyandala",
+//         ]
+//     },
+// ];
+
 const CategoryList=[
+
     {
-        categoryName:"Hotel",
-        categoryIconSvg:<Hotel></Hotel>,
-        subCategories:[
-            "Resturant",
-            "Hotel",
-        ]
+      listTxt:"Cars & Vehicles",
+      categoryIconSvg:<i className="ion-model-s cat-ico   text-color-primary   font-1-9  " />,
+      subCategories:[
+          "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+      ] 
+    },
+    
+    {
+      listTxt:"Electronics",
+      categoryIconSvg:<i className="lnr lnr-laptop-phone cat-ico   text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+    ]
     },
     {
-        categoryName:"Resturant",
-        categoryIconSvg:<Resturant></Resturant>,
-        subCategories:[
-            "Maharagama",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "EEEE",
-        ]
+      listTxt:"Property",
+      categoryIconSvg:<i className="ion-ios-home-outline cat-ico   text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Book Shop",
-        categoryIconSvg:<BookShop></BookShop>,
-        subCategories:[
-            "Book",
-            "Pencil",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "EEEE",
-        ]
+      listTxt:"Fashion Health & Beauty",
+      categoryIconSvg:<i className="ion-ios-home-outline cat-ico   text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
+    },
+   
+    {
+      listTxt:"Home & Garden",
+      categoryIconSvg:<i className="lnr lnr-sun cat-ico  text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+    ]
     },
     {
-        categoryName:"Staionary Shop",
-        categoryIconSvg:<StainoryIcon></StainoryIcon>,
-        subCategories:[
-            "Staionary",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "EEEE",
-        ]
+      listTxt:"Animals",
+      categoryIconSvg:<i className="ion-ios-paw-outline cat-ico  text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Jewelry",
-        categoryIconSvg:<JewelleryIcon></JewelleryIcon>,
-        subCategories:[
-            "Gold",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "EEEE",
-        ]
+      listTxt:"Education",
+      categoryIconSvg:<i className="lnr lnr-graduation-hat cat-ico  text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Saloon",
-        categoryIconSvg:<Parlor></Parlor>,
-        subCategories:[
-            "Hair Cut",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "EEEE",
-        ]
+      listTxt:"Food & Agriculture",
+      categoryIconSvg:<i className="lnr lnr-leaf linier-icon cat-ico  text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Food City",
-        categoryIconSvg:<FoodCity></FoodCity>,
-        subCategories:[
-            "Maharagama",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "EEEE",
-        ]
+      listTxt:"Services",
+      categoryIconSvg:<i className="ion-wrench cat-ico  text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Bakery",
-        categoryIconSvg:<Bakery></Bakery>,
-        subCategories:[
-            "Bread",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "EEEE",
-        ]
+      listTxt:"Others",
+      categoryIconSvg:<i className="ion-ios-albums-outline cat-ico text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Fruite Shop",
-        categoryIconSvg:<FruiteShop></FruiteShop>,
-        subCategories:[
-            "Appple",
-            "Orange",
-            "Piliyandala",
-        ]
+      listTxt:"Hotel, Travels & Tours",
+      categoryIconSvg:<i className="ion-beer cat-ico  text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Vegetable Shop",
-        categoryIconSvg:<Vegitables></Vegitables>,
-        subCategories:[
-            "potato",
-            "Kottawa",
-            "Piliyandala",
-        ]
+      listTxt:"Jobs",
+      categoryIconSvg:<i className="ion-briefcase cat-ico  text-color-primary font-1-9    " />,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
-    {
-        categoryName:"Vegetable Shop",
-        categoryIconSvg:<Vegitables></Vegitables>,
-        subCategories:[
-            "potato",
-            "Kottawa",
-            "Piliyandala",
-        ]
-    },
-    {
-        categoryName:"Vegetable Shop",
-        categoryIconSvg:<Vegitables></Vegitables>,
-        subCategories:[
-            "potato",
-            "Kottawa",
-            "Piliyandala",
-        ]
-    },
-];
+  
+   
+  
+  
+  
+  ];
 
 
 

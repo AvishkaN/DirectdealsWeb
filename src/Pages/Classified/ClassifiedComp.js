@@ -7,14 +7,11 @@ import FirstBanner from './../../assets/img/firstBanner.png';
 import FilterColumn from './FIlterColumn/FilterColumn';
 import ProductColumn from './ProductCol/ProductColumn';
 import ClassifiedHeader from './ClassifiedHeader/ClassifiedHeader';
+import CTAShopNowRow from './CTAShopNow/CTAShopNowRow';
 
-import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import FilterAltOffIcon from '@mui/icons-material/FilterAltOff';
-import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { ShowCategoryPopupFN, ShowLocationPopupFN } from '../../Redux/slices/clickSlice';
-import Search from '../../Components/Search/Search';
+import { ShowCategoryPopupFN, ShowClassifiedPageFilter, ShowLocationPopupFN } from '../../Redux/slices/clickSlice';
 
 
 
@@ -22,19 +19,18 @@ function ClassfiedPageComp({className=""}) {
 
 
 
-    const[showFilter,setShowFilter]=useState(true);
     const dispatch=useDispatch();
 
 
     const handleClick=(e)=>{
 
-        const FilterICon=e.target.closest('.filter-icon-svg');
+        const FilterICon=e.target.closest('#Filter-icon');
 
        const FilterTitle=e.target.closest('.filter-title')?.classList[1]; 
 
 
         if(FilterICon){
-            setShowFilter(!showFilter);
+            dispatch(ShowClassifiedPageFilter());
         }
 
 
@@ -48,19 +44,11 @@ function ClassfiedPageComp({className=""}) {
             dispatch(ShowCategoryPopupFN());
 
         }
+
+        // console.log(e.target.closest('#Filter-icon'));
     }
 
-    useEffect(()=>{
-        
 
-        const documentWidth=document.documentElement.clientWidth;
-
-        if(documentWidth<992){ 
-            setShowFilter(false);
-
-        }
-
-    },[]);
 
 
 
@@ -68,39 +56,29 @@ function ClassfiedPageComp({className=""}) {
     <DIV className={`${className}`} onClick={handleClick}>
          <div className="ClassfiedPageComp-wrapper">
 
+
+                {/* Banner */}
              <div className="first-banner dispaly-none-992">
                  <img src={FirstBanner} alt="" className='w-100' />
              </div>
 
-
-
-
-
-             <div className="Classified-header">
+                {/* Location , category , search bar contianer */}
+             <div className="Classified-header  mt-2">
                      <ClassifiedHeader></ClassifiedHeader>
              </div>
 
+                {/* CTA section --> Shop Now */}
+                <CTAShopNowRow></CTAShopNowRow>
 
-                    {/* filter  icon */}
-             <div className="filter-icon ps-5 cursor-p">
-                 <div className="row">
-                        <div className="col p-3">
-                           {  showFilter  && <FilterAltIcon className=' filter-icon-svg font-2-7 text-color-primary'></FilterAltIcon>}
-                            {!showFilter && <FilterAltOffIcon className=' filter-icon-svg font-2-7 text-color-primary'></FilterAltOffIcon>}
-
-                        </div>
-                 </div>
-             </div>
+              
 
                <div className="row pe-4 ps-4  mt-3 ">
 
 
-                    {/* Filter  */}
-                  {showFilter &&(
+                    {/* Filter  Column*/}
                        <div className="filtercol col-lg-3 p-3">
                             <FilterColumn></FilterColumn>
-                            </div>
-                    )}
+                        </div>
 
 
                     {/* Product Column */}
@@ -131,10 +109,10 @@ const DIV=styled.div`
         margin-right: auto;  */
 
         .filtercol{
-               border: 1px solid var(--color-grey);
+               border: 1px solid #e7edee;
 
             @media (max-width: 992px){
-                /* display: none;   */
+                display: none;  
             }
 
         }

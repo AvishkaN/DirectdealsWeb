@@ -11,10 +11,11 @@ export const clickSlice=createSlice({
 
         showLocationPopUp:false, 
         showCategoryPopUp:false, 
-
+        
         classifiedPageSelectedLocation:"Location",
         classifiedPageSelectedCategory:"Category",
-
+        
+        classifiedPagefilter:false, 
         
 
         UserDashBoardSelectedComp:null,
@@ -77,16 +78,26 @@ export const clickSlice=createSlice({
             // state.showOverlay=true;   
         },
 
+
+        ShowClassifiedPageFilter:(state,action)=>{     
+
+            state.classifiedPagefilter=true;    
+            state.showOverlay=true;  
+
+        },
+
         
         ShowHideAllFN:(state)=>{     
 
-            state.showOverlay=false;  
+            state.showOverlay=false; 
             state.showMobileNav=false; 
 
             state.storeMobileNav=null; 
     
             state.showLocationPopUp=false; 
             state.showCategoryPopUp=false; 
+
+            state.classifiedPagefilter=false; 
 
             state.showPostAd=false; 
             state.UserDashBoardSelectedComp=null; 
@@ -117,6 +128,8 @@ export const {
                             SetShowPostAdFN,
 
                             SetUserDashBoardSelectedCompFN,
+
+                            ShowClassifiedPageFilter,
 
 
                             ShowHideAllFN,

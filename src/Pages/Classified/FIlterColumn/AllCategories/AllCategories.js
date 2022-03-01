@@ -36,7 +36,7 @@ import { render } from '@testing-library/react';
 
 
 
-function AllCategories({className="",AllCategoriesList}) {
+function AllCategories({className="",AllCategoriesList,LocationList}) {
   return (
     <DIV className={`${className} `}>
 
@@ -49,6 +49,10 @@ function AllCategories({className="",AllCategoriesList}) {
                <Categorie   className='mt-2'  text={categoryIcon.listTxt} number={categoryIcon.count}   svgIcon={categoryIcon.SvgIcon}    ></Categorie>
              ))
            }
+
+          
+
+
 
 
          

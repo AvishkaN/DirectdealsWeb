@@ -330,6 +330,13 @@ h1{
     font-family: 'Roboto', sans-serif !important;
 }
 
+.font-family-cursive{
+    font-family: cursive !important;
+}
+
+
+
+
 
 
 .display-inline{   
@@ -339,6 +346,17 @@ h1{
 .display-inline-block{   
     display: inline-block !important;
 }
+
+.background-hover:hover{
+    background: var(--color-grey-2);
+}
+
+@media(max-width:600px){     
+    .background-hover:hover{
+        background: inherit;
+    }
+}
+
 
 .display-flex{   
     display: flex !important;
@@ -425,6 +443,12 @@ h1{
 .border-radius-circle{  
     border-radius: 50%;
 }
+
+
+.border-grey {
+   border: 1px solid #0e0e0e26;
+}
+
 
 
 .background-primary{

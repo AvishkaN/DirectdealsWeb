@@ -5,6 +5,7 @@ import MobileNav from './MobileNav/MobileNav';
 import LocationPopUp from './LocationPopUp/LocationPopUp';
 import CategoryPopUp from './CategoryPopUp/CategoryPopUp';
 import PostAdPopUp from './PostAdPopUp/PostAdPopUp';
+import FilterPopUp from './Filter/FilterPopUp';
 import UserDashBoardSelectComp from './UserDashBoardSelected/UserDashBoardSelectComp';
 
 
@@ -53,6 +54,7 @@ function Overlay({className=""}) {
              {clicks.showLocationPopUp &&    <LocationPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></LocationPopUp>}
              {clicks.showCategoryPopUp &&    <CategoryPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></CategoryPopUp>}
              {clicks.showPostAd &&    <PostAdPopUp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></PostAdPopUp>}
+             {clicks.classifiedPagefilter &&    <FilterPopUp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></FilterPopUp>}
              {/* {clicks.UserDashBoardSelectedComp && document.documentElement.clientWidth>600 &&    <UserDashBoardSelectComp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></UserDashBoardSelectComp>} */}
      
      
@@ -75,8 +77,7 @@ const DIV=styled.div`
     position: absolute;
     top: 0;
     left: 0; 
-    z-index:5; 
-    /* margin-top: var(--margin-top-fix-nav);  */  /*only Overlay */
+    z-index: 99999995;
     
     .Overlay-wrapper{
       /* width: var(--Overlay-content-width);

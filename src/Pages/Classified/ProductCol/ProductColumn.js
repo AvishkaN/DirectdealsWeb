@@ -23,7 +23,7 @@ function ProductColumn({className="",}) {
             <div className=" col-sm-11 col-6 mb-4   overfloy-y-hidden">
 
                         <Link to="/single-product">
-                                <Product className='product-item   cursor-p  h-100    me-sm-2 ms-sm-2  mb-sm-3   ' Ad={Ad}></Product>
+                                <Product className='product-item   cursor-p  h-100    me-sm-2 ms-sm-2    ' Ad={Ad}></Product>
                         </Link>
             </div>
             ))

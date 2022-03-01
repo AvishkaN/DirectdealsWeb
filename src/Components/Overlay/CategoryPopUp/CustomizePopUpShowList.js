@@ -14,10 +14,9 @@ function PopUpShowList({className="",CategoryList,secondList=['Maharagama','Pili
                             <div className="col-7 ">
                                  { 
                                  CategoryList.map(categorieItem=>(
-                                    <div className='categorie-item display-flex border-b align-item-center first-list-item'>
-                                          {console.log(categorieItem.categoryIconSvg)}
-                                          {<img  className='w-8 me-2' src={categorieItem.categoryIconSvg.type} alt="" />}
-                                        <div className=' w-95 font-1-4  pb-3 pt-3 first-list-item-text'>{categorieItem.categoryName}</div>
+                                    <div className='categorie-item  background-hover display-flex border-b align-item-center first-list-item'>
+                                            {categorieItem.categoryIconSvg}
+                                        <div className=' w-95 font-1-4  pb-3 pt-3 first-list-item-text ms-3 '>{categorieItem.listTxt}</div>
                                         <div className="arrow-icon   w-5  ">
                                               <ArrowForwardIosIcon className='font-2 text-color-grey'></ArrowForwardIosIcon>
                                         </div>
@@ -28,7 +27,7 @@ function PopUpShowList({className="",CategoryList,secondList=['Maharagama','Pili
                             <div className="col-5 ps-3  ">
                             { 
                                  secondList.map(categorieItem=>(
-                                    <div className='categorie-item display-flex border-b '>
+                                    <div className='categorie-item  background-hover display-flex border-b '>
                                         <div className=' w-95 font-1-3  pb-2 pt-3 second-list-item'>{categorieItem}</div>
                                     </div>
                                  ))
@@ -45,11 +44,11 @@ function PopUpShowList({className="",CategoryList,secondList=['Maharagama','Pili
 
 const DIV=styled.div`
     width: 100%;
-    /* margin-top: var(--margin-top-fix-nav);  */  /*only PopUpShowList */
-    
-    /* width: var(--PopUpShowList-content-width);
-      margin-left: auto;
-      margin-right: auto;  */
+
+    .categorie-item{
+
+    }
+ 
 
       .arrow-icon{   
 

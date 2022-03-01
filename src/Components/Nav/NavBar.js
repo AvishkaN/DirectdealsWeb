@@ -7,25 +7,15 @@ function NavBar({className=""}) {
 
   return (
     <NAV className={`${className} background-primary`}>
-        <div className="Nav-wrapper">
-            <div className="row  p-sm-4 align-items-center">
+        <div className="Nav-wrapper  row  p-md-4 align-items-center">
                     <NavLeft className=' col-6  nav-left '></NavLeft>
 
                     <NavRight className='   col-6  width-800-display-none '></NavRight>
            
-            </div>
 
 
 
-                {/* <div className="col-2">
-                    <div className="col-2-links">
-                    <ul>
-                        <li><a href><i className="fas fa-comments" /><span className="Mobile">Chat</span></a></li>
-                        <li><a href><i className="fas fa-user" /><span className="Mobile">Login</span></a></li>
-                        <li className="Mobile"><a href>Post Your Add</a></li>
-                    </ul>
-                    </div>
-                </div> */}
+               
         </div>
     </NAV>
   );
@@ -35,6 +25,7 @@ function NavBar({className=""}) {
 const NAV=styled.nav`
 
     /* z-index:10000; */
+    z-index: 8800000;
 
 .Nav-wrapper{
       width: var(--page-content-width);

@@ -32,7 +32,12 @@ function ClassfiedPage({className=""}) {
 const DIV=styled.div`
     width: 100%;
     /* margin-top: var(--margin-top-fix-nav);  */  /*only ClassfiedPage */
-    margin-top: 10rem;   
+    margin-top: 8rem;   
+
+    @media(max-width:768px){     
+      margin-top: 5rem;
+    }
+
     --classified-page-width:85%;
     
     @media(max-width:1000px){     

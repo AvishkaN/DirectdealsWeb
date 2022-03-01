@@ -11,8 +11,8 @@ import LocationIcon from '@mui/icons-material/FmdGoodOutlined';
 function Product({className="",Ad}) {
   return (
     <DIV className={`${className}`} featureAd={Ad.featureAd}>
-                <div className="Product-wrapper display-flex pt-sm-4 pb-sm-4">
-                    <div className="   product-image">
+                <div className="Product-wrapper display-flex ">
+                    <div className="   product-image  display-flex    align-item-center ">
                         <img className=' ' src={Ad.image} alt="" />
                     </div>
                     <div className="   mt-sm-0 mt-2   flex-1 ms-3 ">
@@ -116,7 +116,7 @@ function Product({className="",Ad}) {
 
                     {/* Price  normal Ad*/}
                     {
-                      (  !Ad.topSeller   ||  !Ad.topSeller) && (
+                      (  !Ad.topSeller   &&  !Ad.topSeller) && (
 
 
                                 <div className="font-1-6    text-color-primary fw-bold ">
@@ -155,8 +155,10 @@ const DIV=styled.div`
 
         }
         img{
-            height: 12rem;
-            width: 14rem;
+            /* height: 12rem;
+            width: 14rem; */
+            height: 15rem;
+            width: 18rem;
 
             @media(max-width:576px){        
                      width:100%;

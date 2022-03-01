@@ -1,222 +1,168 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import CustomizePopUpShowList from './../CategoryPopUp/CustomizePopUpShowList';
+
 import FilterDataName from '../../../Functions/FilterDataByName';
-import { SetClassifedLocationFN, ShowHideAllFN } from '../../../Redux/slices/clickSlice';
-import PopUpShowList from '../../UI/PopUpShowList/PopUpShowList';
+import LocationIcon from '@mui/icons-material/FmdGoodOutlined';
+
+import { SetClassifedCategoryFN, ShowHideAllFN } from '../../../Redux/slices/clickSlice';
+
+
+
 
 import PopUp from '../PopUp/PopUp';
 
-const locationList=[
+const CategoryList=[
+
     {
-        categoryName:"Colombo",
-        subCategories:[
-            "Maharagama",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "Nugegoda",
-        ]
+      listTxt:"Matara",
+        categoryIconSvg:<LocationIcon className="font-1-8 text-color-primary "></LocationIcon>,
+      subCategories:[
+          "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+      ] 
+    },
+    
+    {
+      listTxt:"Colombo",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+    ]
     },
     {
-        categoryName:"Matara",
-        subCategories:[
-            "Matara City",
-            "Dikwella",
-            "Akuressa",
-            "Weligama",
-            "Hakmana",
-        ]
+      listTxt:"Galle",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Kandy",
-        subCategories:[
-            "Kandy City",
-            "Gampola",
-            "Katugasthota",
-            "Gampola",
-            "Katugastota",
-            "Peradeniya",
-        ]
+      listTxt:"Gampaha",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
+    },
+   
+    {
+      listTxt:"Home & Garden",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+    ]
     },
     {
-        categoryName:"Badulla",
-        subCategories:[
-            "Badulla City",
-            "Banadarwela",
-            "Welimada",
-            "Mahiyanganaya",
-        ]
+      listTxt:"Animals",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Anuradhapura",
-        subCategories:[
-            "Anuradhapura City",
-            "Kekirawawa",
-            "Medawachchiya",
-            "Tambuttegama",
-            "Eppawala",
-        ]
+      listTxt:"Education",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Colombo",
-        subCategories:[
-            "Maharagama",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "Nugegoda",
-        ]
+      listTxt:"Food & Agriculture",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Matara",
-        subCategories:[
-            "Matara City",
-            "Dikwella",
-            "Akuressa",
-            "Weligama",
-            "Hakmana",
-        ]
+      listTxt:"Services",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Kandy",
-        subCategories:[
-            "Kandy City",
-            "Gampola",
-            "Katugasthota",
-            "Gampola",
-            "Katugastota",
-            "Peradeniya",
-        ]
+      listTxt:"Others",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Badulla",
-        subCategories:[
-            "Badulla City",
-            "Banadarwela",
-            "Welimada",
-            "Mahiyanganaya",
-        ]
+      listTxt:"Hotel, Travels & Tours",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
     {
-        categoryName:"Anuradhapura",
-        subCategories:[
-            "Anuradhapura City",
-            "Kekirawawa",
-            "Medawachchiya",
-            "Tambuttegama",
-            "Eppawala",
-        ]
+      listTxt:"Jobs",
+        categoryIconSvg:<LocationIcon className="font-1-9 text-color-primary "></LocationIcon>,
+      subCategories:[
+           "Auto Parts & Accessories",
+          "Motorbikes",
+          "Auto Services",
+          "Tractors",
+          "Buses",
+          "qqq",
+    ]
     },
-    {
-        categoryName:"Colombo",
-        subCategories:[
-            "Maharagama",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "Nugegoda",
-        ]
-    },
-    {
-        categoryName:"Matara",
-        subCategories:[
-            "Matara City",
-            "Dikwella",
-            "Akuressa",
-            "Weligama",
-            "Hakmana",
-        ]
-    },
-    {
-        categoryName:"Kandy",
-        subCategories:[
-            "Kandy City",
-            "Gampola",
-            "Katugasthota",
-            "Gampola",
-            "Katugastota",
-            "Peradeniya",
-        ]
-    },
-    {
-        categoryName:"Badulla",
-        subCategories:[
-            "Badulla City",
-            "Banadarwela",
-            "Welimada",
-            "Mahiyanganaya",
-        ]
-    },
-    {
-        categoryName:"Anuradhapura",
-        subCategories:[
-            "Anuradhapura City",
-            "Kekirawawa",
-            "Medawachchiya",
-            "Tambuttegama",
-            "Eppawala",
-        ]
-    },
-    {
-        categoryName:"Colombo",
-        subCategories:[
-            "Maharagama",
-            "Kottawa",
-            "Piliyandala",
-            "Homagama",
-            "Dehiwala",
-            "Nugegoda",
-        ]
-    },
-    {
-        categoryName:"Matara",
-        subCategories:[
-            "Matara City",
-            "Dikwella",
-            "Akuressa",
-            "Weligama",
-            "Hakmana",
-        ]
-    },
-    {
-        categoryName:"Kandy",
-        subCategories:[
-            "Kandy City",
-            "Gampola",
-            "Katugasthota",
-            "Gampola",
-            "Katugastota",
-            "Peradeniya",
-        ]
-    },
-    {
-        categoryName:"Badulla",
-        subCategories:[
-            "Badulla City",
-            "Banadarwela",
-            "Welimada",
-            "Mahiyanganaya",
-        ]
-    },
-    {
-        categoryName:"Anuradhapura",
-        subCategories:[
-            "Anuradhapura City",
-            "Kekirawawa",
-            "Medawachchiya",
-            "Tambuttegama",
-            "Eppawala",
-        ]
-    },
-];
+  
+   
+  
+  
+  
+  ];
 
 
 
-function LocationPopUp({className=""}) {
+function CategoryPopUp({className=""}) {
 
     const[SelectedSecondTextsArr,SetSelectedSecondTextsArr]=useState([]);
     const dispatch=useDispatch();
@@ -233,7 +179,7 @@ function LocationPopUp({className=""}) {
         if(selectedTitleText){ // selected title
 
 
-            const selectedSecondTextsArr=FilterDataName(selectedTitleText,locationList)?.subCategories;
+            const selectedSecondTextsArr=FilterDataName(selectedTitleText,CategoryList)?.subCategories;
     
     
             SetSelectedSecondTextsArr(selectedSecondTextsArr);  // update selected second array
@@ -245,8 +191,9 @@ function LocationPopUp({className=""}) {
 
 
         if(selectedSecondListItem){   // set selcted location to redux state
-            dispatch( SetClassifedLocationFN(selectedSecondListItem));
+            dispatch( SetClassifedCategoryFN(selectedSecondListItem));
             dispatch(ShowHideAllFN());
+
 
             // console.log(selectedSecondListItem);
         }
@@ -258,9 +205,9 @@ function LocationPopUp({className=""}) {
     <DIV className={`${className}`} onClick={handleClick}>
            <PopUp to="/">
                     
-                    <div className="title fw-bold font-1-8 text-color-primary">Select city Or Division</div>
+                    <div className="title fw-bold font-1-8 text-color-primary">Select Location</div>
 
-                    <PopUpShowList locationList={locationList}  secondList={SelectedSecondTextsArr}></PopUpShowList>
+                    <CustomizePopUpShowList  CategoryList={CategoryList} secondList={SelectedSecondTextsArr}></CustomizePopUpShowList>
 
               </PopUp>
     </DIV>
@@ -270,9 +217,8 @@ function LocationPopUp({className=""}) {
 
 const DIV=styled.div`
     width: 100%;
-    /* margin-top: var(--margin-top-fix-nav);  */  /*only LocationPopUp */
     
 
 `;
 
-export default LocationPopUp;
+export default CategoryPopUp;

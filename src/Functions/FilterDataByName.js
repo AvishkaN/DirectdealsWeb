@@ -2,7 +2,13 @@
 
 const FilterDataName=(name,Data)=>{
     
-    const FilteredObj=Data.filter(data=>data.categoryName==name);
+    console.log(Data);
+    const FilteredObj=Data.filter(data=>{
+        
+        console.log(name);
+        console.log(data.listTxt);
+        console.log(`${data.listTxt}`==`${name}`);
+        return data.listTxt==name});
     
     return FilteredObj[0];    
 
