@@ -233,7 +233,7 @@ function HomePage({className=""}) {
                 </Link>
 
 
-                <LinkComp to="/single-product">
+                <LinkComp to="/product-item/2845223123">
                     <h1>Product item</h1>
               </LinkComp>
 

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Link from '../../Components/UI/Link/Link';
 
@@ -8,31 +9,39 @@ function BottomMobileComp({className=""}) {
     <DIV className={`${className}`}>
          <div className="BottomMobileComp-wrapper display-flex  justify-content-between align-item-center   pb-1 pt-1 ">
                   
-                    <Link to="/">
+                      {/* Home */}
+                    <NavLink activeClassName="active" to="/">
 
                           <i className="fas fa-home  font-2" aria-hidden="true" />
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/">
+                      {/* Search */}
+                    <NavLink to="/search/:SearchText">
                         <i className="fas fa-search  font-2" aria-hidden="true" />
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/">
+
+                      {/* Add  Post*/}
+                    <NavLink to="/" id="Post-ad-mobile">
                         <div className="plus-button-background   ">
                                 <i className="fas fa-plus  font-2 plus-button" aria-hidden="true" />
                         </div>   
-                    </Link>
+                    </NavLink>
 
 
-                    <Link to="/">
+                      {/* Chat */}
+                    <NavLink to="/chat">
 
                           <i className="fas fa-comments  font-2" aria-hidden="true" />
-                    </Link>
+                    </NavLink>
 
-                    <Link to="/dashBoard">
+
+
+                      {/* DashBoard */}
+                    <NavLink to="/dashBoard">
                            <i className="fas fa-user  font-2" aria-hidden="true" />
 
-                    </Link>
+                    </NavLink>
                   
                   
 
@@ -84,6 +93,15 @@ const DIV=styled.div`
 
 
 
+    }
+
+    a{
+      transition: all  .3s ;
+    }
+
+    .active{
+      color:var(--color-primary);
+      
     }
 
 `;

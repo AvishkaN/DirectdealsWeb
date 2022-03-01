@@ -1,15 +1,19 @@
 import styled from 'styled-components';
+import UndoPage from '../../Components/UI/UndoPage/UndoPage';
 import MyAccountComp from './MyAccountComp';
 
 
 
 function MyAccoutPage({className=""}) {
   return (
-    <DIV className={`${className} `}>
-         <div className="MyAccoutPage-wrapper       mt-5">
-                <MyAccountComp className='pb-5     '></MyAccountComp>
-         </div>
-    </DIV>
+              <UndoPage title={"User DashBoard"} to={"/"} >
+                    <DIV className={`${className} `}>
+                        <div className="MyAccoutPage-wrapper       mt-5">
+                                  <MyAccountComp className='pb-5     '></MyAccountComp>
+
+                        </div>
+                    </DIV>
+              </UndoPage>
   );
 }
 

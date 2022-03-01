@@ -24,9 +24,30 @@ function UndoPage(props) {
 
         <div className="display-flex align-item-center mb-4 ">
 
-                        <div className="left-btn text-left cursor-p" onClick={handleClick}>
-                                <NormalArrowLeft className='font-3-2 ' ></NormalArrowLeft>
-                        </div>
+                      {/*   Is Link    */}
+                     {props.to  && (   
+                       <LinkComp to={props.to}>
+
+                            <div className="left-btn text-left cursor-p" onClick={handleClick}>
+                                        <NormalArrowLeft className='font-3-2 ' ></NormalArrowLeft>
+                                </div>
+                              
+                       </LinkComp>
+
+                      )
+                        
+                      }
+                      {/*   Is Not Link    */}
+                     {!props.to  && (   
+                    
+                            <div className="left-btn text-left cursor-p" onClick={handleClick}>
+                                    <NormalArrowLeft className='font-3-2 ' ></NormalArrowLeft>
+                            </div>
+
+                      )
+                        
+                      }
+
 
 
                 <div className="   mt-2 ms-2">

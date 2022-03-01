@@ -23,7 +23,7 @@ import Footer from './Components/Footer/Footer';
 import OverlayFull from './Components/Overlay/OverlayFull';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import { useSelector } from 'react-redux';
-import { selectClicks, ShowLocationPopupFN, ShowMobileNavFN } from './Redux/slices/clickSlice';
+import { selectClicks, SetShowPostAdFN, ShowLocationPopupFN, ShowMobileNavFN } from './Redux/slices/clickSlice';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import MobileNav from './Components/Overlay/MobileNav/MobileNav';
@@ -53,7 +53,7 @@ function App() {
   const handleClick=(e)=>{
     const mobileNavOpenIcon=e.target.closest('#mobileNav-open-icon');
     const LocationIcon=e.target.closest('.show-btn-location');
-
+    const PostAdMobileBottom=e.target.closest("#Post-ad-mobile");
 
 
 
@@ -63,6 +63,9 @@ function App() {
     }
     if(LocationIcon){
       dispatch(ShowLocationPopupFN());
+    }
+    if(PostAdMobileBottom){
+      dispatch(SetShowPostAdFN());
     }
 
   };
@@ -100,7 +103,7 @@ function App() {
 
 
                                     {/* Single Product */}
-                                    <Route path="/single-product" element={ 
+                                    <Route path="/product-item/:prodcuctId" element={ 
                                       <>
                                       <NavBar className='position-fixed w-100'></NavBar>
 
