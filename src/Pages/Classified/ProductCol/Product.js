@@ -116,7 +116,7 @@ function Product({className="",Ad}) {
 
                     {/* Price  normal Ad*/}
                     {
-                      (  !Ad.topSeller   &&  !Ad.topSeller) && (
+                      (  !Ad.featureAd   &&  !Ad.topSeller) && (
 
 
                                 <div className="font-1-6    text-color-primary fw-bold ">
