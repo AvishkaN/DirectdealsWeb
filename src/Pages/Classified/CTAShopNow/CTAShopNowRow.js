@@ -29,6 +29,10 @@ function ShopNowRow({className=""}) {
 const DIV=styled.div`
     width: 100%;
 
+    @media(min-width:992px){     
+                      display: none !important;
+        }
+
     img{
       width: 28px;
 

@@ -35,7 +35,7 @@ function ClassifiedHeader({className=""}) {
 
                     {/* Category  */}
                  <div className="col-5  col-lg-3  classified-header-input  category cursor-p   ">
-                     <div className=" filter-title filter-title-category display-flex   align-items-center  p-1  h-100  border-grey"> 
+                     <div className=" filter-title filter-title-category display-flex   align-items-center  p-1  h-100  border-grey-this-comp"> 
                          <TagIcon className='font-2-4 text-color-primary me-2' ></TagIcon>
 
                         <div className="fw-bold"> {clicks.classifiedPageSelectedCategory}</div>
@@ -45,7 +45,7 @@ function ClassifiedHeader({className=""}) {
 
                 {/* Location */}
                  <div className="col-6 pe-0  col-lg-4   classified-header-input cursor-p  location   ">
-                     <div className=" filter-title filter-title-location  display-flex  align-items-center  p-1 h-100  border-grey  ">
+                     <div className=" filter-title filter-title-location  display-flex  align-items-center  p-1 h-100  border-grey-this-comp  ">
 
 
                          <LocationIcon className='font-2-4 text-color-primary me-2'></LocationIcon>
@@ -77,7 +77,7 @@ function ClassifiedHeader({className=""}) {
 const DIV=styled.div`
     width: 100%;
 
-    .border-grey{
+    .border-grey-this-comp{
 
         @media(max-width:992px){     
                       border: 1px solid #0e0e0e26;

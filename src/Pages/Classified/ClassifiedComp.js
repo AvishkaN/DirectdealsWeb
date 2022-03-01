@@ -68,7 +68,7 @@ function ClassfiedPageComp({className=""}) {
              </div>
 
                 {/* CTA section --> Shop Now */}
-                <CTAShopNowRow></CTAShopNowRow>
+                <CTAShopNowRow ></CTAShopNowRow>
 
               
 
