@@ -91,7 +91,7 @@ function BrowseAll({className=""}) {
                 
                   <h3 className='fw-bold'>Browse items by category</h3>
 
-                  <div className="browse-item-collection row gy-6 mt-4      ">
+                  <div className="browse-item-collection row gy-6 mt-4   hide-scroll-bar    ">
                     {
                       browseAllCollectionData.map(collectionData=>(
                         <div className="col-3 cursor-p browse-item pb-5">
@@ -127,6 +127,10 @@ const DIV=styled.div`
 
 
         .browse-item-collection{
+
+          /* background-color: red;  */
+
+      
 
           @media(max-width:958px){     
             justify-content: space-between;

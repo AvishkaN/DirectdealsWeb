@@ -200,7 +200,6 @@ function HomePage({className=""}) {
                 
                 </Link>)}
 
-                {
 
                 <Link to="/single-product">
                     <h1>
@@ -208,9 +207,7 @@ function HomePage({className=""}) {
                     </h1>
                 </Link>
 
-                }
 
-                {
 
                 <Link to="/login">
                     <h1>
@@ -218,9 +215,7 @@ function HomePage({className=""}) {
                     </h1>
                 </Link>
 
-                }
 
-                {
 
                 <Link to="/register">
                     <h1>
@@ -228,10 +223,8 @@ function HomePage({className=""}) {
                     </h1>
                 </Link>
 
-                }
 
 
-                {
 
                 <Link to="/store/Home">
                     <h1>
@@ -239,8 +232,10 @@ function HomePage({className=""}) {
                     </h1>
                 </Link>
 
-                }
 
+                <LinkComp to="/single-product">
+                    <h1>Product item</h1>
+              </LinkComp>
 
 
             <BrowseAll className='mt-5'></BrowseAll>
@@ -248,9 +243,6 @@ function HomePage({className=""}) {
             <DeleverySection className=''></DeleverySection>
 
 
-                <LinkComp to="/single-product">
-                    <h1>Product item</h1>
-              </LinkComp>
 
 
          </div>

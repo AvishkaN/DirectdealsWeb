@@ -583,6 +583,13 @@ h1{
     overflow-y: hidden;
 }
 
+
+.hide-scroll-bar::-webkit-scrollbar {  
+    width: 0 !important;   /* hide scroll bar  */
+}
+
+
+
 .input{
     border: none;
     /* background: transparent;    */

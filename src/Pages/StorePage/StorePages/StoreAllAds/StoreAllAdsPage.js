@@ -13,7 +13,7 @@ function StoreAllAds({className="",store,AllAds=68}) {
 
                               <div className="ads-count text-center font-1-6 text-color-grey-light"> <span className='fw-bold'>{store.allAds.length}</span>  Ads From <span className='fw-bold'>{AllAds} Ads</span> </div>
 
-                        <RecentAds className=' mt-6 ' store={store} sliceNum={0}></RecentAds>
+                        <RecentAds className=' mt-6 ' AllAds={store} sliceNum={0}></RecentAds>
               </div>
 
          </div>

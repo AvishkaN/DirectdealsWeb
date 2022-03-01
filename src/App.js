@@ -15,18 +15,15 @@ import UserDashBoardMobile from './Pages/UserDashBorad/UserDashBoardMobile/UserD
 
 import NavBar from './Components/Nav/NavBar';
 import StorePageMobileNav from './Components/Overlay/StoreMobilePageNav/StorePageMobileNav'
-// import Login from './Pages/Login/Login';
-// import MobielNavBar from './Components/Nav/MobileNavBar/MobielNavBar';
+import ScreenWidthCalcComp from './Components/ScreenWidthCalculator/ScreenWidthCalc'
 import Footer from './Components/Footer/Footer';
-// import Test from './Components/Test/Test';
 
 
-// import RegisterPage from './Pages/Register/Register';
 
 import OverlayFull from './Components/Overlay/OverlayFull';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import { useSelector } from 'react-redux';
-import { selectClicks, ShowMobileNavFN } from './Redux/slices/clickSlice';
+import { selectClicks, ShowLocationPopupFN, ShowMobileNavFN } from './Redux/slices/clickSlice';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import MobileNav from './Components/Overlay/MobileNav/MobileNav';
@@ -54,12 +51,18 @@ function App() {
 
 
   const handleClick=(e)=>{
-    // console.log(e.target.closest('#mobileNav-open-icon'));
     const mobileNavOpenIcon=e.target.closest('#mobileNav-open-icon');
+    const LocationIcon=e.target.closest('.show-btn-location');
+
+
+
 
 
     if(mobileNavOpenIcon){
       dispatch(ShowMobileNavFN());
+    }
+    if(LocationIcon){
+      dispatch(ShowLocationPopupFN());
     }
 
   };
@@ -84,16 +87,13 @@ function App() {
                                       <NavBar className='position-fixed w-100'></NavBar>
 
                                       <HomePage></HomePage>
+                                      <ScreenWidthCalcComp></ScreenWidthCalcComp>
                                       
-                                        {/* TEMPORY  WIDTH*/}
-
-                                        <div className="">
-                                          window width  {document.documentElement.clientWidth}
-                                        </div>
+                                       
                                         <BottomMobile></BottomMobile>
 
-                                      {/* <Test></Test> */}
-                                      <Footer className='mt-6'></Footer>
+                                        {/* <Test></Test> */}
+                                        <Footer className='mt-6'></Footer>
 
                                       </>
                                     } />
@@ -129,9 +129,11 @@ function App() {
                                        <>
                                         {/* TEMPORY  WIDTH*/}
 
-                                        <div className="">
-                                          window width  {document.documentElement.clientWidth}
-                                        </div>
+                                        {/* <ScreenWidthCalcComp></ScreenWidthCalcComp> */}
+
+
+
+
                                           <StorePage></StorePage>
                                           <StorePageMobileNav  ShowstoreMobileNav={clicks.storeMobileNav} ></StorePageMobileNav>
                                           <BottomMobile></BottomMobile>
@@ -145,14 +147,6 @@ function App() {
                                             <NavBar className='position-fixed w-100'></NavBar>
 
                                             <ClassifiedPage></ClassifiedPage>
-                                            {/* <Test></Test> */}
-
-                                              {/* TEMPORY  WIDTH*/}
-
-                                              <div className="">
-                                                window width  {document.documentElement.clientWidth}
-                                              </div>
-                                              {/* <BottomMobile></BottomMobile> */}
 
 
                                             <BottomMobile></BottomMobile>
@@ -166,25 +160,14 @@ function App() {
 
                                     <Route path="/dashBoard/*" element={ 
                                        <>
-                                            {/* <NavBar className='position-fixed w-100'></NavBar> */}
 
 
 
 
                                             <MyAccountPage></MyAccountPage>
-                                            {/* <Test></Test> */}
-
-                                              {/* TEMPORY  WIDTH*/}
-
-                                              {/* <div className="">
-                                                window width  {document.documentElement.clientWidth}
-                                              </div> */}
-                                              {/* <BottomMobile></BottomMobile> */}
 
 
                                             <BottomMobile></BottomMobile>
-                                            {/* <LinkComp to="/dashboard-mobile">mobile dashboard</LinkComp> */}
-                                            {/* <Footer className='mt-6'></Footer> */}
 
 
                                       </>
@@ -198,18 +181,9 @@ function App() {
 
 
                                             <UserDashBoardMobile></UserDashBoardMobile>
-                                            {/* <Test></Test> */}
-
-                                              {/* TEMPORY  WIDTH*/}
-
-                                              {/* <div className="">
-                                                window width  {document.documentElement.clientWidth}
-                                              </div> */}
-                                              {/* <BottomMobile></BottomMobile> */}
 
 
                                             <BottomMobile></BottomMobile>
-                                            {/* <Footer className='mt-6'></Footer> */}
 
 
                                       </>
