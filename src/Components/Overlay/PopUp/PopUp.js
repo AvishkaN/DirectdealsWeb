@@ -7,7 +7,7 @@ function LinkComp(props) {
   return (
 
 
-  <DIV className={`${props.className}  border-radius-5  background-white `}>
+  <DIV className={`${props.className}    border-radius-5  background-white `} height={props.height}>
     <div className="PopUp-wrapper ">
 
                 <div className="close-btn text-right">
@@ -33,7 +33,8 @@ const DIV=styled.div`
     
     .PopUp-wrapper{
 
-      height: 92vh;
+      /* height: 92vh; */
+      height:${props => props.height? `92vh`:``};
 
     }
 `;

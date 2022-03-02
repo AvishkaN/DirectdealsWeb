@@ -65,7 +65,7 @@ function Slider({className="",images}) {
         {/* Slider  Box*/}
          <div className="Slider-wrapper ">
                   {/* <h2 className="title fw-bold">Villas Compound </h2> */}
-                  <ShowBox className='mt-5' data={images} activeImg={activeImg}></ShowBox>
+                  <ShowBox className='mt-2' data={images} activeImg={activeImg}></ShowBox>
          </div>
 
 

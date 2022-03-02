@@ -7,6 +7,7 @@ import CategoryPopUp from './CategoryPopUp/CategoryPopUp';
 import PostAdPopUp from './PostAdPopUp/PostAdPopUp';
 import FilterPopUp from './Filter/FilterPopUp';
 import UserDashBoardSelectComp from './UserDashBoardSelected/UserDashBoardSelectComp';
+import NearbyLocationPopUp from './NearbyLoacationPopUp/NearbyLoacationPopUp';
 
 
 
@@ -55,6 +56,7 @@ function Overlay({className=""}) {
              {clicks.showCategoryPopUp &&    <CategoryPopUp className='w-65  overlay-inside-popup  ms-auto me-auto mt-5'></CategoryPopUp>}
              {clicks.showPostAd &&    <PostAdPopUp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></PostAdPopUp>}
              {clicks.classifiedPagefilter &&    <FilterPopUp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></FilterPopUp>}
+             {clicks.showNearbyLocationPopUp &&    <NearbyLocationPopUp className='w-40  overlay-inside-popup-post-ad  ms-auto me-auto mt-auto'></NearbyLocationPopUp>}
              {/* {clicks.UserDashBoardSelectedComp && document.documentElement.clientWidth>600 &&    <UserDashBoardSelectComp className='w-65  overlay-inside-popup-post-ad  ms-auto me-auto mt-5'></UserDashBoardSelectComp>} */}
      
      

@@ -347,7 +347,7 @@ function CategoryPopUp({className=""}) {
 
   return (
     <DIV className={`${className}`} onClick={handleClick}>
-           <PopUp to="/">
+           <PopUp to="/"  height={'default'}>
                     
                     <div className="title fw-bold font-1-8 text-color-primary">Select Categorie</div>
 

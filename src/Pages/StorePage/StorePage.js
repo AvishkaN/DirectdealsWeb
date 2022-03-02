@@ -8,7 +8,11 @@ function StorePage({className=""}) {
   return (
     <DIV className={`${className}`}>
          <div className="StorePage-wrapper">
+
+
                 <StorePageComp></StorePageComp>
+
+
          </div>
     </DIV>
   );

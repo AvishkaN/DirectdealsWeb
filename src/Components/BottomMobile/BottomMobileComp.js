@@ -22,11 +22,11 @@ function BottomMobileComp({className=""}) {
 
 
                       {/* Add  Post*/}
-                    <NavLink to="/" id="Post-ad-mobile">
+                    {/* <NavLink to="" id="Post-ad-mobile">
+                    </NavLink> */}
                         <div className="plus-button-background   ">
                                 <i className="fas fa-plus  font-2 plus-button" aria-hidden="true" />
                         </div>   
-                    </NavLink>
 
 
                       {/* Chat */}

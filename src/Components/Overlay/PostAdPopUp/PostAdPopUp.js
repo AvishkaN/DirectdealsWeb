@@ -30,7 +30,7 @@ function PostAdPop({className=""}) {
   return (
     <DIV className={`${className}`}>
          <div className="PostAdPop-wrapper">
-                <PopUp>
+                <PopUp  height={'default'}>
 
                     <div className="mt-4 post-ad- pb-5">
 

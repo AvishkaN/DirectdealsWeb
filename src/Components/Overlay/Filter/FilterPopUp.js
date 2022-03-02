@@ -13,7 +13,7 @@ function CategoryPopUp({className=""}) {
 
   return (
     <DIV className={`${className}`} >
-           <PopUp to="/">
+           <PopUp to="/"  height={'default'}>
                     
                     <div className="title fw-bold font-1-8 text-color-primary">Filter</div>
 

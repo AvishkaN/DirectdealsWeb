@@ -489,6 +489,10 @@ h1{
 }
 
 
+.border-grey-light {
+    border: 1px solid #0e0e0e26;
+}
+
 
 .background-primary{
     background-color: var(--color-primary);
