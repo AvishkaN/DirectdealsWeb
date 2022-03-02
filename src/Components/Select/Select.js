@@ -6,11 +6,11 @@ function Select({className="",optionList=[]}) {
   return (
     <DIV className={`${className}`}>
          <div className="Select-wrapper w-100  font-1-3">
-                <select name="cars " id="cars " className='w-100'>
+                <select name=" " id=" " className='w-100'>
                     {
                         optionList.map(option=>(
 
-                            <option value="volvo  font-1-3">{option}</option>
+                            <option key={Math.random()} value="  font-1-5">{option}</option>
                         ))
                     }
                     {/* <option value="saab  font-1-3">Saab</option>

@@ -15,7 +15,7 @@ function NearbyLocationPopUp({className=""}) {
 
                         <div className="NearbyLocationPopUp-wrapper ps-4 pe-4  h-100">
 
-                                        {/* Nearby Location */}
+                                        {/* Nearby Location  Title*/}
                                     <div className="display-flex">
 
                                             <LocationIcon className='font-2-5 text-color-primary'></LocationIcon>
@@ -24,7 +24,7 @@ function NearbyLocationPopUp({className=""}) {
 
                                     {/* Search Here */}
                                     <Search   
-                                        className='border-grey-light border-radius-5  '
+                                        className='border-grey-light border-radius-5 mt-4 '
                                         searchFiledClassName=""
                                         SearchIconClassName="font-2-5"
                                         ListItemClassName=""
@@ -54,7 +54,7 @@ function NearbyLocationPopUp({className=""}) {
 
                                                             </div>
 
-                                                            <div className="col-3">
+                                                            <div className="col-4">
                                                                      <Button  className="background-primary text-color-white font-1-5  w-100">Submit</Button>
 
                                                             </div>

@@ -23,7 +23,7 @@ function SearchSection({className=""}) {
 
 
                   {/* Button 2 */}
-                  <Button className="neraBy-show-btn  show-btn  p-2 border-radius-15 display-flex align-item-center ps-4 pe-4 cursor-p    justify-content-center text-color-white">
+                  <Button className="neraBy-show-btn  show-btn-nearby-location show-btn  p-2 border-radius-15 display-flex align-item-center ps-4 pe-4 cursor-p    justify-content-center text-color-white">
                             <i className="fas fa-location-arrow font-2" />
                             <div className="ms-2">Near By Location</div>
                   </Button>

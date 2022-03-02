@@ -3,7 +3,7 @@ import {createSlice} from '@reduxjs/toolkit';
 export const clickSlice=createSlice({
     name:"clicks",
     initialState:{   
-        showOverlay:true, 
+        showOverlay:false, 
         showMobileNav:false, 
 
 
@@ -17,7 +17,7 @@ export const clickSlice=createSlice({
         
         classifiedPagefilter:false, 
 
-        showNearbyLocationPopUp:true, 
+        showNearbyLocationPopUp:false, 
         
 
         UserDashBoardSelectedComp:null,
@@ -88,6 +88,13 @@ export const clickSlice=createSlice({
 
         },
 
+        ShowNearbyLocationPopUpFN:(state,action)=>{     
+
+            state.showOverlay=true;  
+            state.showNearbyLocationPopUp=true;    
+
+        },
+
         
         ShowHideAllFN:(state)=>{     
 
@@ -129,6 +136,8 @@ export const {
                             ShowLocationPopupFN,
 
                             SetShowPostAdFN,
+
+                            ShowNearbyLocationPopUpFN,
 
                             SetUserDashBoardSelectedCompFN,
 
