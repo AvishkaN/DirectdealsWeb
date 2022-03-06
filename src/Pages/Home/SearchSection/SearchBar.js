@@ -19,9 +19,9 @@ const DIV=styled.div`
     width: 100%;
 
     .search-div{
-          width: 65%;
+          width: 55%;
           
-          @media(max-width:521px){     
+          @media(max-width:583px){     
             width: 99%;
         }
 

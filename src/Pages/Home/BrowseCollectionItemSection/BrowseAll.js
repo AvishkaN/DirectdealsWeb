@@ -89,7 +89,7 @@ function BrowseAll({className=""}) {
     <DIV className={`${className} pb-5  `}>
          <div className="BrowseAll-wrapper ">
                 
-                  <h3 className='fw-bold'>Browse items by category</h3>
+                  <h3 className='fw-bold    '>Browse items by category</h3>
 
                   <div className="browse-item-collection row gy-6 mt-4   hide-scroll-bar    ">
                     {
