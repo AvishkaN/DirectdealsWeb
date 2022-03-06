@@ -169,69 +169,70 @@ function HomePage({className=""}) {
 
             <SearchSection className='background-primary'></SearchSection>
           
+          {/* Links sections */}
+          <div className="display-none">
+
+                      <Link to="/allAds">
+                            <h1>
+
+                                  All ads
+                            </h1>
+                        
+                        </Link>
+
+
+                      {document.documentElement.clientWidth >600 && (
+                          <Link to="/dashBoard/MyAccount">
+                                <h1>
+
+                                      User DashBoard
+                                </h1>
+                            
+                            </Link>)}
+
+                      {document.documentElement.clientWidth < 600 && (
+                          <Link to="/dashBoard">
+                                <h1>
+
+                                      User DashBoard
+                                </h1>
+                            
+                            </Link>)}
+
+
+                        
+
+
+
+                            <Link to="/login">
+                                <h1>
+                                      Login
+                                </h1>
+                            </Link>
+
+
+
+                            <Link to="/register">
+                                <h1>
+                                      Register
+                                </h1>
+                            </Link>
+
+
+
+
+                            <Link to="/store/Home">
+                                <h1>
+                                    Store
+                                </h1>
+                            </Link>
+
+
+                            <LinkComp to="/product-item/2845223123">
+                                <h1>Product item</h1>
+                          </LinkComp>
+          </div>
           
-          
-          
-          
-           <Link to="/allAds">
-                <h1>
-
-                      All ads
-                </h1>
-             
-             </Link>
-
-
-          {document.documentElement.clientWidth >600 && (
-              <Link to="/dashBoard/MyAccount">
-                    <h1>
-
-                          User DashBoard
-                    </h1>
-                
-                </Link>)}
-
-          {document.documentElement.clientWidth < 600 && (
-              <Link to="/dashBoard">
-                    <h1>
-
-                          User DashBoard
-                    </h1>
-                
-                </Link>)}
-
-
-            
-
-
-
-                <Link to="/login">
-                    <h1>
-                          Login
-                    </h1>
-                </Link>
-
-
-
-                <Link to="/register">
-                    <h1>
-                          Register
-                    </h1>
-                </Link>
-
-
-
-
-                <Link to="/store/Home">
-                    <h1>
-                         Store
-                    </h1>
-                </Link>
-
-
-                <LinkComp to="/product-item/2845223123">
-                    <h1>Product item</h1>
-              </LinkComp>
 
 
             <BrowseAll className='mt-5'></BrowseAll>
