@@ -77,7 +77,7 @@ const DIV=styled.div`
     
     .undoPage-wrapper{
 
-      height: 92vh;
+      min-height: 100vh;
 
     }
 `;

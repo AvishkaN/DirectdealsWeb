@@ -29,24 +29,7 @@ function MyAccountComp({className=""}) {
     const clicks = useSelector(selectClicks);
 
 
-    // const handleClick=(e)=>{
-    //     console.log(e.target.closest('#post-ad-ad'));
-
-    //     const selectedLink=e.target.closest('.nav-item-row-item');
-
-     
-
-
-
-    //     // Post Ad 
-    //     const PostAdButton=e.target.closest('#post-ad-ad');
-
-    //     if(PostAdButton){
-
-    //         dispatch(SetShowPostAdFN());
-
-    //     }
-    // }
+  
 
 
 

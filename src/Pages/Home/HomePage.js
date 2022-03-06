@@ -201,11 +201,7 @@ function HomePage({className=""}) {
                 </Link>)}
 
 
-                <Link to="/single-product">
-                    <h1>
-                          Single Product
-                    </h1>
-                </Link>
+            
 
 
 

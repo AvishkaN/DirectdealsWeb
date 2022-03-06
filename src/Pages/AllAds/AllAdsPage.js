@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
-import ClassifiedComp from './ClassifiedComp';
+import ClassifiedComp from './AllAdsComp';
 
 
 

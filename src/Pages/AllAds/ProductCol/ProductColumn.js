@@ -22,7 +22,7 @@ function ProductColumn({className="",}) {
         AllAds.map(Ad=>(
             <div className=" col-sm-11 col-6 mb-4   overfloy-y-hidden">
 
-                        <Link to="/single-product">
+                        <Link to="/product-item/:prodcuctId">
                                 <Product className='product-item   cursor-p  h-100    me-sm-2 ms-sm-2    ' Ad={Ad}></Product>
                         </Link>
             </div>

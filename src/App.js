@@ -4,13 +4,11 @@ import HomePage from './Pages/Home/HomePage';
 import StorePage from './Pages/StorePage/StorePage';
 // import PropertPage from './Pages/ProperyPage/PropertPage';
 import ProductItem from './Pages/ProductItem/ProductItem';
-import ClassifiedPage from './Pages/Classified/ClassifiedPage';
+import AllAdsPage from './Pages/AllAds/AllAdsPage';
 import Login from './Pages/LoginAndRegister/Login/Login';
 import Register from './Pages/LoginAndRegister/Register/Register';
 import MyAccountPage from './Pages/UserDashBorad/MyAccountPage';
 import UserDashBoardMobile from './Pages/UserDashBorad/UserDashBoardMobile/UserDashBoardMobile';
-// import ClassifiedPage from './Pages/Classified/ClassifiedPage';
-// import MyAccountPage from './Pages/MyAccount/MyAccountPage';
 
 
 import NavBar from './Components/Nav/NavBar';
@@ -29,6 +27,7 @@ import { useDispatch } from 'react-redux';
 import MobileNav from './Components/Overlay/MobileNav/MobileNav';
 import BottomMobile from './Components/BottomMobile/BottomMobile';
 import LinkComp from './Components/UI/Link/Link';
+import UndoPage from './Components/UI/UndoPage/UndoPage';
 
 
 
@@ -51,11 +50,14 @@ function App() {
 
 
   const handleClick=(e)=>{
+    console.log(e.target);
+
+
+
     const mobileNavOpenIcon=e.target.closest('#mobileNav-open-icon');
     const LocationIcon=e.target.closest('.show-btn-location');
     const NearbyLocationIcon=e.target.closest('.show-btn-nearby-location');
     const PostAdMobileBottom=e.target.closest("#Post-ad-mobile");
-    console.log(e.target);
 
 
 
@@ -96,7 +98,7 @@ function App() {
                                       <NavBar className='position-fixed w-100'></NavBar>
 
                                       <HomePage></HomePage>
-                                      <ScreenWidthCalcComp></ScreenWidthCalcComp>
+                                      {/* <ScreenWidthCalcComp></ScreenWidthCalcComp> */}
                                       
                                        
                                         <BottomMobile></BottomMobile>
@@ -113,19 +115,22 @@ function App() {
                                       <>
                                       <NavBar className='position-fixed w-100'></NavBar>
 
-                                      <ProductItem></ProductItem>
-                                      {/* <Test></Test> */}
-                                      
-                                        {/* TEMPORY  WIDTH*/}
 
-                                        <div className="">
-                                          window width  {document.documentElement.clientWidth}
-                                        </div>
-                                        {/* <BottomMobile></BottomMobile> */}
+                                                  <ProductItem></ProductItem>
+                                                  {/* <Test></Test> */}
+                                                  
+                                                    {/* TEMPORY  WIDTH*/}
+
+                                                    <div className="">
+                                                      window width  {document.documentElement.clientWidth}
+                                                    </div>
+                                                    {/* <BottomMobile></BottomMobile> */}
 
 
-                                        <BottomMobile></BottomMobile>
-                                      <Footer className='mt-6'></Footer>
+                                                    <BottomMobile></BottomMobile>
+                                                  <Footer className='mt-6'></Footer>
+
+
 
                                       </>
                                     } />
@@ -133,7 +138,7 @@ function App() {
 
                            
 
-
+                                      {/* StorePage */}
                                     <Route path="/store/*" element={ 
                                        <>
                                         {/* TEMPORY  WIDTH*/}
@@ -151,11 +156,12 @@ function App() {
                                     } />
 
 
+                                    {/* All Ads */}
                                     <Route path="/allAds" element={ 
                                        <>
                                             <NavBar className='position-fixed w-100'></NavBar>
 
-                                            <ClassifiedPage></ClassifiedPage>
+                                            <AllAdsPage></AllAdsPage>
 
 
                                             <BottomMobile></BottomMobile>
@@ -166,7 +172,7 @@ function App() {
                                     } />
 
 
-
+                                      {/* Dash Board  Dekstop Mod*/}
                                     <Route path="/dashBoard/*" element={ 
                                        <>
 
@@ -184,6 +190,7 @@ function App() {
 
 
 
+                                      {/* Dashboard mobile */}
                                     <Route path="/dashboard-mobile" element={ 
                                        <>
                                             <NavBar className='position-fixed w-100'></NavBar>
@@ -199,7 +206,7 @@ function App() {
                                     } />
 
 
-
+                                    {/* Login */}
                                     <Route path="/login" element={ 
                                        <>
 
@@ -207,6 +214,7 @@ function App() {
                                       </>
                                     } />
 
+                                    {/* Register  */}
                                     <Route path="/register" element={ 
                                        <>
 

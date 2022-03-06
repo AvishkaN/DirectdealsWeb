@@ -21,7 +21,7 @@ function NavLeft({className=""}) {
 
 
                             <div className="col-8  display-flex width-800-display-none"> 
-                                        <Link to="/ " className="  all-ads text-color-white ms-2 p-1 ms-5   fw-bold  font-1-6" >  All Ads</Link>
+                                        <Link to="/allAds" className="  all-ads text-color-white ms-2 p-1 ms-5   fw-bold  font-1-6" >  All Ads</Link>
                                         <Link to="/ " className="nav-left-link  ms-3 text-color-white p-1   fw-bold  font-1-6" >  සිංහල</Link>
                                         <Link to="/ " className="nav-left-link  ms-2 text-color-white p-1   fw-bold  font-1-6" >  தமிழ் </Link>
              

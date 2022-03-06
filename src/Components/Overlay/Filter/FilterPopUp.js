@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FilterColumn from '../../../Pages/Classified/FIlterColumn/FilterColumn';
+import FilterColumn from '../../../Pages/AllAds/FIlterColumn/FilterColumn';
 
 
 

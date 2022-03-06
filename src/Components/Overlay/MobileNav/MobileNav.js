@@ -1,11 +1,27 @@
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import { ShowHideAllFN } from '../../../Redux/slices/clickSlice';
 import MobileNavComp from './MobilrNavComp';
 
 
 
 function MobileNav({className="",showNav=false}) {
+
+  const dispatch=useDispatch();
+
+  const handleClick=(e)=>{
+    const mobileNavLink=e.target.closest('.mobile-nav-link');
+
+    if(mobileNavLink){
+      dispatch(ShowHideAllFN());
+
+    }
+  };
+
+
+
   return (
-    <DIV className={`${className}`}  showNav={showNav}>
+    <DIV className={`${className}`}  showNav={showNav}  onClick={handleClick}>
          <div className="MobileNav-wrapper p-3">
              <MobileNavComp></MobileNavComp>
          </div>

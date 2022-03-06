@@ -19,10 +19,15 @@ function NavRight({className=""}) {
                                 </Link>
 
                               
+                                <Link to="/dashBoard/PostAd" className="">
 
-                                <Button className=" background-secondary ms-4 p-3 width-800-display-none">
-                                    <div className="fw-bold"> Post Your Add</div>
-                                </Button>
+                                    <Button className=" background-secondary ms-4 p-3 width-800-display-none">
+                                        <div className="fw-bold"> Post Your Add</div>
+                                    </Button>
+
+                                </Link>
+
+
                     </div>
          </div>
     </DIV>

@@ -5,8 +5,8 @@ import styled from 'styled-components';
 function Select({className="",optionList=[]}) {
   return (
     <DIV className={`${className}`}>
-         <div className="Select-wrapper w-100  font-1-3">
-                <select name=" " id=" " className='w-100'>
+         <div className="Select-wrapper w-100  font-1-3  h-100">
+                <select name=" " id=" " className='w-100 h-100'>
                     {
                         optionList.map(option=>(
 

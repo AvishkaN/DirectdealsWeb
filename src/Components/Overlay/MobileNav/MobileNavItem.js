@@ -6,7 +6,7 @@ import Link from './../../../Components/UI/Link/Link';
 function MobileNavItem({className="",svgIcon,ItemName,link}) {
   return (
     
-    <Link to={link}>
+    <Link to={link} className="mobile-nav-link">
           <DIV className={`${className} display-flex align-items-center `}>
              {svgIcon}
              <div className="font-2 ms-3">{ItemName}</div>

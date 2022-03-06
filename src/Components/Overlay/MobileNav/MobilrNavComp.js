@@ -13,7 +13,7 @@ const navList=[
     {
         itemName:"Login",
         Icon:<i className="fas fa-user  font-1-8    " aria-hidden="true"></i>,
-        link:"/",
+        link:"/login",
     },
     {
         itemName:"Stay Safe",
@@ -67,8 +67,8 @@ function MobileNavComp({className=""}) {
 
                 <div className="borttom  pt-5">
                         <div className="language-list display-flex justify-content-space-between">
-                            <Button className="text-color-grey w-50 first-lang font-2">සිංහල</Button>
-                            <Button className="text-color-grey w-50 font-2">தமிழ்</Button>
+                            <Button className="text-color-grey w-50 first-lang font-2  mobile-nav-link  "  >සිංහල</Button>
+                            <Button className="text-color-grey w-50 font-2  mobile-nav-link  "  >தமிழ்</Button>
                         </div>
                 </div>
 
