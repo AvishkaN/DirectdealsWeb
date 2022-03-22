@@ -349,7 +349,7 @@ function CategoryPopUp({className=""}) {
     <DIV className={`${className}`} onClick={handleClick}>
            <PopUp to="/"  height={'default'}>
                     
-                    <div className="title fw-bold font-1-8 text-color-primary">Select Categorie</div>
+                    <div className="title fw-bold font-1-8 text-color-primary">Select Category</div>
 
                     <CustomizePopUpShowList  CategoryList={CategoryList} secondList={SelectedSecondTextsArr}></CustomizePopUpShowList>
 

@@ -6,7 +6,7 @@ import CustomizePopUpShowList from './../CategoryPopUp/CustomizePopUpShowList';
 import FilterDataName from '../../../Functions/FilterDataByName';
 import LocationIcon from '@mui/icons-material/FmdGoodOutlined';
 
-import { SetClassifedCategoryFN, ShowHideAllFN } from '../../../Redux/slices/clickSlice';
+import { SetClassifedLocationFN, ShowHideAllFN } from '../../../Redux/slices/clickSlice';
 
 
 
@@ -191,7 +191,7 @@ function CategoryPopUp({className=""}) {
 
 
         if(selectedSecondListItem){   // set selcted location to redux state
-            dispatch( SetClassifedCategoryFN(selectedSecondListItem));
+            dispatch( SetClassifedLocationFN(selectedSecondListItem));
             dispatch(ShowHideAllFN());
 
 
