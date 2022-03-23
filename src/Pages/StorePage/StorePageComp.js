@@ -37,7 +37,6 @@ function StoreComp({className=""}) {
 
 
   const handleClick=(e)=>{
-    console.log(e.target);
     const menuIcon=e.target.closest('#store-page-menu');
 
     if(menuIcon){

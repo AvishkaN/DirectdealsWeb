@@ -35,7 +35,6 @@ function ClassfiedPageComp({className=""}) {
 
 
         if(FilterTitle=="filter-title-location"){
-            console.log(`....`);
             dispatch(ShowLocationPopupFN());
             
             
@@ -45,7 +44,6 @@ function ClassfiedPageComp({className=""}) {
 
         }
 
-        // console.log(e.target.closest('#Filter-icon'));
     }
 
 

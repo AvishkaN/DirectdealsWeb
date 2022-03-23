@@ -44,7 +44,6 @@ function Search({className="",searchFiledClassName,SearchIconClassName,ListItemC
   const handleChange=(e)=>{
     
     const value=e.target.value;
-    console.log(value);
     setSearchKeyword(value);
     
     if(value){
@@ -53,7 +52,6 @@ function Search({className="",searchFiledClassName,SearchIconClassName,ListItemC
         return `${suggestItem.toLocaleLowerCase()}`.includes(value.toLocaleLowerCase())
       });
 
-      console.log(searchItem);
       setSearchList(searchItem);
       
     }else{
@@ -65,20 +63,17 @@ function Search({className="",searchFiledClassName,SearchIconClassName,ListItemC
 
 
   const handleClick=(e)=>{
-    console.log(e.target?.classList[0]=='search-list-item');
     const SelectedSearchList=e.target?.classList[0]=='search-list-item';
 
     if(SelectedSearchList){
       setSearchKeyword(e.target.innerText);
       setSearchList([]);
-      console.log(e.target.innerText);
     }
 
   };
   
   return (
     <DIV className={`${className}  background-aqu `} onClick={handleClick}>
-      {console.log(searchKeyword ? searchKeyword:SearchText)}
 
       
         <div className="searchh-wrapper">

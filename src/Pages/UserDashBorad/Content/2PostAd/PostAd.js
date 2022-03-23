@@ -14,7 +14,6 @@ function PoadAdForm({className=""}) {
 
   const handleClick=(e)=>{
 
-    console.log(e.target.closest('#post-ad-ad'));
 
     // Post Ad 
     const PostAdButton=e.target.closest('#post-ad-ad');

@@ -13,7 +13,6 @@ function PopUpShowList({className="",selectedItemIdex,CategoryList,secondList=['
          <div className="category-section mt-4">
                       <div className="row">
                             <div className="col-12 ">
-                              {console.log(secondList.FilteredObj?.subCategories)}
 
                                  { 
                                  

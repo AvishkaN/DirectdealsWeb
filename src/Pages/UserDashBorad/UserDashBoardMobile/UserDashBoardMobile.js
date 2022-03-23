@@ -26,7 +26,6 @@ function UserdashBoardMobile({className=""}) {
 
   return (
     <DIV className={`${className} `}>
-        {console.log(clicks.UserDashBoardSelectedComp?.comp)}
          <div className="UserdashBoardMobile-wrapper  ">
              <UndoPage title={clicks?.UserDashBoardSelectedComp?.compName}  >
 

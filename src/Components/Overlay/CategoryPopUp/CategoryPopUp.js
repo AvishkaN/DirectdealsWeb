@@ -12,6 +12,8 @@ import MobileCustomizePopUpShowList from './Mobile/MobileCustomizePopUpShowList'
 
 
 import PopUp from '../PopUp/PopUp';
+import ScroolWindowTop from '../../../Functions/DOM/ScrollWindowTop';
+import ScreenWidthCalc from '../../../Functions/DOM/CalcScreenWidth';
 
 
 
@@ -183,13 +185,6 @@ function CategoryPopUp({className=""}) {
 
 
             const selectedSecondTextsArrNew=FilterDataName(selectedTitleText,CategoryList);
-    
-              console.log(selectedSecondTextsArrNew.FilteredObj.listTxt);
-              console.log(selectedTitleText);
-              console.log(`${selectedTitleText}`===`${selectedSecondTextsArrNew.FilteredObj.listTxt}`);
-              console.log(selectedTitleText,selectedSecondTextsArrNew.FilteredObj.listTxt);
-
-
               
               SetSelectedSecondTextsArr(selectedSecondTextsArrNew);  // update selected second array
     
@@ -212,8 +207,20 @@ function CategoryPopUp({className=""}) {
                     
                     <div className="title fw-bold font-1-8 text-color-primary">Select Category</div>
 
-                    {/* <CustomizePopUpShowList  CategoryList={CategoryList} secondList={SelectedSecondTextsArr}></CustomizePopUpShowList> */}
-                    <MobileCustomizePopUpShowList  CategoryList={CategoryList} secondList={SelectedSecondTextsArr}></MobileCustomizePopUpShowList>
+                    {console.log(ScreenWidthCalc())}
+
+                    {
+                        
+                        ScreenWidthCalc() < 900 && <MobileCustomizePopUpShowList  CategoryList={CategoryList} secondList={SelectedSecondTextsArr}></MobileCustomizePopUpShowList>
+                   
+                   }
+
+                    {
+                        
+                        ScreenWidthCalc() > 900 && <CustomizePopUpShowList  CategoryList={CategoryList} secondList={SelectedSecondTextsArr}></CustomizePopUpShowList>
+                   
+                   }
+
 
               </PopUp>
     </DIV>

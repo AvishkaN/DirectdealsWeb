@@ -39,7 +39,6 @@ function MyAccountComp({className=""}) {
         
         
         if(pathName==="/dashBoard/MyAccount"){
-            console.log(`!!!`);
             comp={compName:"My Account",comp:<MyAccount></MyAccount>};
             // dispatch(SetUserDashBoardSelectedCompFN(<MyAccount></MyAccount>));
             
@@ -91,7 +90,6 @@ function MyAccountComp({className=""}) {
         }
         
         
-        console.log(comp);
 
 
     },[location.pathname]);
@@ -99,9 +97,7 @@ function MyAccountComp({className=""}) {
 
     useEffect(()=>{
 
-        console.log(clicks.UserDashBoardSelectedComp);
         if(clicks.UserDashBoardSelectedComp){
-            console.log(`🤜🤜`);
 
             if(document.documentElement.clientWidth<600){
                 navigate("/dashboard-mobile");

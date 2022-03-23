@@ -171,7 +171,6 @@ function CategoryPopUp({className=""}) {
 
   return (
     <DIV className={`${className}`} >
-        {console.log(clicks.UserDashBoardSelectComp)}
 
            <PopUp to="/">
                     

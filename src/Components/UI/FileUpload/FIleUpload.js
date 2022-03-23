@@ -13,10 +13,8 @@ function FileUpload({className=""}) {
 
 
     const handleChange=(e)=>{
-        console.log(e.target.value);
 
         if(e.target.value){
-            console.log();
             SetUploadMessage(`Uploaded    ${e.target.value}`);
         }
     };   
