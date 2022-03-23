@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import CustomizePopUpShowList from './../CategoryPopUp/CustomizePopUpShowList';
+import MobileCustomizePopUpShowList from './../CategoryPopUp/Mobile/MobileCustomizePopUpShowList';
 
 import FilterDataName from '../../../Functions/FilterDataByName';
 import LocationIcon from '@mui/icons-material/FmdGoodOutlined';
@@ -12,6 +13,7 @@ import { SetClassifedLocationFN, ShowHideAllFN } from '../../../Redux/slices/cli
 
 
 import PopUp from '../PopUp/PopUp';
+import ScreenWidthCalc from '../../../Functions/DOM/CalcScreenWidth';
 
 const CategoryList=[
 
@@ -19,9 +21,9 @@ const CategoryList=[
       listTxt:"Matara",
         categoryIconSvg:<LocationIcon className="font-1-8 text-color-primary "></LocationIcon>,
       subCategories:[
-          "Auto Parts & Accessories",
-          "Motorbikes",
-          "Auto Services",
+          "hakamana",
+          "wallasmulla",
+          "middeniya",
           "Tractors",
           "Buses",
           "qqq",
@@ -179,10 +181,10 @@ function CategoryPopUp({className=""}) {
         if(selectedTitleText){ // selected title
 
 
-            const selectedSecondTextsArr=FilterDataName(selectedTitleText,CategoryList)?.subCategories;
+          const selectedSecondTextsArrNew=FilterDataName(selectedTitleText,CategoryList);
     
     
-            SetSelectedSecondTextsArr(selectedSecondTextsArr);  // update selected second array
+            SetSelectedSecondTextsArr(selectedSecondTextsArrNew);  // update selected second array
     
             document.querySelector('.PopUp-wrapper').scroll(0,0); //  scroll to top
     
@@ -207,7 +209,18 @@ function CategoryPopUp({className=""}) {
                     
                     <div className="title fw-bold font-1-8 text-color-primary">Select Location</div>
 
-                    <CustomizePopUpShowList  CategoryList={CategoryList} secondList={SelectedSecondTextsArr}></CustomizePopUpShowList>
+                    {
+                        
+                        ScreenWidthCalc() < 900 && <MobileCustomizePopUpShowList  CategoryList={CategoryList} secondList={SelectedSecondTextsArr}></MobileCustomizePopUpShowList>
+                   
+                   }
+
+                    {
+                        
+                        ScreenWidthCalc() > 900 && <CustomizePopUpShowList  CategoryList={CategoryList} secondList={SelectedSecondTextsArr}></CustomizePopUpShowList>
+                   
+                   }
+
 
               </PopUp>
     </DIV>

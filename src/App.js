@@ -50,7 +50,6 @@ function App() {
 
 
   const handleClick=(e)=>{
-    console.log(e.target);
 
 
 
