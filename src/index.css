@@ -646,6 +646,17 @@ a{
 }
 
 
+.rotate90{
+    transform: rotate(90deg);
+    transition: all .2s; 
+}
+
+.rotate0{
+    transform: rotate(0deg);
+}
+
+
+
 ::-moz-selection { /* Code for Firefox */
     background-color: var(--color-primary);
     color: #ffff; 

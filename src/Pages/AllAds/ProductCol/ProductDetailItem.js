@@ -5,8 +5,6 @@ import styled from 'styled-components';
 function ProductDetailIcon({className="",svgIcon,text}) {
   return (
     <DIV className={`${className} display-flex  align-item-center  font-1-3 text-color-grey-ori`}>
-        {console.log(svgIcon)}
-        {console.log(text)}
          {svgIcon}
          <div className="font-size-inherit ms-1">{text}</div>
     </DIV>

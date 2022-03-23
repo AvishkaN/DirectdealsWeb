@@ -1,16 +1,24 @@
 
 
 const FilterDataName=(name,Data)=>{
+    let itemIndex=null;
     
-    console.log(Data);
-    const FilteredObj=Data.filter(data=>{
+
+    const FilteredObj=Data.filter( (data,i)=>{
+
+        if(data.listTxt==name){
+            itemIndex=i;
+        }
+
         
-        console.log(name);
-        console.log(data.listTxt);
-        console.log(`${data.listTxt}`==`${name}`);
-        return data.listTxt==name});
-    
-    return FilteredObj[0];    
+        return data.listTxt==name
+    });
+
+     
+    return {
+            FilteredObj:FilteredObj[0],
+            itemIndex:itemIndex,
+    };    
 
 };
 

@@ -21,7 +21,6 @@ function Overlay({className=""}) {
 
   const handleClick=(e)=>{
 
-    console.log((e.target.classList[0]=='Overlay-wrapper'));
 
     
     let IsSelectOverlay=(e.target.querySelector('.Overlay-wrapper')?.classList[0]=='Overlay-wrapper');
